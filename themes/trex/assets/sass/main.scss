@@ -1,0 +1,65 @@
+/*!
+@Eutrex
+Gen 2019
+EuTRex style sheets written by LC.D https://cataldi.design/
+*/
+
+/* --------------------------------------------------
+# Fonts
+--------------------------------------------------  */
+@import 'fonts';
+
+/* --------------------------------------------------
+# SASS Variables
+--------------------------------------------------  */
+@import 'variables';
+
+
+/*shade of gray*/
+$black: #161614;
+$grey: #dcdcdc;
+$grey-dark: #76737A;
+$grey-light: #f9f9f9;
+$white: #FFF;
+
+$background: {{ .Param "background" | default "#F2F6F5" }} !default;
+$primary: {{ .Param "primary" | default "#003399" }} !default; //link & heading colors
+$primary-light: {{ .Param "primary_light" | default "#5472cb" }} !default;
+$secondary: {{ .Param "$secondary" | default "#FFCC00" }} !default;
+$tertiary: {{ .Param "$tertiary" | default "#FC1D6A" }} !default ; //btn colors
+$tertiary-dark: {{ .Param "tertiary_dark" | default "#dc1a59" }} !default ; //btn colors
+
+/*! --------------------------------------------------
+# Reset
+--------------------------------------------------  */
+@import 'reset';
+
+/*! --------------------------------------------------
+# Normalize Wordpress
+--------------------------------------------------  */
+@import 'normalize';
+
+/*! --------------------------------------------------
+# Template Grid
+--------------------------------------------------  */
+@import 'grid';
+
+/*! --------------------------------------------------
+# Typography
+--------------------------------------------------  */
+@import 'typography';
+
+/*! --------------------------------------------------
+# Mastro template
+--------------------------------------------------  */
+@import 'mastro';
+
+/*! --------------------------------------------------
+# Specific site style code
+--------------------------------------------------  */
+@import 'site';
+
+/*! --------------------------------------------------
+# Media queries
+--------------------------------------------------  */
+@import 'query';

@@ -1,0 +1,12 @@
+<footer id="colophon">
+    <div class="container">
+        <p class="logo hidden-txt"><a href="{{ .Site.BaseURL }}" title="Go back to home page">Tracking Expose</a></p>
+        <small>&copy; {{ now.Format "2006"}} </small>
+        {{- partial "footer-menu.html" . -}}
+        <span class="clear"></span>
+    </div>
+</footer>
+<script src='{{ "/js/jquery-3.3.1.min.js" | absURL }}'></script>
+<script src='{{ "/js/modernizr-custom.js" | absURL }}'></script>
+<script src='{{ "/js/ui-script.js" | absURL }}'></script>
+<script src='{{ "/js/script.js" | absURL }}'></script>

@@ -1,0 +1,30 @@
+<nav class="main-navigation" id="site-navigation">
+    <button class="menu-toggle hidden-txt" aria-controls="primary-menu" aria-expanded="false">Primary Menu</button>
+    <ul>
+        {{ $currentPage := .Page }}
+        {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+                <li class='has-children {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}'>
+                <a href="#">
+                    {{ .Pre }}
+                    <span>{{ .Name }}</span>
+                </a>
+                    <ul class="sub-menu">
+                        {{ range .Children }}
+                        <li class='{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>
+                        <a href="{{ .URL }}">{{ .Name }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </li>
+            {{ else }}
+                <li>
+                    <a href="{{ .URL }}">
+                        {{ .Pre }}
+                        <span>{{ .Name }}</span>
+                    </a>
+                </li>
+            {{ end }}
+        {{ end }}
+    </ul>
+</nav>
