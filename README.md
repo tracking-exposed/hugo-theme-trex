@@ -44,6 +44,23 @@ In your config.toml define these parameters:
 + Use `layouts/page/custom-page.html` to create your own custom page connected to `content/page/custom-page.md`
 
 
+## UI tool
+
+### Built-in overlay
+
+Add overlay elements into the DOM like this
+
+``` 
+<div class="overlay" id="overlay-ID">
+    <a class="close-btn" href="#">x</a>
+    <!--Your content-->
+</div>
+<div id="overlay_shade"></div>
+``` 
+
+Into `script.js` call the overlay with the trigger you want using this function `openOverlay('#overlay-ID')` with the overlay ID as argument;
+
+
 ## Menu manage
 
 You have two menu: header and footer. Header menu support sub navigation adding in the `parent` element value the parent's identifier value
