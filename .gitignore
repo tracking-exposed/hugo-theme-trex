@@ -10,6 +10,5 @@ chromedriver.log
 geckodriver.log
 archetypes/*
 data/*
-static/
 resources/
 config.toml
