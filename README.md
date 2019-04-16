@@ -1,17 +1,42 @@
-# Hugo TRex theme
+Hugo TRex Theme
+===============
 
-Hi. I'm the hugo TRex starter theme. I'm a theme meant for hacking so try turning me into the next awesome TRex website. That's what I'm here for.
+Hi. I'm the hugo TRex starter theme. I'm a theme meant for hacking so try
+turning me into the next awesome TRex website. That's what I'm here for.
 
 
-## Getting start
+## Getting Started
 
-+ download the **trex** theme folder into Hugo theme folder
-+ add "trex" as theme value in `config.toml`
-+ download sample content into hugo contents folders, if you need
+1. Download the **trex** theme folder into Hugo theme folder
+
+```
+cd new-site.tracking.exposed/themes
+git clone https://github.com/tracking-exposed/hugo-theme-trex
+```
+
+2. In the `config.toml` file of your new site edit the value `theme="trex"`
+3. Copy sample content from `exampleSite` into the sites `contents` folder
+
+
+## Updating Theme
+
+As the theme is updated and developed in the future, for instance once a new
+color scheme (for a subsite) is created, do the following steps
+
+```
+cd new-site.tracking.exposed/theses/trex
+git pull origin master
+```
+
+Then build your Hugo site and voila, theme is updated.
+
+
+---
+
 
 ### Params variable
 
-In your config.toml define these parameters:
+In your `config.toml` also define these parameters:
 
 ```
 [params]
@@ -26,6 +51,7 @@ In your config.toml define these parameters:
   tertiary_dark = ""
   tertiary = ""
 ```
+
 
 + `description`: is the main meta description for the website, usefull for SEO
 + `subsite`: if `true` it change the layout form generic ones into color specific one. It enable the colored header with the white logo version
