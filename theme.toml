@@ -2,10 +2,10 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "trex"
-license = "MIT"
-licenselink = ""
+license = "AGPLv3"
+licenselink = "https://github.com/tracking-exposed/trex/blob/master/LICENSE"
 description = ""
-homepage = ""
+homepage = "https://tracking.exposed"
 tags = []
 features = []
 min_version = "0.41"
