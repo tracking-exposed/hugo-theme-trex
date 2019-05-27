@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en-us" }}" class="no-ie no-js">
+    <head>
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/reveal.css">
+        <link rel="stylesheet" href="/js/local/slides.css">
+        <link rel="stylesheet" href="/css/reveal-solarized.css">
+        <link href="/js/local/EB+Garamond-Font.css" rel="stylesheet">
+        <script type="text/javascript" src="/js/reveal.min.js"></script>
+        <script type="text/javascript" src="/js/reveal-head.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ .Title }}</title>
+        <script>
+          function blink() {
+            $('.blink').each(function() {
+              var elem = $(this);
+              setInterval(function() {
+                if (elem.css('visibility') == 'hidden') {
+                  elem.css('visibility', 'visible');
+                } else {
+                  elem.css('visibility', 'hidden');
+                }
+              }, 500);
+            })
+          }
+        </script>
+    </head>
+    <body onload="blink();">
+        {{- block "main" . }}
+        <strong>Layout: talks/single.html</strong>
+        {{ .Content }}
+        {{- end }}
+        <script>
+            Reveal.initialize({
+              controls: true,
+              progress: true,
+              history: true,
+              center: true
+            })
+        </script>
+    </body>
+</html>
