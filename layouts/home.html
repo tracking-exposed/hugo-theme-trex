@@ -2,19 +2,29 @@
 
 <div class="entry-header center">
     <div class="container">
-        <h1>{{ .Title }}</h1>
-        <h4>Layout: _default/list.html</h4>
+        <small>Our Mission</small>
+        <h1>{{ site.Params.Description }}</h1>
+        <h3>Layout: home.html</h3>
     </div>
 </div>
-<div class="entry-content container">
+
+<div class="container">
+    {{ .Content }}
+</div>
+
+{{ if eq site.Params.Subsite "false" }}
+<div class="container">
+    <h2>Recent News</h2>
     <ul class="archive">
-        {{ range $index, $element := .Data.Pages }}
-        <li class="column_1-2{{if not (modBool $index 2)}} omega{{end}}">
+        {{ range first 6 (.Data.Pages) }}
+        <li class="column_1-2">
             <article>
                 <h3 class="center">
                     <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
                 </h3>
-                <time class="post-date hidden" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+                <time class="post-date" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>
+                    {{ .Date.Format "Mon, Jan 2, 2006" }}
+                </time>
                 <p>
                     {{ .Summary }}
                     {{ if .Truncated }}
@@ -29,5 +39,5 @@
     </ul>
     <span class="clear"></span>
 </div>
-
+{{ end }}
 {{- end }}
