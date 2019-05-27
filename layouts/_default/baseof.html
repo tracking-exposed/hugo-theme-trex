@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en-us" }}" class="no-ie no-js">
+<html lang="{{ site.LanguageCode | default "en-us" }}" class="no-ie no-js">
     {{- partial "head.html" . -}}
-    <body class="{{ if eq .Site.Params.subsite "true" }}sub-theme{{ end}}">
+    <body class="{{ if eq site.Params.subsite "true" }}sub-theme{{ end}}">
         <div id="page" class="site">
             {{- partial "header.html" . -}}
             <main id="content">

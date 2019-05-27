@@ -1,8 +1,21 @@
 {{ define "main" -}}
 
+<div class="entry-header center">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+    </div>
+</div>
+
+<div class="container">
+    {{ .Content }}
+</div>
+
+
+
 <header class="entry-header center">
     <div class="container">
         <h1>{{ .Title }}</h1>
+        <h3>Layout: pages/single.html</h3>
         <time class="post-date hidden" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
     </div>
 </header>
