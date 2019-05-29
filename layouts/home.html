@@ -1,23 +1,37 @@
 {{ define "main" -}}
-
-<div class="entry-header center">
+<div class="jumbotron {{ .Site.Params.Subsite }} ">
     <div class="container">
-        <small>Our Mission</small>
-        <h1>{{ site.Params.Description }}</h1>
-        <h3>Layout: home.html</h3>
+        <small>Our Vision</small>
+        <h1 class="display-4 font-weight-bold">
+            {{ site.Params.Tagline }}
+        </h1>
     </div>
+</div>
+
+<div class="container">
+    {{ range .Site.Menus.featured }}
+    <div class="featured-box">
+        <a class="nav-link" href="{{ .URL }}">
+            {{ .Name }}
+        </a>
+    </div>
+    {{ end }}
 </div>
 
 <div class="container">
     {{ .Content }}
 </div>
 
-{{ if eq site.Params.Subsite "false" }}
+<div class="container">
+    {{- partial "get-browser-extension.html" . -}}
+</div>
+
+{{ if eq site.Params.Subsite "default" }}
 <div class="container">
     <h2>Recent News</h2>
-    <ul class="archive">
+    <ul class="list-group list-group-flush">
         {{ range first 6 (.Data.Pages) }}
-        <li class="column_1-2">
+        <li>
             <article>
                 <h3 class="center">
                     <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
