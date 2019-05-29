@@ -48,10 +48,8 @@
         "url" : "{{ .Permalink }}"
     }
     </script>
-    {{ $options := (dict "targetPath" "static/css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
-
-
-    {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "main.scss" . | toCSS $options | resources.Fingerprint }}
+    {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
+    {{ $style := resources.Get "main.scss" | resources.ExecuteAsTemplate "bootstrap.scss" . | toCSS $options | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
     {{ .Hugo.Generator }}
 </head>
