@@ -9,17 +9,49 @@
 </div>
 
 <div class="container">
-    {{ range .Site.Menus.featured }}
-    <div class="featured-box">
-        <a class="nav-link" href="{{ .URL }}">
-            {{ .Name }}
-        </a>
+    {{ if ne site.Params.Subsite "default" }}
+        {{ range .Site.Menus.featured }}
+        <div class="featured-box">
+            <a class="nav-link" href="{{ .URL }}">
+                {{ .Name }}
+            </a>
+        </div>
+        {{ end }}
+        <div class="content">
+            {{ .Content }}
+        </div>
+    {{ else }}
+    <div class="row">
+        <div class="col-6">
+            {{ .Content }}
+        </div>
+        <div class="col-6">
+            <h2>Our Initiatives</h2>
+            <p>Our methods and approach to exposing the tracking of the technology
+            giants is to host many different interrelated project, each
+            one under a dedicated (and when possible) self-explanatory sub-domain.</p>
+            <ul class="list-group mb-5">
+                {{ range .Site.Menus.initiatives }}
+                <li class="list-group-item">
+                    <a href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+
+            <h2>Case Studies</h2>
+            <p>Building upon our tools above are specific case studies that
+            offer visualizations and specific insights into various ways
+            algorithmic tracking is being use to say, influence elections.</p>
+            <ul class="list-group mb-5">
+                {{ range .Site.Menus.studies }}
+                <li class="list-group-item">
+                    <a href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
     </div>
     {{ end }}
-</div>
-
-<div class="container">
-    {{ .Content }}
 </div>
 
 <div class="container">
