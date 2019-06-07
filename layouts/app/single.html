@@ -1,9 +1,6 @@
 {{ define "main" }}
-
-<h1>
-    {{ .Title }}
-</h1>
-
 {{ .Content }}
-
+{{ if .Params.include_partial }}
+    {{ partial .Params.include_partial . }}
+{{ end }}
 {{ end }}
