@@ -6,9 +6,70 @@
 @import "variables";
 @import "bootstrap/bootstrap";
 @import "bootstrap_customization";
+@import "mixins";
+
+$navbar-top-height: 85px;
 
 body {
-    padding-top: 85px;
+    padding-top: $navbar-top-height;
+
+    &.default {
+
+        a {
+            color: $primary;
+        }
+
+        .navbar-top {
+            @include trex-navbar(#1b1b1b, $white, $white, $white);
+        }
+
+        .jumbotron-home {
+            @include trex-jumbotron(#1b1b1b, $white, true)
+        }
+
+    }
+
+    &.facebook {
+        $fbook-blue: #3b5898;
+
+        .btn-facebook {
+            background-color: $fbook-blue;
+            color: $white;
+        }
+
+        a {
+            color: $fbook-blue;
+        }
+
+        .navbar-top {
+            @include trex-navbar($fbook-blue, $white, $white, $white);
+        }
+
+        .jumbotron-home {
+            @include trex-jumbotron($fbook-blue, $white, false);
+        }
+
+        .jumbotron-full {
+            @include trex-jumbotron($fbook-blue, $white, false);
+        }
+    }
+
+    &.youtube {
+        $ytube-red: $red;
+
+        a {
+            color: $ytube-red;
+        }
+
+        .navbar-top {
+            @include trex-navbar($white, $black, $red, $black);
+        }
+
+        .jumbotron-home {
+            @include trex-jumbotron($white, $black, false);
+        }
+    }
+
 }
 
 /* Main Navbar */
@@ -22,71 +83,7 @@ body {
         background-color: #d9d9d9;
 
         span.navbar-toggler-icon {
-           color: $black; 
-        }
-    }
-
-    &.navbar-default {
-        background: #1b1b1b;
-        color: #ffffff;
-
-        .navbar-brand,
-        .navbar-text {
-            color: #ffffff;
-        }
-
-        .navbar-nav .nav-link {
-            color: #ffffff;
-        }
-
-        .nav-item.active .nav-link,
-        .nav-item:hover .nav-link {
-            color: #ffffff;
-        }
-
-        hr {
-            border-bottom: 2px solid $white;
-        }
-    }
-
-    &.navbar-facebook {
-        background: #3b5898;
-        color: #ffffff;
-
-        .navbar-brand,
-        .navbar-text {
-            color: #ffffff;
-        }
-
-        .navbar-nav .nav-link {
-            color: #ffffff;
-        }
-
-        .nav-item.active .nav-link,
-        .nav-item:hover .nav-link {
-            color: #ffffff;
-        }
-
-        hr {
-            border-bottom: 2px solid $white;
-        }
-    }
-
-    &.navbar-youtube {
-        background: $white;
-        color: $black;
-
-        .navbar-nav .nav-link {
-            color: $black;
-        }
-
-        .nav-item.active .nav-link,
-        .nav-item:hover .nav-link {
-            color: $red;
-        }
-
-        hr {
-            border-bottom: 2px solid $black;
+           color: $black;
         }
     }
 
@@ -101,30 +98,9 @@ body {
 }
 
 
-div.jumbotron {
+div.jumbotron-home {
     border-radius: 0px;
     min-height: 500px;
-
-    &.default {
-        background: #1b1b1b;
-        color: #ffffff;
-        border-bottom: 40px solid #53c1b6;
-    }
-
-    &.facebook {
-        background: #3b5898;
-        color: #ffffff;
-
-        p.heading {
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-    }
-
-    &.youtube {
-        background: $white;
-        color: $black;
-    }
 
     h1 {
         width: 65%;
@@ -135,9 +111,7 @@ div.jumbotron {
         text-transform: uppercase;
         color: #e9e9e9;
     }
-
 }
-
 
 /* Home - Featured Boxes */
 div.featured-box {
@@ -162,8 +136,15 @@ div.featured-box {
 
 
 footer {
+    margin-top: 4.5rem;
     padding: 2.5rem 0;
-    color: #999;
-    background-color: #f9f9f9;
-    border-top: 0.05rem solid #e5e5e5;
+    color: $black;
+    background-color: $gray-200;
+    border-top: 40px solid $primary;
+
+    a {
+        color: $primary !important;
+    }
 }
+
+@import "components";

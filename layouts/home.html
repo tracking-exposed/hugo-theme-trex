@@ -1,5 +1,5 @@
 {{ define "main" -}}
-<div class="jumbotron {{ .Site.Params.Subsite }} ">
+<div class="jumbotron jumbotron-home">
     <div class="container">
         <small>Our Vision</small>
         <h1 class="display-4 font-weight-bold">
@@ -8,7 +8,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container mb-5">
     {{ if ne site.Params.Subsite "default" }}
         {{ range .Site.Menus.featured }}
         <div class="featured-box">
@@ -61,7 +61,7 @@
 {{ if eq site.Params.Subsite "default" }}
 <div class="container">
     <h2>Recent News</h2>
-    <ul class="list-group list-group-flush">
+    <ul class="list-group list-group-flush list-unstyled">
         {{ range first 6 (.Data.Pages) }}
         <li>
             <article>
