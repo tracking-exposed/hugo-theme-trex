@@ -1,12 +1,16 @@
 <footer id="colophon">
     <div class="container">
-        <p class="logo hidden-txt">
+        <p class="logo float-left">
             <a href="{{ .Site.BaseURL }}" title="Go back to home page">
                 Tracking Exposed
             </a>
+            <small>&copy; {{ now.Format "2006"}} </small>   <span class="clearfix"></span>
         </p>
-        <small>&copy; {{ now.Format "2006"}} </small>
         {{- partial "footer-menu.html" . -}}
-        <span class="clear"></span>
+        <span class="clearfix"></span>
     </div>
 </footer>
+<script src='{{ "/js/jquery-3.3.1.min.js" | absURL }}'></script>
+<script src='{{ "/js/bootstrap.bundle.min.js" | absURL }}'></script>
+<script src='{{ "/js/modernizr-custom.js" | absURL }}'></script>
+<script src='{{ "/js/lodash.min.js" | absURL }}'></script>

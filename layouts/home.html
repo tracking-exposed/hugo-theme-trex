@@ -8,49 +8,31 @@
     </div>
 </div>
 
-<div class="container mb-5">
+<div class="container">
     {{ if ne site.Params.Subsite "default" }}
-        {{ range .Site.Menus.featured }}
-        <div class="featured-box">
-            <a class="nav-link" href="{{ .URL }}">
-                {{ .Name }}
-            </a>
+        <div class="row">
+            {{ range .Site.Menus.featured }}
+            <div class="featured-box col-sm">
+                <a class="nav-link" href="{{ .URL }}" {{ if .Pre }} style="background-image: url({{ .Pre }});" {{ end }}>
+                    {{ .Name }}
+                </a>
+                {{ if .Post }}
+                    <p class="text-center mt-3 mb-0"> {{ .Post }} </p>
+                {{ end }}
+            </div>
+            {{ end }}
         </div>
-        {{ end }}
         <div class="content">
             {{ .Content }}
         </div>
-    {{ else }}
-    <div class="row">
-        <div class="col-6">
-            {{ .Content }}
-        </div>
-        <div class="col-6">
-            <h2>Our Initiatives</h2>
-            <p>Our methods and approach to exposing the tracking of the technology
-            giants is to host many different interrelated project, each
-            one under a dedicated (and when possible) self-explanatory sub-domain.</p>
-            <ul class="list-group mb-5">
-                {{ range .Site.Menus.initiatives }}
-                <li class="list-group-item">
-                    <a href="{{ .URL }}">{{ .Name }}</a>
-                </li>
-                {{ end }}
-            </ul>
 
-            <h2>Case Studies</h2>
-            <p>Building upon our tools above are specific case studies that
-            offer visualizations and specific insights into various ways
-            algorithmic tracking is being use to say, influence elections.</p>
-            <ul class="list-group mb-5">
-                {{ range .Site.Menus.studies }}
-                <li class="list-group-item">
-                    <a href="{{ .URL }}">{{ .Name }}</a>
-                </li>
-                {{ end }}
-            </ul>
+    {{ else }}
+
+        <div class="row">
+            <div class="col-6">
+                {{ .Content }}
+            </div>
         </div>
-    </div>
     {{ end }}
 </div>
 

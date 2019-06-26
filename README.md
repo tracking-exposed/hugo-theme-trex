@@ -43,6 +43,8 @@ The following are the three that are **required** for the theme to build.
 
 - `[[menu.main]]` - the links in the `<navbar>` at the top of pages
 - `[[menu.featured]]` - featured boxes on home page of each site (max 3)
+    * `pre` - value for background image path
+    * `post` - value for description text
 - `[[menu.footer]]` - special per site links in `<footer>` of pages
 
 ``` 
@@ -57,7 +59,9 @@ The following are the three that are **required** for the theme to build.
   [[menu.featured]]
      page = "Facebook"
      identifier = "facebook"
-     name= "Facebook"
+     name = "Facebook"
+     pre = "path-to-images" #backgrodund image path
+     post = "comment text" #add a description text
      url = "https://facebook.tracking.exposed"
      weight = -180
 
