@@ -4,9 +4,6 @@
 
 // Variables ===================================================================
 
-//$web-font-path: "Open+Sans:400,700" !default;
-//@import url($web-font-path);
-
 @mixin btn-shadow($color){
   @include gradient-y-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));
   filter: none;
@@ -26,7 +23,7 @@
   }
 
   &-fixed-bottom {
-    border-top-width: 1px 0 0 0;
+    border-top-width: 1px;
     border-style: solid;
   }
 }

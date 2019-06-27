@@ -1,0 +1,204 @@
+
+/*--------------------------------------------------------------
+## Heading
+--------------------------------------------------------------*/
+h1, .h1_style {
+  font-size: 42px;
+  line-height: 140%;
+  font-family: $medium;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+h2, .h2_style {
+  font-size: 32px;
+  line-height: 140%;
+  font-family: $bold;
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
+h3, .h3_style{
+  font-size: 24px;
+  line-height: 140%;
+  font-family: $bold;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+h4, .h4_style {
+  font-size: 18px;
+  line-height: 140%;
+  text-transform: uppercase;
+  font-family: $bold;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+h5, h6, .h5_style {
+  font-size: 18px;
+  line-height: 140%;
+  //color: $grey-dark;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+h5 {
+  font-family: $bold;
+}
+
+/*--------------------------------------------------------------
+## Characters formatting
+--------------------------------------------------------------*/
+div, form, p, .paragraph, small, .small, mark, label, input {
+  font-family: $regular;
+}
+b, .bold, strong, .strong {
+  font-family: $bold !important;
+}
+em, i, .italic {
+  font-style: italic;
+}
+p, .paragraph {
+  font-size: 16px;
+  line-height: 160%;
+  display: block;
+  font-family: $regular;
+  margin-bottom: 15px;
+}
+small, .small {
+  font-size: 80%;
+  line-height: 140%;
+  display: inline-block;
+}
+kbd, code {
+  display: inline-block;
+  word-wrap: break-word;
+  font-size: 75%;
+  padding: 0 2px;
+  background: $gray-100;
+  border: solid 1px $gray-200;
+}
+code.break {
+  display: inline;
+}
+var {
+  font-family: $bold;
+  border-bottom: dotted 1px black;
+}
+del, strike {
+  text-decoration: line-through;
+}
+blockquote, q {
+  display: block;
+  margin: 10px 0 10px 15px;
+  padding-left: 15px;
+  font-style: italic;
+  border-left: solid 2px grey;
+}
+blockquote p, q p {
+  line-height: 160%;
+}
+cite {
+  display: inline-block;
+  margin-left: 30px;
+  font-family: $bold;
+}
+pre {
+  max-width: 100%;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+mark, address {
+  background-color: $secondary;
+  padding: 1px 4px;
+}
+address {
+  margin-bottom: 15px;
+  display: inline-block;
+  font-size: 80%;
+}
+ins {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-spacing: 0;
+  margin-bottom: 30px;
+}
+table td, table th {
+  padding: 8px 12px;
+  background-color: $white;
+  vertical-align: middle;
+  border-spacing: 0;
+  border-bottom: solid 1px $gray-400;
+}
+table th {
+  background-color: $gray-400;
+  padding: 16px 12px;
+  color: white;
+  font-family: $bold;
+}
+dl {
+  margin-bottom: 35px;
+}
+dl dd {
+  margin: 0 0 20px 2%;
+}
+dl dt {
+  font-family: $bold;
+  margin-bottom: 5px;
+}
+hr {
+  display: block;
+  margin: 20px 0;
+}
+figure {
+  margin-bottom: 20px;
+}
+figure.full img {
+  width: 100%;
+  margin: 10px auto;
+}
+figure.half img {
+  width: 50%;
+}
+figure.align-left img {
+  float: left;
+  margin: 0 15px 5px 0;
+}
+figure.align-right img {
+  float: right;
+  margin: 0 0 5px 15px;
+}
+figure.align-center img {
+  margin: 10px auto;
+  display: block;
+}
+figcaption, .footnotes li {
+  font-size: 80% !important;
+}
+.underline {
+  text-decoration: underline !important;
+}
+.black {
+  color: $black !important;
+}
+.primary-color {
+  color: $primary !important;
+}
+.secondary-color {
+  color: $secondary;
+}
+.light-font {
+  font-family: $regular !important;
+}
+.white {
+  color: $white !important;
+}
+.break {
+  word-break: break-all;
+}
+.no-break {
+  word-break: keep-all !important;
+}
+

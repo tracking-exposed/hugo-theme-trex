@@ -22,50 +22,51 @@
             </div>
             {{ end }}
         </div>
-        <div class="content">
+        <div class="content" style="margin-top: -7rem;">
             {{ .Content }}
         </div>
 
     {{ else }}
 
         <div class="row">
-            <div class="col-6">
+            <div class="col-12">
                 {{ .Content }}
             </div>
         </div>
     {{ end }}
 </div>
 
+{{ if eq site.Params.Subsite "default" }}
+    <div class="container">
+        <h2>Recent News</h2>
+        <ul class="list-group list-group-flush list-unstyled">
+            {{ range first 6 (.Data.Pages) }}
+            <li>
+                <article>
+                    <h3 class="center">
+                        <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
+                    </h3>
+                    <time class="post-date" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>
+                        {{ .Date.Format "Mon, Jan 2, 2006" }}
+                    </time>
+                    <p>
+                        {{ .Summary }}
+                        {{ if .Truncated }}
+                        <span class="read-more-link">
+                            <a href="{{ .RelPermalink }}">Read More…</a>
+                        </span>
+                        {{ end }}
+                    </p>
+                </article>
+            </li>
+            {{- end }}
+        </ul>
+        <span class="clear"></span>
+    </div>
+{{ end }}
+
 <div class="container">
     {{- partial "get-browser-extension.html" . -}}
 </div>
 
-{{ if eq site.Params.Subsite "default" }}
-<div class="container">
-    <h2>Recent News</h2>
-    <ul class="list-group list-group-flush list-unstyled">
-        {{ range first 6 (.Data.Pages) }}
-        <li>
-            <article>
-                <h3 class="center">
-                    <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
-                </h3>
-                <time class="post-date" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>
-                    {{ .Date.Format "Mon, Jan 2, 2006" }}
-                </time>
-                <p>
-                    {{ .Summary }}
-                    {{ if .Truncated }}
-                    <span class="read-more-link">
-                        <a href="{{ .RelPermalink }}">Read More…</a>
-                    </span>
-                    {{ end }}
-                </p>
-            </article>
-        </li>
-        {{- end }}
-    </ul>
-    <span class="clear"></span>
-</div>
-{{ end }}
 {{- end }}
