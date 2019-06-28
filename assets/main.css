@@ -6890,6 +6890,12 @@ h5 {
 /*--------------------------------------------------------------
 ## Characters formatting
 --------------------------------------------------------------*/
+a {
+  text-decoration: underline; }
+
+header a, footer a {
+  text-decoration: none; }
+
 div, form, p, .paragraph, small, .small, mark, label, input {
   font-family: "Trex-Regular", sans-serif; }
 
@@ -6916,6 +6922,7 @@ kbd, code {
   word-wrap: break-word;
   font-size: 75%;
   padding: 0 2px;
+  color: #1b1b1b;
   background: #f8f9fa;
   border: solid 1px #e6e6e6; }
 

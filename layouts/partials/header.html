@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-top">
+<header class="navbar navbar-expand-lg fixed-top navbar-top">
     <div class="container">
         <a class="navbar-brand" href="/">
             <img src="/images/header-logo-{{ .Site.Params.Subsite }}.svg">
@@ -13,7 +13,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse pull-right" id="navbarCollapse">
+        <nav class="collapse navbar-collapse pull-right" id="navbarCollapse">
             <ul class="navbar-nav ml-auto position-relative">
                 {{ $currentPage := .Page }}
                 {{ range .Site.Menus.main }}
@@ -39,6 +39,6 @@
                     {{ end }}
                 {{ end }}
             </ul>
-        </div>
+        </nav>
     </div>
-</nav>
+</header>
