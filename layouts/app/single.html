@@ -1,0 +1,12 @@
+{{define "main" -}}
+
+<div class="container">
+    {{ .Content }}
+    <span class="clearfix"></span>
+    {{ if .Params.include_partial }}
+        {{ partial .Params.include_partial . }}
+    {{ end }}
+    <span class="clearfix"></span>
+</div>
+
+{{- end }}

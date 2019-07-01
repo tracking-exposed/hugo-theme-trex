@@ -7289,5 +7289,86 @@ ul.list li {
   text-indent: -99999px; }
 
 /*  _components */
+div.jumbotron-full {
+  height: 100%;
+  min-height: 100%;
+  border-radius: 0px; }
+
+button.selectable {
+  border-radius: 0px; }
+
+#reality-check {
+  background-color: #e9ebee;
+  background-size: 850px 350px; }
+  #reality-check div.container-c3 {
+    min-height: 100px;
+    background-color: #fff;
+    color: #1b1b1b;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px; }
+  #reality-check div.profile-left {
+    width: 180px;
+    display: inline-block;
+    float: left; }
+    #reality-check div.profile-left div.avatar {
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      overflow: hidden; }
+      #reality-check div.profile-left div.avatar img {
+        max-height: 250px;
+        max-width: 300px;
+        position: relative;
+        left: -75px; }
+    #reality-check div.profile-left h1 {
+      font-size: 21px; }
+    #reality-check div.profile-left strong.username {
+      font-size: 18px;
+      color: #777; }
+  #reality-check div.feed-right {
+    width: 850px;
+    display: inline-block;
+    float: left; }
+    #reality-check div.feed-right div.masthead {
+      width: 850px;
+      background-color: #fff; }
+      #reality-check div.feed-right div.masthead div.banner {
+        width: 850px;
+        height: 312px;
+        background-image: url("/images/blurred-faces-street.jpg");
+        background-size: 90%;
+        background-repeat: none;
+        text-align: center; }
+        #reality-check div.feed-right div.masthead div.banner h1 {
+          position: relative;
+          top: 35%;
+          color: #fff;
+          font-size: 48px;
+          text-shadow: 1px 1px 1px #212529; }
+      #reality-check div.feed-right div.masthead div.actions {
+        height: 60px;
+        border-left: 1px solid #d9d9d9;
+        border-right: 2px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
+        border-radius-bottom-left: 3px;
+        border-radius-bottom-right: 3px; }
+    #reality-check div.feed-right div.feed-item,
+    #reality-check div.feed-right div.stats-item {
+      background-color: #fff;
+      color: #1c1e21;
+      border: 1px solid #d9d9d9;
+      border-radius: 3px; }
+  #reality-check div.list-group button.list-group-item {
+    background: transparent;
+    padding: 10px 15px; }
+    #reality-check div.list-group button.list-group-item:hover {
+      cursor: pointer;
+      color: #1b1b1b; }
+    #reality-check div.list-group button.list-group-item.active {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      background-color: #fff;
+      color: #1b1b1b; }
 
 /*# sourceMappingURL=main.css.map */
