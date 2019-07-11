@@ -1,0 +1,35 @@
+/* Tracking Exposed - Mixins */
+
+@mixin trex-navbar($background-color, $text-color, $hover-color, $border-color) {
+      background: $background-color;
+      color: $text-color;
+
+      .navbar-brand,
+      .navbar-text {
+          color: $text-color;
+      }
+
+      .navbar-nav .nav-link {
+          color: $text-color;
+      }
+
+      .nav-item.active .nav-link,
+      .nav-item:hover .nav-link {
+          color: $hover-color;
+      }
+
+      hr {
+          border-bottom: 2px solid $border-color;
+      }
+}
+
+@mixin trex-jumbotron($background, $text-color, $border) {
+        background: $background;
+        color: $text-color;
+        @if $border == true { border-bottom: 40px solid $primary; }
+
+        p.heading {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+}

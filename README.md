@@ -11,11 +11,82 @@ turning me into the next awesome TRex website. That's what I'm here for.
 
 ```
 cd new-site.tracking.exposed/themes
-git clone https://github.com/tracking-exposed/hugo-theme-trex
+git clone https://github.com/tracking-exposed/hugo-theme-trex trex
 ```
 
 2. In the `config.toml` file of your new site edit the value `theme="trex"`
 3. Copy sample content from `exampleSite` into the sites `contents` folder
+
+
+## Config File
+
+For each site modify the `config.toml` to define the following Hugo `[params]`
+
+```
+[params]
+  subtitle = ""
+  subsite = "default"
+  description = ""  
+  tagline = ""
+```
+
+- `subtitle` - title of the site as written along side `Tracking Exposed`
+- `subsite` - name-space used in HTML and CSS classes (lowercase + no spaces)
+- `description` - the main `<meta>` description for the site used for SEO
+- `tagline` - text that is shown in the home page banner above featured
+
+
+## Menus
+
+There are multipe *"menus"* that get re-used in different areas of the site.
+The following are the three that are **required** for the theme to build.
+
+- `[[menu.main]]` - the links in the `<navbar>` at the top of pages
+- `[[menu.featured]]` - featured boxes on home page of each site (max 3)
+    * `pre` - value for background image path
+    * `post` - value for description text
+- `[[menu.footer]]` - special per site links in `<footer>` of pages
+
+``` 
+[menu] 
+  [[menu.main]]
+     page = "Help"
+     identifier = "help"
+     name = "Help"
+     url = "/help/"
+     weight = -150
+  
+  [[menu.featured]]
+     page = "Facebook"
+     identifier = "facebook"
+     name = "Facebook"
+     pre = "path-to-images" #backgrodund image path
+     post = "comment text" #add a description text
+     url = "https://facebook.tracking.exposed"
+     weight = -180
+
+  [[menu.footer]]
+      page = "Help"
+      identifier = "help"
+      name = "Help"
+      url = "/help/"
+      weight = -150
+```
+
+Extra menus can be added as needed such as in `tracking.exposed/config.toml`
+
+
+## SASS Architecture
+
+The following files are how the SASS that is compiled into CSS are organized.
+The theme is built on top of using [Bootstrap 4](https://getbootstrap.com)
+framework.
+
+- `assets/_bootstrap_customization.scss` - proper extensions of various Bootstrap classes
+- `assets/_components.scss` - specific custom classes for areas of sites for apps (Reality Check, Zuckless News)
+- `assets/_mixins.scss` - reusable SASS mixins that extend or customize Boostrap styles or custom things
+- `assets/_variables.scss` - used throughout all SASS files
+- `assets/main.scss` - main file which has global `body.subsite` class and other custom things
 
 
 ## Updating Theme
@@ -28,132 +99,4 @@ cd new-site.tracking.exposed/theses/trex
 git pull origin master
 ```
 
-Then build your Hugo site and voila, theme is updated.
-
-
----
-
-
-### Params variable
-
-In your `config.toml` also define these parameters:
-
-```
-[params]
-  description = ""
-  subsite = "true"
-
-  #colors
-  background = "#FFF"
-  primary = "#3C5A96"
-  primary_light = ""
-  secondary = ""
-  tertiary_dark = ""
-  tertiary = ""
-```
-
-
-+ `description`: is the main meta description for the website, usefull for SEO
-+ `subsite`: if `true` it change the layout form generic ones into color specific one. It enable the colored header with the white logo version
-+ `background`: the backgorund color, default: *#F2F6F5*
-+ `primary`: the main subsite color, it define the header background color, default: *#003399*
-+ `primary_light`: used for link hover, default *#5472cb*
-+ `secondary`: used for alert and advise, default *#FFCC00*
-+ `tertiary_dark`: used for button, default *#FC1D6A*
-+ `tertiary`: used for button hover, default *#dc1a59*
-
-
-## How to hack
-
-+ Write custom CSS rules into `assets/sass/_site.scss`
-+ Write custom JS into `static/js/script.js`
-+ Use `layouts/page/custom-page.html` to create your own custom page connected to `content/page/custom-page.md`
-
-
-## UI tool
-
-### Built-in overlay
-
-Add overlay elements into the DOM like this
-
-``` 
-<div class="overlay" id="overlay-ID">
-    <a class="close-btn" href="#">x</a>
-    <!--Your content-->
-</div>
-<div id="overlay_shade"></div>
-``` 
-
-Into `script.js` call the overlay with the trigger you want using this function `openOverlay('#overlay-ID')` with the overlay ID as argument;
-
-
-## Menu manage
-
-You have two menu: header and footer. Header menu support sub navigation adding in the `parent` element value the parent's identifier value
-
-``` 
- menu = ["main", "footer"]
- 
-  #Header menu
-  
-  [[menu.main]]
-     page = "Pages"
-     identifier = "pages"
-     name = "Pages"
-     url = "#"
-     weight = -100
-  [[menu.main]]
-     page = "#"
-     identifier = "#"
-     name = "Test"
-     url = "#"
-     parent = "pages"
-     weight = -110
-  [[menu.main]]
-      page = "#"
-      identifier = "#-2"
-      name = "Test 2"
-      url = "#"
-      parent = "pages"
-      weight = -120
-  [[menu.main]]
-     page = "Typography"
-     identifier = "typography"
-     name = "Typography"
-     url = "/help/typography/"
-     weight = -130
-  [[menu.main]]
-     page = "Images"
-     identifier = "images"
-     name = "Images Alignment"
-     url = "/help/images/"
-     weight = -140
-  [[menu.main]]
-     page = "Help"
-     identifier = "help"
-     name = "Help"
-     url = "/help/"
-     weight = -150
- 
- 
-  #Footer menu
-
-  [[menu.footer]]
-      page = "Typography"
-      identifier = "typography"
-      name = "Typography"
-      url = "/help/typography/"
-      weight = -130
-  [[menu.footer]]
-      page = "Images"
-      identifier = "images"
-      name = "Images Alignment"
-      url = "/help/images/"
-      weight = -140
-  [[menu.footer]]
-      page = "Help"
-      identifier = "help"
-      name = "Help"
-      url = "/help/"
-      weight = -150
-```
+Then `hugo build` and voila the theme is updated

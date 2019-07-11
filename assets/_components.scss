@@ -1,0 +1,125 @@
+/*  _components */
+
+div.jumbotron-full {
+  height: 100%;
+  min-height: 100%;
+  border-radius: 0px;
+}
+
+button.selectable {
+  border-radius: 0px;
+}
+
+
+#reality-check {
+  $facebook-border-color: #d9d9d9;
+  $facebook-border-radius: 3px;
+
+  background-color: #e9ebee;
+  background-size: 850px 350px;
+
+  div.container-c3 {
+    min-height: 100px;
+    background-color: $white;
+    color: $black;
+    border: 1px solid $facebook-border-color;
+    border-radius: $facebook-border-radius;
+  }
+
+  div.profile-left {
+    width: 180px;
+    display: inline-block;
+    float: left;
+
+    div.avatar {
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      border: 5px solid $white;
+      overflow: hidden;
+
+      img {
+        max-height: 250px;
+        max-width: 300px;
+        position: relative;
+        left: -75px;
+      }
+    }
+
+    h1 {
+      font-size: 21px;
+    }
+
+    strong.username {
+      font-size: 18px;
+      color: $gray-600;
+    }
+  }
+
+  div.feed-right {
+    width: 850px;
+    display: inline-block;
+    float: left;
+
+    div.masthead {
+      width: 850px;
+      background-color: $white;
+
+      div.banner {
+        width: 850px;
+        height: 312px;
+        background-image: url('/images/blurred-faces-street.jpg');
+        background-size: 90%;
+        background-repeat: none;
+        text-align: center;
+
+        h1 {
+          position: relative;
+          top: 35%;
+          color: $white;
+          font-size: 48px;
+          text-shadow: 1px 1px 1px $gray-900;
+        }
+      }
+
+      div.actions {
+        height: 60px;
+        border-left: 1px solid #d9d9d9;
+        border-right: 2px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
+
+        border-radius-bottom-left: 3px;
+        border-radius-bottom-right: 3px;
+      }
+    }
+
+    div.feed-item,
+    div.stats-item {
+      background-color: $white;
+      color: #1c1e21;
+      border: 1px solid $facebook-border-color;
+      border-radius: $facebook-border-radius;
+    }
+
+  }
+
+  div.list-group {
+    button.list-group-item {
+      background: transparent;
+      padding: 10px 15px;
+
+      &:hover {
+        cursor: pointer;
+        color: $black;
+      }
+
+      &.active {
+        border: 1px solid $gray-300;
+        border-radius: 3px;
+        background-color: $white;
+        color: $black;
+      }
+    }
+  }
+
+}

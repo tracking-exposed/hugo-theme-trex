@@ -1,5 +1,5 @@
 {{ define "main" -}}
-<div class="jumbotron {{ .Site.Params.Subsite }} ">
+<div class="jumbotron jumbotron-home">
     <div class="container">
         <small>Our Vision</small>
         <h1 class="display-4 font-weight-bold">
@@ -10,80 +10,63 @@
 
 <div class="container">
     {{ if ne site.Params.Subsite "default" }}
-        {{ range .Site.Menus.featured }}
-        <div class="featured-box">
-            <a class="nav-link" href="{{ .URL }}">
-                {{ .Name }}
-            </a>
-        </div>
-        {{ end }}
-        <div class="content">
-            {{ .Content }}
-        </div>
-    {{ else }}
-    <div class="row">
-        <div class="col-6">
-            {{ .Content }}
-        </div>
-        <div class="col-6">
-            <h2>Our Initiatives</h2>
-            <p>Our methods and approach to exposing the tracking of the technology
-            giants is to host many different interrelated project, each
-            one under a dedicated (and when possible) self-explanatory sub-domain.</p>
-            <ul class="list-group mb-5">
-                {{ range .Site.Menus.initiatives }}
-                <li class="list-group-item">
-                    <a href="{{ .URL }}">{{ .Name }}</a>
-                </li>
+        <div class="row">
+            {{ range .Site.Menus.featured }}
+            <div class="featured-box col-sm">
+                <a class="nav-link" href="{{ .URL }}" {{ if .Pre }} style="background-image: url({{ .Pre }});" {{ end }}>
+                    {{ .Name }}
+                </a>
+                {{ if .Post }}
+                    <p class="text-center mt-3 mb-0"> {{ .Post }} </p>
                 {{ end }}
-            </ul>
+            </div>
+            {{ end }}
+        </div>
+        <div class="content" style="margin-top: -7rem;">
+            {{ .Content }}
+        </div>
 
-            <h2>Case Studies</h2>
-            <p>Building upon our tools above are specific case studies that
-            offer visualizations and specific insights into various ways
-            algorithmic tracking is being use to say, influence elections.</p>
-            <ul class="list-group mb-5">
-                {{ range .Site.Menus.studies }}
-                <li class="list-group-item">
-                    <a href="{{ .URL }}">{{ .Name }}</a>
-                </li>
-                {{ end }}
-            </ul>
+    {{ else }}
+
+        <div class="row">
+            <div class="col-12">
+                {{ .Content }}
+            </div>
         </div>
-    </div>
     {{ end }}
 </div>
+
+{{ if eq site.Params.Subsite "default" }}
+    <div class="container">
+        <h2>Recent News</h2>
+        <ul class="list-group list-group-flush list-unstyled">
+            {{ range first 6 (.Data.Pages) }}
+            <li>
+                <article>
+                    <h3 class="center">
+                        <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
+                    </h3>
+                    <time class="post-date" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>
+                        {{ .Date.Format "Mon, Jan 2, 2006" }}
+                    </time>
+                    <p>
+                        {{ .Summary }}
+                        {{ if .Truncated }}
+                        <span class="read-more-link">
+                            <a href="{{ .RelPermalink }}">Read More…</a>
+                        </span>
+                        {{ end }}
+                    </p>
+                </article>
+            </li>
+            {{- end }}
+        </ul>
+        <span class="clear"></span>
+    </div>
+{{ end }}
 
 <div class="container">
     {{- partial "get-browser-extension.html" . -}}
 </div>
 
-{{ if eq site.Params.Subsite "default" }}
-<div class="container">
-    <h2>Recent News</h2>
-    <ul class="list-group list-group-flush">
-        {{ range first 6 (.Data.Pages) }}
-        <li>
-            <article>
-                <h3 class="center">
-                    <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
-                </h3>
-                <time class="post-date" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>
-                    {{ .Date.Format "Mon, Jan 2, 2006" }}
-                </time>
-                <p>
-                    {{ .Summary }}
-                    {{ if .Truncated }}
-                    <span class="read-more-link">
-                        <a href="{{ .RelPermalink }}">Read More…</a>
-                    </span>
-                    {{ end }}
-                </p>
-            </article>
-        </li>
-        {{- end }}
-    </ul>
-    <span class="clear"></span>
-</div>
-{{ end }}
 {{- end }}

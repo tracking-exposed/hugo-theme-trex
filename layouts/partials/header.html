@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-{{ .Site.Params.Subsite }}">
+<header class="navbar navbar-expand-lg fixed-top navbar-top">
     <div class="container">
         <a class="navbar-brand" href="/">
             <img src="/images/header-logo-{{ .Site.Params.Subsite }}.svg">
@@ -12,33 +12,33 @@
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse pull-right" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
+
+        <nav class="collapse navbar-collapse pull-right" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto position-relative">
                 {{ $currentPage := .Page }}
                 {{ range .Site.Menus.main }}
-                {{ if .HasChildren }}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ .URL }}">
-                        {{ .Name }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="">
-                        {{ range .Children }}
-                        <a class="dropdown-item" href="{{ .URL }}">
+                    {{ if .HasChildren }}
+                    <li class="nav-item  position-static">
+                        <a class="nav-link dropdown-toggle" href="{{ .URL }}" id="{{ .Name }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ .Name }}
                         </a>
-                        {{ end }}
-                    </div>
-                </li>
-                {{ else }}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ .URL }}">
-                        {{ .Name }}
-                    </a>
-                </li>
-                {{ end }}
+                        <div class="dropdown-menu" aria-labelledby="{{ .Name }}">
+                            {{ range .Children }}
+                            <a class="dropdown-item" href="{{ .URL }}">
+                                {{ .Name }}
+                            </a>
+                            {{ end }}
+                        </div>
+                    </li>
+                    {{ else }}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ .URL }}">
+                            {{ .Name }}
+                        </a>
+                    </li>
+                    {{ end }}
                 {{ end }}
             </ul>
-        </div>
-        <hr>
+        </nav>
     </div>
-</nav>
+</header>
