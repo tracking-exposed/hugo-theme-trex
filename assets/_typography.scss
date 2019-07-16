@@ -209,7 +209,7 @@ figcaption, .footnotes li {
   word-break: keep-all !important;
 }
 
-/* special styles call by partial */
+/* special styles call by Shortcodes */
 .highlight {
   padding: 10px;
   background-color: $primary;
@@ -217,5 +217,12 @@ figcaption, .footnotes li {
 }
 .highlight.secondary {
   background-color: $secondary;
+  color: $black;
+}
+.red {
+  background-color: $red;
+}
+.yellow {
+  background-color: $yellow;
   color: $black;
 }

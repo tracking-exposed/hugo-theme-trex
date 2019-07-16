@@ -7053,13 +7053,20 @@ figcaption, .footnotes li {
 .no-break {
   word-break: keep-all !important; }
 
-/* special styles call by partial */
+/* special styles call by Shortcodes */
 .highlight {
   padding: 10px;
   background-color: #53c1b6;
   color: #fff; }
 
 .highlight.secondary {
+  background-color: #ffc107;
+  color: #1b1b1b; }
+
+.red {
+  background-color: #D9230F; }
+
+.yellow {
   background-color: #ffc107;
   color: #1b1b1b; }
 
