@@ -209,3 +209,13 @@ figcaption, .footnotes li {
   word-break: keep-all !important;
 }
 
+/* special styles call by partial */
+.highlight {
+  padding: 10px;
+  background-color: $primary;
+  color: $white;
+}
+.highlight.secondary {
+  background-color: $secondary;
+  color: $black;
+}
