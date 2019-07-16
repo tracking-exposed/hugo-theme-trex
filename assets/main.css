@@ -7053,6 +7053,16 @@ figcaption, .footnotes li {
 .no-break {
   word-break: keep-all !important; }
 
+/* special styles call by partial */
+.highlight {
+  padding: 10px;
+  background-color: #53c1b6;
+  color: #fff; }
+
+.highlight.secondary {
+  background-color: #ffc107;
+  color: #1b1b1b; }
+
 /* Tracking Exposed - Mixins */
 body {
   padding-top: 85px; }
