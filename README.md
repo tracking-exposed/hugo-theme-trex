@@ -89,6 +89,15 @@ framework.
 - `assets/main.scss` - main file which has global `body.subsite` class and other custom things
 
 
+## Browser extensions shortcode
+
+You can have links to different browser extension anywhere you may want via shortcode, just call the following in your `.md` file (i.e. into the _index.md):
+
+- **Youtube extension**: `{{< yt-extension >}}`
+- **FaceBook extension**: `{{< fb-extension >}}`
+
+
+
 ## Updating Theme
 
 As the theme is updated and developed in the future, for instance once a new
