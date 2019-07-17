@@ -11,8 +11,8 @@
     <meta property="og:description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ if eq $isHomePage false }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ .Permalink }}" />
-    <meta property="og:locale" content="en-US" />
-    <meta property="og:site_name" content="EU19 Tracking Exposed" />
+    <meta property="og:locale" content="utf-8" />
+    <meta property="og:site_name" content="{{ .Site.Params.openGraphSiteName }}" />
     <meta property="og:image" content="/images/trex-logo.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="200" />
