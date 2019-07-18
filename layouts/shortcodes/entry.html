@@ -1,0 +1,26 @@
+<div class="row">
+  {{ $kind := .Get "type" }}
+  {{ if eq $kind "left" }}
+    <div class="col-sm-6" style="vertical-align:middle;">
+      <h2 style="text-align:right;padding-top:1em;padding-bottom:1em;vertical-align:middle;">
+        {{ .Get "text"}}
+      </h2>
+    </div>
+    <div class="col-sm-6">
+        <figure>
+            <img width="100%" src={{ .Get "picture" }}>
+        </figure>
+    </div>
+  {{ else }}
+    <div class="col-sm-6">
+        <figure>
+            <img width="100%" src={{ .Get "picture" }}>
+        </figure>
+    </div>
+    <div class="col-sm-6">
+      <h2 style="text-align:left;padding-top:1em;padding-bottom:1em;vertical-align:middle;">
+        {{ .Get "text"}}
+      </h2>
+    </div>
+  {{ end }}
+</div>
