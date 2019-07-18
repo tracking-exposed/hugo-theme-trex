@@ -7056,18 +7056,18 @@ figcaption, .footnotes li {
 /* special styles call by Shortcodes */
 .highlight {
   padding: 10px;
-  background-color: #53c1b6;
-  color: #fff; }
+  color: #fff;
+  background-color: #53c1b6; }
 
 .highlight.secondary {
   background-color: #ffc107;
   color: #1b1b1b; }
 
 .red {
-  background-color: #D9230F; }
+  background-color: #D9230F !important; }
 
 .yellow {
-  background-color: #ffc107;
+  background-color: #ffc107 !important;
   color: #1b1b1b; }
 
 /* Tracking Exposed - Mixins */
@@ -7102,6 +7102,11 @@ body {
     background-size: contain; }
   body.facebook .btn-facebook {
     background-color: #3b5898;
+    color: #fff; }
+  body.facebook .highlight {
+    background-color: #3b5898; }
+  body.facebook .highlight.secondary {
+    background-color: #53c1b6 !important;
     color: #fff; }
   body.facebook a {
     color: #3b5898; }
@@ -7139,6 +7144,11 @@ body {
     background-size: contain; }
   body.youtube a {
     color: #D9230F; }
+  body.youtube .highlight {
+    background-color: #D9230F; }
+  body.youtube .highlight.secondary {
+    background-color: #3b5898 !important;
+    color: #fff; }
   body.youtube .navbar-top {
     background: #fff;
     color: #1b1b1b; }
@@ -7164,6 +7174,11 @@ body {
     border-color: #D9230F; }
   body.pornhub a {
     color: #F98E05; }
+  body.pornhub .highlight.secondary {
+    background-color: #3b5898 !important;
+    color: #fff; }
+  body.pornhub .highlight {
+    background-color: #F98E05; }
   body.pornhub footer {
     border-color: #F98E05; }
   body.pornhub .navbar-nav {

@@ -43,7 +43,13 @@ body {
             background-color: $fbook-blue;
             color: $white;
         }
-
+       .highlight {
+          background-color: $fbook-blue;
+        }
+        .highlight.secondary {
+          background-color: $primary !important;
+          color: $white;
+        }
         a {
             color: $fbook-blue;
         }
@@ -80,7 +86,13 @@ body {
         a {
             color: $ytube-red;
         }
-
+        .highlight {
+          background-color: $ytube-red;
+        }
+        .highlight.secondary {
+          background-color: $fbook-blue !important;
+          color: $white;
+        }
         .navbar-top {
             @include trex-navbar($white, $black, $red, $black);
         }
@@ -101,6 +113,13 @@ body {
     &.pornhub {
         a {
           color: $orange;
+        }
+        .highlight.secondary {
+          background-color: $fbook-blue !important;
+          color: $white;
+        }
+        .highlight {
+          background-color: $orange;
         }
         footer {
           border-color: $orange;

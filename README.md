@@ -89,12 +89,34 @@ framework.
 - `assets/main.scss` - main file which has global `body.subsite` class and other custom things
 
 
-## Browser extensions shortcode
+## Shortcode
 
+### Extension shortcodes
 You can have links to different browser extension anywhere you may want via shortcode, just call the following in your `.md` file (i.e. into the _index.md):
 
 - **Youtube extension**: `{{< yt-extension >}}`
 - **FaceBook extension**: `{{< fb-extension >}}`
+
+### Typography shortcodes
+
+#### Colored text block
+
+- {{< boxes text="Your text" >}} *Primary color as background*
+- {{< boxes color="secondary" text="Your text" >}} *Secondary color as background*
+- {{< boxes color="red" text="Your text" >}} *Red color as background*
+- {{< boxes color="yellow" text="Your text" >}} *Yellow color as background*
+
+#### Images
+**Images alignment**
+
+- {{< figure src="image-url" alt="" class="align-right">}} `class="align-right"` 
+- {{< figure src="image-url" alt="" class="align-left">}} `class="align-left"`
+- {{< figure src="image-url" alt="" class="align-center">}} `class="align-center"`
+
+**Images sizes**
+
+- {{< figure src="image-url" alt="" class="full" >}} `class="full"` *100% of the page*
+- {{< figure src="image-url" alt="" class="half" >}} `class="half"` *50% of the page*
 
 
 

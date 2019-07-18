@@ -212,17 +212,19 @@ figcaption, .footnotes li {
 /* special styles call by Shortcodes */
 .highlight {
   padding: 10px;
-  background-color: $primary;
   color: $white;
+  background-color: $primary;
+}
+.highlight.primary {
 }
 .highlight.secondary {
   background-color: $secondary;
   color: $black;
 }
 .red {
-  background-color: $red;
+  background-color: $red !important;
 }
 .yellow {
-  background-color: $yellow;
+  background-color: $yellow !important;
   color: $black;
 }
