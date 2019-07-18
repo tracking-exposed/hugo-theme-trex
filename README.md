@@ -75,6 +75,16 @@ The following are the three that are **required** for the theme to build.
 
 Extra menus can be added as needed such as in `tracking.exposed/config.toml`
 
+## Frontmatter parameters
+
+Into the Frontmatter of `.md` files, you can define this parameters:
+
+- title: "The page h1"
+- subtitle: "The page h2"
+- description: "The page's metadata description"
+- date: 2019-02-07T15:01:21+01:00
+- draft: false
+
 
 ## SASS Architecture
 
