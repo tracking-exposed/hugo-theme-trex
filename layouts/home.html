@@ -13,11 +13,16 @@
         <div class="row">
             {{ range .Site.Menus.featured }}
             <div class="featured-box col-sm">
-                <a class="nav-link" href="{{ .URL }}" {{ if .Pre }} style="background-image: url({{ .Pre }});" {{ end }}>
+                <a class="image" href="{{ .URL }}" {{ if .Pre }}
+                    style="background-image: url({{ .Pre }});" {{ end }}>
+                </a>
+                <a class="text" href="{{ .URL }}">
                     {{ .Name }}
                 </a>
                 {{ if .Post }}
-                    <p class="text-center mt-3 mb-0"> {{ .Post }} </p>
+                <p class="mb-0">
+                    {{ .Post }}
+                </p>
                 {{ end }}
             </div>
             {{ end }}
