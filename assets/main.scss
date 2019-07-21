@@ -166,7 +166,7 @@ div.jumbotron-home {
     min-height: 500px;
 
     h1 {
-        width: 65%;
+        width: 70%;
         font-weight: bold;
     }
 
@@ -178,7 +178,6 @@ div.jumbotron-home {
 
 /* Home - Featured Boxes */
 div.featured-box {
-    //width: 20rem;
     position: relative;
     top: -10rem;
     padding: 2rem;
@@ -187,15 +186,28 @@ div.featured-box {
     display: inline-block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    a {
+    a.image {
         display: block;
         text-indent: -99999px;
         background-color: #d9d9d9;
         width: 100%;
         text-align: center;
         height: 15rem;
+        margin-bottom: 1.5rem;
         background-position: center center;
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    a.text {
+        text-decoration: none;
+        font-size: 21px;
+        font-family: "Trex-Bold";
+        margin-bottom: 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
