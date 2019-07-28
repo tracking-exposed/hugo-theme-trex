@@ -3,13 +3,13 @@
 
 name = "trex"
 license = "AGPLv3"
-licenselink = "https://github.com/tracking-exposed/trex/blob/master/LICENSE"
+licenselink = "https://github.com/tracking-exposed/hugo-theme-trex/blob/master/LICENSE"
 description = ""
 homepage = "https://tracking.exposed"
 tags = []
 features = []
-min_version = "0.41"
+min_version = "0.55"
 
 [author]
-  name = "LC.D"
-  homepage = "https://cataldi.design/en/"
+  name = "Various Trackingg Exposed contributors"
+  homepage = "https://tracking.exposed/contributors"
