@@ -90,8 +90,8 @@ body {
           background-color: $ytube-red;
         }
         .highlight.secondary {
-          background-color: $fbook-blue !important;
-          color: $white;
+          background-color: whitesmoke !important;
+          color: #606060;
         }
         .navbar-top {
             @include trex-navbar($white, $black, $red, $black);
