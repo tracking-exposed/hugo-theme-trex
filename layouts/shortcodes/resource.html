@@ -26,16 +26,16 @@
   </div>
   <div class="col-2">
     {{ $resources := .Get "resources" }}
-    {{ if $resources }}
-        <a href="{{ $resources }}"> TODO icon download</a>
-    {{ end }}
     <small><smaller>
-        link download material ? authors list ? information related TODO
+        {{ if $resources }}
+            {{ $resources }}
+        {{ end }}
     </smaller></small>
     <!-- note: why smaller + small do not make it tiny ? -->
+
     {{ $authors := .Get "authors" }}
     {{ if $authors }}
-        <small>{{ $authors }}</small>    
+        <small style="font-style:italic">{{ $authors }}</small>
     {{ end }}
   </div>
 
