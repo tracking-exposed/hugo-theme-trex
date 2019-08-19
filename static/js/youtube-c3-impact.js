@@ -3,7 +3,7 @@ $(document).ready(function() {
     var graphNodes = $('.c3graph');
 
     const clist = [{
-        bindto: '#supporters-graph',
+        bindto: '#newcomers-graph',
         data : {
             url: '/api/v2/statistics/supporters/day/15',
             mimeType: 'json',
