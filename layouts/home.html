@@ -9,36 +9,26 @@
 </div>
 
 <div class="container">
-    {{ if ne site.Params.Subsite "default" }}
-        <div class="row">
-            {{ range .Site.Menus.featured }}
-            <div class="featured-box col-sm">
-                <a class="image" href="{{ .URL }}" {{ if .Pre }}
-                    style="background-image: url({{ .Pre }});" {{ end }}>
-                </a>
-                <a class="text" href="{{ .URL }}">
-                    {{ .Name }}
-                </a>
-                {{ if .Post }}
-                <p class="mb-0">
-                    {{ .Post }}
-                </p>
-                {{ end }}
-            </div>
+    <div class="row">
+        {{ range .Site.Menus.featured }}
+        <div class="featured-box col-sm">
+            <a class="image" href="{{ .URL }}" {{ if .Pre }}
+                style="background-image: url({{ .Pre }});" {{ end }}>
+            </a>
+            <a class="text" href="{{ .URL }}">
+                {{ .Name }}
+            </a>
+            {{ if .Post }}
+            <p class="mb-0">
+                {{ .Post }}
+            </p>
             {{ end }}
         </div>
-        <div class="content" style="margin-top: -7rem;">
-            {{ .Content }}
-        </div>
-
-    {{ else }}
-
-        <div class="row">
-            <div class="col-12">
-                {{ .Content }}
-            </div>
-        </div>
-    {{ end }}
+        {{ end }}
+    </div>
+    <div class="content" style="margin-top: -7rem;">
+        {{ .Content }}
+    </div>
 </div>
 
 {{ if eq site.Params.Subsite "default" }}
