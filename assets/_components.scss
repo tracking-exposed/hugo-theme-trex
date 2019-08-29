@@ -36,6 +36,11 @@ button.selectable {
       height: 175px;
       border-radius: 50%;
       border: 5px solid $white;
+      background-color: $white;
+      background-image: url('/images/fb-reality-check.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 10% center;
       overflow: hidden;
 
       img {
@@ -67,18 +72,11 @@ button.selectable {
 
       div.banner {
         width: 850px;
-        height: 312px;
-        background-image: url('/images/blurred-faces-street.jpg');
-        background-size: 90%;
-        background-repeat: none;
-        text-align: center;
+        height: 125px;
 
         h1 {
-          position: relative;
-          top: 35%;
-          color: $white;
+          color: $gray-900;
           font-size: 48px;
-          text-shadow: 1px 1px 1px $gray-900;
         }
       }
 
