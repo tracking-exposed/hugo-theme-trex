@@ -1,0 +1,42 @@
+<div class="row" style="margin:0.5em">
+  {{ $title:= .Get "title" }}
+  {{ $when := .Get "when" }}
+  {{ $description := .Get "description" }}
+  {{ $href := .Get "href" }}
+  {{ $kind := .Get "kind" }}
+
+  <div class="col-1">
+      {{ if eq $kind "paper" }}
+          <small class="kindOfContent">Publication</small>
+      {{ else if eq $kind "link" }}
+          <small class="kindOfContent">link</small>
+      {{ else if eq $kind "event" }}
+          <small class="kindOfContent">event</small>
+      {{ else if eq $kind "video" }}
+          <small class="kindOfContent">video</small>
+      {{ end }}
+      <p>{{ $when }}
+  </div>
+
+  <div class="col-9" style="background:white">
+      <a href="{{ $href }}" target=_blank>
+          <h5>{{ $title }}</h5>
+          <small>{{ $description }}</small>
+      </a>
+  </div>
+  <div class="col-2">
+    {{ $resources := .Get "resources" }}
+    <small><smaller>
+        {{ if $resources }}
+            {{ $resources }}
+        {{ end }}
+    </smaller></small>
+    <!-- note: why smaller + small do not make it tiny ? -->
+
+    {{ $authors := .Get "authors" }}
+    {{ if $authors }}
+        <small style="font-style:italic">{{ $authors }}</small>
+    {{ end }}
+  </div>
+
+</div>

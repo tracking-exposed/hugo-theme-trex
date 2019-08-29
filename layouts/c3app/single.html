@@ -1,0 +1,38 @@
+{{define "main" -}}
+
+<header class="jumbotron">
+    <div class="container">
+        <div class="text-center">
+            <h1>{{ .Title }}</h1>
+            {{ if (isset .Params "subtitle") }}<smaller class="top light-font">{{ .Params.subtitle }}</smaller>{{ end }}
+            <time class="post-date d-none" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    {{ .Content }}
+    <span class="clearfix"></span>
+    {{ if .Params.include_partial }}
+        {{ partial .Params.include_partial . }}
+    {{ end }}
+    <span class="clearfix"></span>
+</div>
+
+<script src="/js/moment-with-locales.min.js"></script>
+<script src="/js/d3.min.js"></script>
+<script src="/js/c3.min.js"></script>
+<script src="/js/global.js"></script>
+
+<!-- include the site-script which hook at $(document).ready() to fire c3 -->
+{{ if eq site.Params.Subsite "youtube" }}
+    <script src="/js/youtube-c3-impact.js"></script>
+{{ else if eq site.Params.Subsite "facebook" }}
+    <script src="/js/facebook-c3-impact.js"></script>
+{{ else if eq site.Params.Subsite "pornhub" }}
+    <script src="/js/pornhub-c3-impact.js"></script>
+{{ else }}
+    <h1>UNSUPPORTED CONDITION IN c3app/single.html</h1>
+{{ end }}
+
+{{- end }}
