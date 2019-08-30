@@ -1,0 +1,42 @@
+<div class="row">
+  {{ $kind := .Get "type" }}
+  {{ $link := .Get "link" }}
+
+  {{ if eq $kind "left" }}
+    <div class="col-sm-5" style="vertical-align:middle;">
+      <h2 style="text-align:right;padding-bottom:1em;vertical-align:middle;">
+        {{ .Get "title"}}
+      </h2>
+      <p> {{ .Get "content" }} </p>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6 text-center">
+      <figure>
+        <img width="100%" src={{ .Get "picture" }}>
+      </figure>
+      {{ if $link }}
+        <small class="text-center">
+          Via: <a href='{{ .Get "link" }}' target=_blank>{{ .Get "description" }}</a> {{ .Get "credit" }}
+        </small>
+      {{ end }}
+    </div>
+  {{ else }}
+    <div class="col-sm-6 text-center">
+      <figure>
+        <img width="100%" src={{ .Get "picture" }}>
+      </figure>
+      {{ if $link }}
+        <small>
+          Via: <a href='{{ .Get "link" }}' target=_blank>{{ .Get "description" }}</a> {{ .Get "credit" }}
+        </small>
+      {{end }}
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <h2 style="text-align:left;padding-bottom:1em;vertical-align:middle;">
+        {{ .Get "title"}}
+      </h2>
+      <p> {{ .Get "content" }} </p>
+    </div>
+  {{ end }}
+</div>
