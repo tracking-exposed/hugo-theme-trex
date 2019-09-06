@@ -8,6 +8,7 @@
   @include gradient-y-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));
   filter: none;
   border: 1px solid darken($color, 6.5%);
+  text-decoration: none;
 }
 
 // Navbar ======================================================================
