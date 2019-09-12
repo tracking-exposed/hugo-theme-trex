@@ -28,7 +28,6 @@ button.selectable {
   }
 
   div.masthead {
-    width: 100%;
     background-color: $white;
     border: 1px solid #d9d9d9;
 
@@ -70,7 +69,6 @@ button.selectable {
     }
   }
 
-  div.graphs-feed {
 
     button.daily-nav {
         width: 100%;
@@ -113,6 +111,10 @@ button.selectable {
 
     }
 
+    div.daily-topic-count {
+        font-size: 36px;
+    }
+
     div.feed-item,
     div.stats-item {
       background-color: $white;
@@ -120,8 +122,6 @@ button.selectable {
       border: 1px solid $facebook-border-color;
       border-radius: $facebook-border-radius;
     }
-
-  }
 
   div.list-group {
     button.list-group-item {
