@@ -1,9 +1,25 @@
-<div class="row" style="margin:0.5em">
+{{ $nature := .Get "nature" }}
+{{ if ne $nature "external" }}
+  {{ $nature = "internal" }}
+{{ end }}
+
+<div class="row {{ $nature }}" style="margin:0.5em">
   {{ $title:= .Get "title" }}
   {{ $when := .Get "when" }}
   {{ $description := .Get "description" }}
   {{ $href := .Get "href" }}
   {{ $kind := .Get "kind" }}
+  {{ $author := .Get "author" }}
+  {{ $authorLink := .Get "authorLink" }}
+
+  {{ if eq $nature "external" }}
+  <div class="metainfo external">
+    <div class="col-4">Write about us, by <a href="{{ $authorLink }}">{{ $author }}</a></div>
+  {{ else }}
+  <div class="metainfo">
+    <div class="col-4">Opinion piece ({{ $author }})</div>
+  {{ end }}
+
 
   <div class="col-1">
       {{ if eq $kind "paper" }}
@@ -18,12 +34,6 @@
       <p>{{ $when }}
   </div>
 
-  <div class="col-9" style="background:white">
-      <a href="{{ $href }}" target=_blank>
-          <h5>{{ $title }}</h5>
-          <small>{{ $description }}</small>
-      </a>
-  </div>
   <div class="col-2">
     {{ $resources := .Get "resources" }}
     <small><smaller>
@@ -38,5 +48,14 @@
         <small style="font-style:italic">{{ $authors }}</small>
     {{ end }}
   </div>
+
+  <div class="col-12" style="background:white">
+      <a href="{{ $href }}" target=_blank>
+          <h5>{{ $title }}</h5>
+          <small>{{ $description }}</small>
+      </a>
+  </div>
+  
+  </div> <!-- metainfo -->
 
 </div>

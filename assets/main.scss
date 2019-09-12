@@ -303,4 +303,13 @@ ul.list li {
   text-indent: -99999px;
 }
 
+.metainfo {
+  text-size: 0.7em;
+  margin: 3px;
+}
+.external {
+  background-color: darkgrey;
+  color: white;
+}
+
 @import "components";
