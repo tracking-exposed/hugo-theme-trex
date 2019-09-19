@@ -88,10 +88,12 @@ body {
         }
         .highlight {
           background-color: $ytube-red;
+          color: $white;
+          font-family: $medium;
         }
         .highlight.secondary {
           background-color: whitesmoke !important;
-          color: #606060;
+          color: $black;
         }
         .navbar-top {
             @include trex-navbar($white, $black, $red, $black);

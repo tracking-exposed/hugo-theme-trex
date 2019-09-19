@@ -65,7 +65,7 @@ p, .paragraph {
   line-height: 160%;
   display: block;
   font-family: $regular;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 small, .small {
   font-size: 80%;
@@ -216,6 +216,8 @@ figcaption, .footnotes li {
   background-color: $primary;
 }
 .highlight.primary {
+  background-color: $primary;
+  color: $black;
 }
 .highlight.secondary {
   background-color: $secondary;
@@ -232,4 +234,28 @@ figcaption, .footnotes li {
 /* special style used in templates */
 .pageTitle {
   margin-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+## Short code style
+--------------------------------------------------------------*/
+.entry h3 {
+  font-size: 20px;
+  font-family: $medium;
+}
+.entry p {
+  width: 100%;
+  clear: both;
+  text-align: center;
+  font-family: $medium;
+}
+@media screen and (min-width: 571px)
+{
+  .entry h3 {
+    margin-top: 0 !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }

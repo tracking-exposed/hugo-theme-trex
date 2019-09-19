@@ -132,3 +132,7 @@ label {
 // Progress bars ===============================================================
 
 // Containers ==================================================================
+.row {
+  margin: 0;
+}
+.clear{ clear:both; height:0; font-size:0; line-height:0; display: block;}

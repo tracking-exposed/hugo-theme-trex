@@ -1,10 +1,11 @@
-<div class="row">
+<div class="row entry">
+  <p class="mb-2">{{ .Get "title" }}</p>
   {{ $kind := .Get "type" }}
   {{ if eq $kind "left" }}
-    <div class="col-sm-4" style="vertical-align:middle;">
-      <h2 style="text-align:right;padding-top:1em;padding-bottom:1em;vertical-align:middle;">
+    <div class="col-sm-4 position-relative">
+      <h3 class="mt-4 mb-4">
         {{ .Get "text"}}
-      </h2>
+      </h3>
     </div>
     <div class="col-sm-8">
       <figure>
@@ -17,10 +18,14 @@
         <img width="100%" src={{ .Get "picture" }}>
       </figure>
     </div>
-    <div class="col-sm-4">
-      <h2 style="text-align:left;padding-top:1em;padding-bottom:1em;vertical-align:middle;">
+    <div class="col-sm-4 position-relative">
+      <h3 class="mt-4 mb-4">
         {{ .Get "text"}}
-      </h2>
+      </h3>
     </div>
   {{ end }}
 </div>
+<div class="row col-sm-8 mb-4 text-center {{ if eq $kind "left" }}float-right{{ end }}">
+  <img width="100%" src="{{ .Get "legend-image-url" }}" />
+</div>
+<span class="clear"></span>
