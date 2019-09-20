@@ -19,7 +19,7 @@ button.selectable {
   background-color: #e9ebee;
   background-size: 850px 350px;
 
-  div.container-c3 {
+  div.container-fb {
     min-height: 100px;
     background-color: $white;
     color: $black;
@@ -28,12 +28,15 @@ button.selectable {
   }
 
   div.masthead {
+    padding: 0;
+    margin: 0;
+    border-radius: $facebook-border-radius;
     background-color: $white;
-    border: 1px solid #d9d9d9;
+    border: 1px solid $facebook-border-color;
 
     div.avatar {
-      width: 150px;
-      height: 150px;
+      width: 115px;
+      height: 115px;
       display: inline-block;
       background-color: $white;
       background-image: url('/images/fb-reality-check.png');
@@ -47,69 +50,58 @@ button.selectable {
       display: inline-block;
       color: $gray-900;
       font-size: 48px;
-    }
-    
-    div.actions {
-      height: 60px;
-      border-radius-bottom-left: 3px;
-      border-radius-bottom-right: 3px;
-    }
+      line-height: 48px;
+      margin-bottom: .5rem;
+    }  
   }
 
-  div.profile-filters {
-    display: inline-block;
-
+  div.profile {
     h1 {
-      font-size: 21px;
-    }
+      text-transform: capitalize; 
 
-    strong.username {
-      font-size: 18px;
-      color: $gray-600;
+      &:before {
+        display: block;
+        width: 60%;
+        background: $gray-300;
+      }
     }
   }
 
+  ul.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    background: $white;
+  }
 
-    button.daily-nav {
-        width: 100%;
-        height: 100%;
-        border: 0px;
-        border-radius: 2px;
-        cursor: pointer;
-        background: $gray-100;
-        color: $gray-600;
+  div.tab-content {
+    background: $white;
+    border: 1px solid $facebook-border-color;
+    border-radius-bottom-right: $facebook-border-radius;
+  }
 
-        &:hover {
-            background: $gray-200;
-            color: $gray-500;
-        }
+  div.graph-day {
+
+    &.graph-day-border {
+        border-left: 1px solid $facebook-border-color;
     }
 
-    div.graph-day {
-
-        &.graph-day-border {
-            border-left: 1px solid $facebook-border-color;
-        }
-
-        span.seconds {
-            font-size: 48px;
-            line-height: 48px;
-        }
-
-        span.posts {
-            font-size: 30px;
-            line-height: 30px;
-        }
-
-        div.daily-pie {
-            max-height: 150px;
-        }
-
-        .c3-chart-arc path {
-            stroke: $facebook-border-color;
-        }
-
+    span.seconds {
+        font-size: 48px;
+        line-height: 48px;
     }
+
+    span.posts {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    div.daily-pie {
+        max-height: 150px;
+    }
+
+    .c3-chart-arc path {
+        stroke: $facebook-border-color;
+    }
+
+  }
 
     div.daily-topic-count {
         font-size: 36px;
@@ -123,23 +115,19 @@ button.selectable {
       border-radius: $facebook-border-radius;
     }
 
-  div.list-group {
-    button.list-group-item {
-      background: transparent;
-      padding: 10px 15px;
+  span.topic-count {
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: ($border-radius * 3);
+    text-align: center;
 
-      &:hover {
-        cursor: pointer;
-        color: $black;
-      }
-
-      &.active {
-        border: 1px solid $gray-300;
-        border-radius: 3px;
-        background-color: $white;
-        color: $black;
-      }
-    }
+    &.num-1 { background-color: $gray-200; }
+    &.num-2 { background-color: lighten($yellow, 25%); }
+    &.num-3 { background-color: $yellow; }
+    &.num-4 { background-color: $orange; }
+    &.num-5 { background-color: $red; color: $white; }
+    &.num-6 { background-color: $red; color: $white; }
+    &.num-7 { background-color: $red; color: $white; }
   }
 
 }
