@@ -70,6 +70,14 @@ body {
           background-color: $fbook-blue;
         }
 
+        .nav-pills {
+            .nav-link {
+                &.active {
+                    background-color: $fbook-blue;
+                }
+            }
+        }
+
         footer {
           border-color: $fbook-blue;
         }
@@ -301,6 +309,17 @@ ul.list li {
   max-width: 320px;
   background: transparent url($icon-notfound) no-repeat;
   text-indent: -99999px;
+}
+
+.icon-info-circle {
+  display: inline-block;
+  width: 14px; 
+  height: 14px;
+  background-size: 14px;
+  background-image: url($icon-info-circle);
+  background-repeat: no-repeat;
+  opacity: 25%;
+  filter: alpha(opacity=25);
 }
 
 @import "components";
