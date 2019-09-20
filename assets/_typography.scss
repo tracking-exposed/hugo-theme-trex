@@ -240,19 +240,20 @@ figcaption, .footnotes li {
 /*--------------------------------------------------------------
 ## Short code style
 --------------------------------------------------------------*/
-.entry h3 {
+.entry p {
   font-size: 20px;
   font-family: $medium;
 }
-.entry p {
+.entry h3 {
   width: 100%;
   clear: both;
   text-align: center;
   font-family: $medium;
+  font-size: 20px;
 }
 @media screen and (min-width: 571px)
 {
-  .entry h3 {
+  .entry p {
     margin-top: 0 !important;
     position: absolute;
     top: 50%;

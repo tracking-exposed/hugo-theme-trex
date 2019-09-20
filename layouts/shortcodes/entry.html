@@ -1,11 +1,11 @@
 <div class="row entry">
-  <p class="mb-2">{{ .Get "title" }}</p>
+  <h3 class="mb-2">{{ .Get "title" }}</h3>
   {{ $kind := .Get "type" }}
   {{ if eq $kind "left" }}
     <div class="col-sm-4 position-relative">
-      <h3 class="mt-4 mb-4">
+      <p class="mt-4 mb-4">
         {{ .Get "text"}}
-      </h3>
+      </p>
     </div>
     <div class="col-sm-8">
       <figure>
@@ -19,9 +19,9 @@
       </figure>
     </div>
     <div class="col-sm-4 position-relative">
-      <h3 class="mt-4 mb-4">
+      <p class="mt-4 mb-4">
         {{ .Get "text"}}
-      </h3>
+      </p>
     </div>
   {{ end }}
 </div>
