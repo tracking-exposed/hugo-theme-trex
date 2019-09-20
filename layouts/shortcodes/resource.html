@@ -27,8 +27,8 @@
             {{ else }}
             <small>Opinion piece by <b>{{ $author }}</b></small>
             {{ end }}
-            {{ if $when }}<small>on: <b>{{ $when }}</b></small>{{ end }}
         {{ end }}
+        {{ if $when }}<small>on <b>{{ $when }}</b></small>{{ end }}
     </div>
     <div class="col-12">
         <div class="{{ if $kind }}kind {{ $kind }}{{ end }}">
