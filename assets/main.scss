@@ -70,6 +70,14 @@ body {
           background-color: $fbook-blue;
         }
 
+        .nav-pills {
+            .nav-link {
+                &.active {
+                    background-color: $fbook-blue;
+                }
+            }
+        }
+
         footer {
           border-color: $fbook-blue;
         }
@@ -304,5 +312,53 @@ ul.list li {
   background: transparent url($icon-notfound) no-repeat;
   text-indent: -99999px;
 }
+
+.icon-info-circle {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-size: 14px;
+  background-image: url($icon-info-circle);
+  background-repeat: no-repeat;
+  opacity: 25%;
+  filter: alpha(opacity=25);
+}
+
+.resource {
+  background-color: $gray-100;
+  margin: 30px 0;
+  padding: 20px 10px;
+  border: solid 1px $gray-200;
+}
+.resource.external {
+  background-color: $gray-200;
+}
+
+.resource .kind {
+  padding-left: 40px;
+}
+.resource .kind.paper,
+.resource .kind.publication,
+.resource .kind.article {
+  background: transparent url($icon-publication) no-repeat;
+}
+.resource .kind.event {
+  background: transparent url($icon-event) no-repeat;
+}
+.resource .kind.link {
+  background: transparent url($icon-link) no-repeat;
+}
+.resource .kind.video {
+  background: transparent url($icon-video) no-repeat;
+}
+
+//.metainfo {
+//  text-size: 0.7em;
+//  margin: 3px;
+//}
+//.external {
+//  background-color: darkgrey;
+//  color: white;
+//}
 
 @import "components";

@@ -1,42 +1,51 @@
-<div class="row" style="margin:0.5em">
-  {{ $title:= .Get "title" }}
-  {{ $when := .Get "when" }}
-  {{ $description := .Get "description" }}
-  {{ $href := .Get "href" }}
-  {{ $kind := .Get "kind" }}
+{{ $nature := .Get "nature" }}
+{{ $title:= .Get "title" }}
+{{ $when := .Get "when" }}
+{{ $description := .Get "description" }}
+{{ $href := .Get "href" }}
+{{ $kind := .Get "kind" }}
+{{ $author := .Get "author" }}
+{{ $authors := .Get "authors" }}
+{{ $authorLink := .Get "authorLink" }}
+{{ $resources := .Get "resources" }}
+{{ $language := .Get "language" }}
 
-  <div class="col-1">
-      {{ if eq $kind "paper" }}
-          <small class="kindOfContent">Publication</small>
-      {{ else if eq $kind "link" }}
-          <small class="kindOfContent">link</small>
-      {{ else if eq $kind "event" }}
-          <small class="kindOfContent">event</small>
-      {{ else if eq $kind "video" }}
-          <small class="kindOfContent">video</small>
-      {{ end }}
-      <p>{{ $when }}
-  </div>
-
-  <div class="col-9" style="background:white">
-      <a href="{{ $href }}" target=_blank>
-          <h5>{{ $title }}</h5>
-          <small>{{ $description }}</small>
-      </a>
-  </div>
-  <div class="col-2">
-    {{ $resources := .Get "resources" }}
-    <small><smaller>
-        {{ if $resources }}
-            {{ $resources }}
+<div class="row resource rounded {{ if eq $nature "external" }}external{{ end }}">
+    <div class="col-12 border-bottom pb-3">
+        <span class="kindOfContent mr-2">
+            <small class="btn btn-info btn-sm">
+                {{ if or (eq $kind "paper") (eq $kind "article") }} Publication
+                {{ else if eq $kind "link" }} Link
+                {{ else if eq $kind "event" }} Event
+                {{ else if eq $kind "video" }} Video {{ end }}
+                {{ if $language}}({{ $language }}){{ end }}
+            </small>
+        </span>
+        {{ if $author }}
+            {{ if eq $nature "external" }}
+            <small>author: <a href="{{ $authorLink }}" target="_blank"><b>{{ $author }}</b></a></small>
+            {{ else }}
+            <small>opinion piece by <b>{{ $author }}</b></small>
+            {{ end }}
         {{ end }}
-    </smaller></small>
-    <!-- note: why smaller + small do not make it tiny ? -->
-
-    {{ $authors := .Get "authors" }}
-    {{ if $authors }}
-        <small style="font-style:italic">{{ $authors }}</small>
-    {{ end }}
-  </div>
-
+        {{ if $when }}<small>in <b>{{ $when }}</b></small>{{ end }}
+    </div>
+    <div class="col-12">
+        <div class="{{ if $kind }}kind {{ $kind }}{{ end }}">
+            <h3 class="mb-0 mt-3">
+                <a href="{{ $href }}" target=_blank>{{ $title }}</a>
+            </h3>
+            <p class="mt-1">
+                {{ $description }}<br />
+                {{ if $authors }}
+                    <small>Authors: <i>{{ $authors }}</i></small>
+                {{ end }}
+            </p>
+            {{ if $resources }}
+            <p class="mt-2">
+                <small><b>Resource:</b> {{ $resources }}</small>
+            </p>
+            {{ end }}
+        </div>
+    </div>
 </div>
