@@ -1,0 +1,21 @@
+{{ $desc := .Get "desc" }}
+{{ $href := .Get "href" }}
+{{ $suffix := .Get "suffix" }}
+{{ $bgcolor := .Get "bgcolor" }}
+
+<div class="row resource rounded">
+    <div class="col-8 border-bottom pb-3">
+        <h3 class="mb-0 mt-3">
+            <a href="{{ $href }}">{{ $href }}</a>
+        </h3>
+    </div>
+    <div class="col-4 border-bottom pb-3" style="background-color:{{ $bgcolor }};padding-top:1em;">
+        <img width="100%" src="/images/header-logo-{{$suffix}}">
+    </div>
+    <div class="col-12">
+        <span class="kindOfContent mr-2">
+            {{ $desc }}
+        </span>
+    </div>
+</div>
+
