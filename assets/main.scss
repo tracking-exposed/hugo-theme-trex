@@ -125,8 +125,8 @@ body {
           color: $orange;
         }
         .highlight.secondary {
-          background-color: $fbook-blue !important;
-          color: $white;
+          background-color: $black !important;
+          color: $orange;
         }
         .highlight {
           background-color: $orange;
@@ -137,9 +137,13 @@ body {
         .navbar-nav {
           background-color: $black;
         }
+        .jumbotron-home {
+          background-color: $black;
+          color: $orange;
+        }
 
       .navbar-top {
-        @include trex-navbar($white, $black, $orange, $black);
+        @include trex-navbar($black, $black, $orange, $black);
       }
     }
 
