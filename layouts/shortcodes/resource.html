@@ -23,12 +23,12 @@
         </span>
         {{ if $author }}
             {{ if eq $nature "external" }}
-            <small>Write about us, by <a href="{{ $authorLink }}" target="_blank"><b>{{ $author }}</b></a></small>
+            <small>author: <a href="{{ $authorLink }}" target="_blank"><b>{{ $author }}</b></a></small>
             {{ else }}
-            <small>Opinion piece by <b>{{ $author }}</b></small>
+            <small>opinion piece by <b>{{ $author }}</b></small>
             {{ end }}
         {{ end }}
-        {{ if $when }}<small>on <b>{{ $when }}</b></small>{{ end }}
+        {{ if $when }}<small>in <b>{{ $when }}</b></small>{{ end }}
     </div>
     <div class="col-12">
         <div class="{{ if $kind }}kind {{ $kind }}{{ end }}">
