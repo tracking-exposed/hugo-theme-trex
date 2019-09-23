@@ -329,17 +329,35 @@ ul.list li {
 }
 
 .resource {
-  background-color: $gray-100;
+  background-color: $white;
   margin: 30px 0;
-  padding: 20px 10px;
   border: solid 1px $gray-200;
 }
-.resource.external {
-  background-color: $gray-200;
+.resource-header {
+  padding: 15px 20px 10px 20px;
+  background-color: $gray-100;
+  border-bottom: none;
+}
+.resource-body {
+  padding: 0 20px 10px 20px;
+  word-break: break-all;
+}
+.resource-header .badge {
+  font-size: 13px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
+.resource-header a {
+  color: $black !important;
+  text-decoration: underline;
+}
 .resource .kind {
-  padding-left: 40px;
+  display: inline-block;
+  float: left;
+  height: 27px;
+  width: 35px;
+
 }
 .resource .kind.paper,
 .resource .kind.publication,
@@ -356,13 +374,5 @@ ul.list li {
   background: transparent url($icon-video) no-repeat;
 }
 
-//.metainfo {
-//  text-size: 0.7em;
-//  margin: 3px;
-//}
-//.external {
-//  background-color: darkgrey;
-//  color: white;
-//}
 
 @import "components";

@@ -10,42 +10,49 @@
 {{ $resources := .Get "resources" }}
 {{ $language := .Get "language" }}
 
-<div class="row resource rounded {{ if eq $nature "external" }}external{{ end }}">
-    <div class="col-12 border-bottom pb-3">
-        <span class="kindOfContent mr-2">
-            <small class="btn btn-info btn-sm">
-                {{ if or (eq $kind "paper") (eq $kind "article") }} Publication
-                {{ else if eq $kind "link" }} Link
-                {{ else if eq $kind "event" }} Event
-                {{ else if eq $kind "video" }} Video {{ end }}
-                {{ if $language}}({{ $language }}){{ end }}
-            </small>
-        </span>
-        {{ if $author }}
-            {{ if eq $nature "external" }}
-            <small>author: <a href="{{ $authorLink }}" target="_blank"><b>{{ $author }}</b></a></small>
-            {{ else }}
-            <small>opinion piece by <b>{{ $author }}</b></small>
-            {{ end }}
-        {{ end }}
-        {{ if $when }}<small>in <b>{{ $when }}</b></small>{{ end }}
-    </div>
-    <div class="col-12">
-        <div class="{{ if $kind }}kind {{ $kind }}{{ end }}">
-            <h3 class="mb-0 mt-3">
-                <a href="{{ $href }}" target=_blank>{{ $title }}</a>
-            </h3>
-            <p class="mt-1">
-                {{ $description }}<br />
-                {{ if $authors }}
-                    <small>Authors: <i>{{ $authors }}</i></small>
+<div class="row resource rounded">
+    <header class="resource-header col-12 border-bottom">
+        <div class="row">
+            <p class="mb-0">
+                {{ if $kind }}
+                    <small><span class="badge badge-info text-capitalize">{{ $kind }}</span></small>
                 {{ end }}
+                {{ if eq $nature "external" }}
+                    <span class="badge badge-warning"><i>Extrenal resource</i></span>
+                {{ end }}
+                {{ if $author }}
+                    {{ if eq $nature "external" }}
+                    <small>Author: <span class="badge badge-light"><a href="{{ $authorLink }}" target="_blank">{{ $author }}</a></span></small>
+                    {{ else }}
+                    <small>Opinion piece by: <span class="badge badge-light" >{{ $author }}</span></small>
+                    {{ end }}
+                {{ end }}
+                {{ if $when }}<small>Published in: <span class="badge badge-light">{{ $when }}</span></small>{{ end }}
+                {{ if $language}}<small>Language: <span class="badge badge-light">{{ $language }}</span></small>{{ end }}
             </p>
-            {{ if $resources }}
-            <p class="mt-2">
-                <small><b>Resource:</b> {{ $resources }}</small>
-            </p>
-            {{ end }}
         </div>
+    </header>
+    <div class="resource-body col-12">
+        <h3 class="mb-3 mt-3">
+            <a href="{{ $href }}" target=_blank>
+                {{ if $kind }}<span class="kind {{ $kind }}"></span>{{ end }}
+                {{ $title }}
+            </a>
+        </h3>
+        {{ if $description }}
+            <p class="mb-1">
+                {{ $description }}
+            </p>
+        {{ end }}
+        {{ if $authors }}
+            <p class="mb-1">
+                <small>Authors: <i>{{ $authors }}</i></small>
+            </p>
+        {{ end }}
+        {{ if $resources }}
+            <p class="mb-1">
+                <small><b>Resource:</b> <a href="{{ $resources }}" target="_blank">{{ $resources }}</a></small>
+            </p>
+        {{ end }}
     </div>
 </div>
