@@ -7,8 +7,12 @@
 {{ $author := .Get "author" }}
 {{ $authors := .Get "authors" }}
 {{ $authorLink := .Get "authorLink" }}
-{{ $resources := .Get "resources" }}
 {{ $language := .Get "language" }}
+
+{{ $resource1 := .Get "resource1" }}
+{{ $resource1href := .Get "resource1href" }}
+{{ $resource2 := .Get "resource2" }}
+{{ $resource2href := .Get "resource2href" }}
 
 <div class="row resource rounded">
     <header class="resource-header col-12 border-bottom">
@@ -49,9 +53,14 @@
                 <small>Authors: <i>{{ $authors }}</i></small>
             </p>
         {{ end }}
-        {{ if $resources }}
+        {{ if $resource1 }}
             <p class="mb-1">
-                <small><b>Resource:</b> <a href="{{ $resources }}" target="_blank">{{ $resources }}</a></small>
+                <small>
+                  <b>See also:</b> <a href="{{ $resource1href }}" target="_blank">{{ $resource1 }}</a>
+                  {{ if $resource2 }} — 
+                    <a href="{{ $resource2href }}" target="_blank">{{ $resource2 }}</a>
+                  {{ end }}
+                </small>
             </p>
         {{ end }}
     </div>
