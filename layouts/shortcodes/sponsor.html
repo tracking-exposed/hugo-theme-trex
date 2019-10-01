@@ -1,0 +1,18 @@
+{{ $picture := .Get "picture" }}
+{{ $linked := .Get "linked" }}
+{{ $title := .Get "title" }}
+{{ $text := .Get "text" }}
+{{ $subtext := .Get "subtext" }}
+{{ $href := .Get "href" }}
+
+<div class="card">
+  <img src="{{ .Get "picture" }}" class="card-img-top"> 
+  <div class="card-body">
+    <h5 class="card-title">{{ .Get "title" }}</h5>
+    <p class="card-text">{{ .Get "text" }}</p>
+  </div>
+  <div class="card-footer">
+    <span class="card-text"><small class="text-muted">{{ $subtext }}</small></span>
+    <a class="card-link" href="{{ $href }}">{{ $linked }}</a>
+  </div>
+</div>

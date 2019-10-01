@@ -3,18 +3,13 @@
 {{ $suffix := .Get "suffix" }}
 {{ $bgcolor := .Get "bgcolor" }}
 
-<div class="row resource rounded">
-    <div class="col-8 border-bottom pb-3">
-        <h3 class="mb-0 mt-3">
-            <a href="{{ $href }}">{{ $href }}</a>
-        </h3>
-    </div>
-    <div class="col-4 border-bottom pb-3" style="background-color:{{ $bgcolor }};padding-top:1em;">
-        <img width="100%" src="/images/header-logo-{{$suffix}}">
-    </div>
-    <div class="col-12" style="font-size:1.6em;">
-        <span class="kindOfContent mr-2">
-            {{ $desc }}
-        </span>
-    </div>
+<div class="card mb-3 text-center">
+  <div style="background-color:{{ $bgcolor }}; padding: 0.5em;">
+    <img src="/images/header-logo-{{$suffix}}" class="card-img-top" alt="...">
+  </div>
+  <div class="card-body">
+    <a target=_blank href="{{ $href }}" class="card-link">{{$href}} →<a>
+    <!-- <h4 class="card-title">title</h4> -->
+    <p class="card-text">{{$desc}}</p>
+  </div>
 </div>
