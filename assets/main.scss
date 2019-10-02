@@ -374,6 +374,24 @@ ul.list li {
   background: transparent url($icon-video) no-repeat;
 }
 
+/*personal page*/
+.icon-small {
+  display: inline-block;
+  padding-left: 20px;
+  min-height: 15px;
+}
+.compare {
+  background: transparent url($icon-compare) no-repeat;
+}
+.arrow-down {
+  background: transparent url($icon-arrow-down) no-repeat 0 8px;
+}
+.arrow-up {
+  background: transparent url($icon-arrow-up) no-repeat 0 8px;
+}
+.delete {
+  background: transparent url($icon-delete) no-repeat 0 5px;
+}
 
 @import "components";
 @import "facebook";
