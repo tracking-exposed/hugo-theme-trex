@@ -7,6 +7,8 @@
 
   background-color: #e9ebee;
   background-size: 850px 350px;
+  min-height: 575px;
+  margin-bottom: -4.5rem;
 
   div.container-fb {
     padding: 0;
@@ -25,7 +27,7 @@
     background-color: $white;
     border: 1px solid $facebook-border-color;
 
-    div.avatar {
+    div.logo {
       width: 115px;
       height: 115px;
       display: inline-block;
@@ -46,16 +48,46 @@
     }  
   }
 
+  #loading-data {
+    img {
+      height: 48px;
+      opacity: 0.20;
+      filter: grayscale(100%);
+    }
+  }
+
   div.profile {
+
+    &:empty {
+        display: block;
+        width: 400px;
+        content: '\00a0';
+        background: $gray-300;
+    }
+
+    div.avatar {
+      background: $white;
+      border: 1px solid $facebook-border-color;
+      border-radius: $facebook-border-radius;
+      width: 72px;
+      height: 72px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.35;
+      } 
+    }
+
     h1 {
       text-transform: capitalize; 
 
-      &:before {
-        display: block;
-        width: 60%;
-        background: $gray-300;
-      }
+
+
     }
+
+    
+
   }
 
   ul.nav-tabs {
