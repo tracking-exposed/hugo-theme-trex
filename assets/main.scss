@@ -397,10 +397,12 @@ ul.list li {
   display: inline-block;
   padding-left: 20px;
   min-height: 15px;
+  margin-right: 10px;
+  color: $black !important;
 }
 
 .compare {
-  background: transparent url($icon-compare) no-repeat;
+  background: transparent url($icon-compare) no-repeat 0 3px;
 }
 
 .arrow-down {
@@ -412,7 +414,13 @@ ul.list li {
 }
 
 .delete {
-  background: transparent url($icon-delete) no-repeat 0 5px;
+  background: transparent url($icon-delete) no-repeat 0 3px;
+}
+.related {
+  background: transparent url($icon-related) no-repeat 0 3px;
+}
+.author {
+  background: transparent url($icon-author) no-repeat 0 3px;
 }
 
 @import "components";
