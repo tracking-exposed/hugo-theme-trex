@@ -233,12 +233,4 @@ figcaption, .footnotes li {
   font-family: $medium;
   font-size: 20px;
 }
-@media screen and (min-width: 571px)
-{
-  .entry p {
-    margin-top: 0 !important;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
+

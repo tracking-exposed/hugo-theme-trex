@@ -168,7 +168,7 @@ body {
         font-family: 'Trex-Bold';
 
         img {
-            height: 48px;
+            height: 45px;
             display: inline-block;
         }
     }
@@ -209,7 +209,7 @@ div.featured-box {
         height: 15rem;
         margin-bottom: 1.5rem;
         background-position: center center;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
     }
 
@@ -225,7 +225,11 @@ div.featured-box {
     }
 }
 
-
+.home-content {
+  h2 {
+    word-break: break-all;
+  }
+}
 .dropdown-menu {
   right: 0;
   line-height: 30px;
@@ -278,15 +282,21 @@ div.featured-box {
   display: inline-block;
 }
 
+
 #colophon .main-navigation a {
   padding: 0;
-  margin: 10px 0;
+  margin: 5px 0;
   line-height: 30px;
   color: $black !important;
   display: inline-block;
   text-decoration: none;
 }
 
+
+.main-navigation ul {
+  margin: 0;
+  padding: 0;
+}
 .main-navigation li {
   list-style: none;
   display: inline-block;
@@ -425,3 +435,4 @@ ul.list li {
 
 @import "components";
 @import "facebook";
+@import "query";
