@@ -1,0 +1,44 @@
+
+
+
+
+@media screen and (max-width: 1000px)
+{
+  div.jumbotron-home h1 {
+    width: 100%;
+  }
+
+}
+
+
+@media screen and (max-width: 680px)
+{
+  div.jumbotron-home h1 {
+    font-size: 3em;
+  }
+  .main-navigation li {
+    display: block;
+    text-align: left;
+  }
+  .main-navigation ul {
+    float: right !important;
+  }
+}
+
+@media screen and (max-width: 480px)
+{
+  div.jumbotron-home h1 {
+    font-size: 2.5em;
+  }
+}
+
+
+@media screen and (min-width: 571px)
+{
+  .entry p {
+    margin-top: 0 !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
