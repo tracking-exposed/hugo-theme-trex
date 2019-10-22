@@ -10,6 +10,10 @@
   min-height: 575px;
   margin-bottom: -4.5rem;
 
+  .bg-facebook { 
+    background-color: #f7fbfa;
+  }
+
   div.container-fb {
     padding: 0;
     margin: 0;
@@ -57,7 +61,6 @@
   }
 
   div.profile {
-
     &:empty {
         display: block;
         width: 400px;
@@ -81,17 +84,10 @@
 
     h1 {
       text-transform: capitalize; 
-
-
-
     }
-
-    
-
   }
 
   ul.nav-tabs {
-
     .nav-link {
       &.active {
         background: $white;
@@ -114,45 +110,57 @@
     background: $white;
     border: 1px solid $facebook-border-color;
     border-radius-bottom-right: $facebook-border-radius;
+
+    button.btn-overview-paginate {
+        width: auto;
+        height: 100%;
+        border: 0px;
+        padding: 0 .7rem;
+        background: $gray-200;
+        border-radius: $facebook-border-radius;
+        cursor: pointer;
+        font-size: 1.25rem;
+        font-weight: 100;
+        color: $gray-400;
+
+        &:hover {
+            background: $facebook-border-color;
+            color: $gray-600;
+        }
+    }
   }
 
   div.graph-day {
-
     &.graph-day-border {
         border-left: 1px solid $facebook-border-color;
     }
-
     span.seconds {
         font-size: 48px;
         line-height: 48px;
     }
-
     span.posts {
         font-size: 30px;
         line-height: 30px;
     }
-
     div.daily-pie {
         max-height: 150px;
     }
-
     .c3-chart-arc path {
         stroke: $facebook-border-color;
     }
-
   }
 
-    div.daily-topic-count {
-        font-size: 36px;
-    }
+  div.daily-topic-count {
+      font-size: 36px;
+  }
 
-    div.feed-item,
-    div.stats-item {
-      background-color: $white;
-      color: #1c1e21;
-      border: 1px solid $facebook-border-color;
-      border-radius: $facebook-border-radius;
-    }
+  div.feed-item,
+  div.stats-item {
+    background-color: $white;
+    color: #1c1e21;
+    border: 1px solid $facebook-border-color;
+    border-radius: $facebook-border-radius;
+  }
 
   span.topic-count {
     padding: 4px 8px;
@@ -166,7 +174,11 @@
     &.num-4 { background-color: $orange; }
     &.num-5 { background-color: $red; color: $white; }
     &.num-6 { background-color: $red; color: $white; }
-    &.num-7 { background-color: $red; color: $white; }
+    &.num-7 { background-color: darken($red, 10%); color: $white; }
+    &.num-8 { background-color: darken($red, 15%); color: $white; }
+    &.num-9 { background-color: darken($red, 20%); color: $white; }
+    &.num-10 { background-color: #4e1919; color: $white; }
+    &.num-11 { background-color: darken(#4e1919, 5%); color: $white; }
+    &.num-12 { background-color: $black; color: $white; }
   }
-
 }
