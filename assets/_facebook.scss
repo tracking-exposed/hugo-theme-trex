@@ -128,7 +128,20 @@
             color: $gray-600;
         }
     }
+    button.btn-overview-inactive {
+        width: auto;
+        height: 100%;
+        border: 0px;
+        padding: 0 .7rem;
+        background: $white;
+        border-radius: $facebook-border-radius;
+        cursor: none;
+        font-size: 1.25rem;
+        font-weight: 100;
+        color: $gray-400;
+    }
   }
+
 
   div.graph-day {
     &.graph-day-border {
