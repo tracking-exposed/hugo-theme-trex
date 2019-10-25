@@ -7,8 +7,8 @@
 @import "icons";
 
 $navbar-top-height: 85px;
-$fbook-blue: #3b5898;
-$ytube-red: #D9230F;
+$facebook-blue: #3b5898;
+$youtube-red: #D9230F;
 
 
 body {
@@ -40,46 +40,46 @@ body {
     &.facebook {
 
         .btn-facebook {
-            background-color: $fbook-blue;
+            background-color: $facebook-blue;
             color: $white;
         }
        .highlight {
-          background-color: $fbook-blue;
+          background-color: $facebook-blue;
         }
         .highlight.secondary {
           background-color: $primary !important;
           color: $white;
         }
         a {
-            color: $fbook-blue;
+            color: $facebook-blue;
         }
 
         .navbar-top {
-            @include trex-navbar($fbook-blue, $white, $white, $white);
+            @include trex-navbar($facebook-blue, $white, $white, $white);
         }
 
         .jumbotron-home {
-            @include trex-jumbotron($fbook-blue, $white, false);
+            @include trex-jumbotron($facebook-blue, $white, false);
         }
 
         .jumbotron-full {
-            @include trex-jumbotron($fbook-blue, $white, false);
+            @include trex-jumbotron($facebook-blue, $white, false);
         }
 
         .navbar-nav {
-          background-color: $fbook-blue;
+          background-color: $facebook-blue;
         }
 
         .nav-pills {
             .nav-link {
                 &.active {
-                    background-color: $fbook-blue;
+                    background-color: $facebook-blue;
                 }
             }
         }
 
         footer {
-          border-color: $fbook-blue;
+          border-color: $facebook-blue;
         }
 
         .navbar-toggler-icon {
@@ -92,10 +92,10 @@ body {
     &.youtube {
 
         a {
-            color: $ytube-red;
+            color: $youtube-red;
         }
         .highlight {
-          background-color: $ytube-red;
+          background-color: $youtube-red;
           color: $white;
           font-family: $medium;
         }
@@ -116,7 +116,7 @@ body {
         }
 
         footer {
-          border-color: $ytube-red;
+          border-color: $youtube-red;
         }
     }
 
