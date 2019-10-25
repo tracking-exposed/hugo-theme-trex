@@ -13,7 +13,7 @@
         {{ range .Site.Menus.featured }}
         <div class="featured-box col-sm">
             <a class="image" href="{{ .URL }}" {{ if .Pre }}
-                style="background-image: url({{ .Pre }});" {{ end }}>
+                style="background-image: url({{ .Pre }})" {{ end }}>
             </a>
             <a class="text" href="{{ .URL }}">
                 {{ .Name }}

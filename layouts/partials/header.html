@@ -6,13 +6,15 @@
                 {{ .Site.Title }}
             </span>
         </a>
-        <button class="navbar-toggler ml-auto" type="button"
+        <button class="navbar-toggler"
+                type="button"
                 data-toggle="collapse"
-                data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                data-target="#collapsingNavbarMd">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <nav class="collapse navbar-collapse pull-right" id="navbarCollapse">
+        <nav class="navbar navbar-expand-md" id="collapsingNavbarMd">
             <ul class="navbar-nav ml-auto position-relative">
                 {{ $currentPage := .Page }}
                 {{ range .Site.Menus.main }}
