@@ -1,45 +1,47 @@
 <div class="row">
-    <header class="navbar fixed-top navbar-top">
-        <a class="navbar-brand" href="/">
-            <img src="/images/header-logo-{{ .Site.Params.Subsite }}.svg">
-            <span class="d-none">
-                {{ .Site.Title }}
-            </span>
-        </a>
-        <button class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                data-target="#collapsingNavbarMd">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <nav class="navbar navbar-expand-md" id="collapsingNavbarMd">
-            <ul class="navbar-nav ml-auto position-relative">
-                {{ $currentPage := .Page }}
-                {{ range .Site.Menus.main }}
-                {{ if .HasChildren }}
-                <li class="nav-item  position-static">
-                    <a class="nav-link dropdown-toggle" href="{{ .URL }}" id="{{ .Name }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ .Name }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="{{ .Name }}">
-                        {{ range .Children }}
-                        <a class="dropdown-item" href="{{ .URL }}">
+    <header class="fixed-top navbar-top">
+        <nav class="navbar navbar-expand-md pull-right">
+            <a class="navbar-brand" href="/">
+                <img src="/images/header-logo-{{ .Site.Params.Subsite }}.svg">
+                <span class="d-none">
+                    {{ .Site.Title }}
+                </span>
+            </a>
+            <button class="navbar-toggler pull-right"
+                    type="button"
+                    data-toggle="collapse"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    data-target="#collapsingNavbarMd">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsingNavbarMd">
+                <ul class="navbar-nav ml-auto position-relative">
+                    {{ $currentPage := .Page }}
+                    {{ range .Site.Menus.main }}
+                    {{ if .HasChildren }}
+                    <li class="nav-item  position-static">
+                        <a class="nav-link dropdown-toggle" href="{{ .URL }}" id="{{ .Name }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ .Name }}
                         </a>
-                        {{ end }}
-                    </div>
-                </li>
-                {{ else }}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ .URL }}">
-                        {{ .Name }}
-                    </a>
-                </li>
-                {{ end }}
-                {{ end }}
-            </ul>
+                        <div class="dropdown-menu" aria-labelledby="{{ .Name }}">
+                            {{ range .Children }}
+                            <a class="dropdown-item" href="{{ .URL }}">
+                                {{ .Name }}
+                            </a>
+                            {{ end }}
+                        </div>
+                    </li>
+                    {{ else }}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ .URL }}">
+                            {{ .Name }}
+                        </a>
+                    </li>
+                    {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
         </nav>
     </header>
 </div>

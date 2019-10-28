@@ -141,12 +141,47 @@ body {
           background-color: $black;
           color: $orange;
         }
-
-      .navbar-top {
-        @include trex-navbar($black, $white, $black, $black);
-      }
+        .navbar-toggler-icon {
+          background: transparent url($icon-navbar-toggler-white) no-repeat;
+          background-size: contain;
+        }
+        .navbar-top {
+          @include trex-navbar($black, $white, $black, $black);
+        }
     }
 
+    &.amazon {
+        a {
+          color: $amazon-yellow;
+        }
+        .highlight.secondary {
+          background-color: $amazon-blue !important;
+          color: $amazon-yellow;
+        }
+        .highlight {
+          background-color: $amazon-yellow;
+        }
+        footer {
+          border-color: $amazon-yellow;
+        }
+        .navbar-nav {
+          background-color: $amazon-blue;
+        }
+        .jumbotron-home {
+          background-color: $amazon-blue;
+          color: $amazon-yellow;
+        }
+        .navbar-top {
+          @include trex-navbar($amazon-blue, $white, $amazon-yellow, $amazon-blue);
+        }
+        .navbar-toggler-icon {
+          background: transparent url($icon-navbar-toggler-white) no-repeat;
+          background-size: contain;
+        }
+        .dropdown-menu {
+          background-color: $amazon-blue;
+        }
+    }
 }
 
 /* Main Navbar */
@@ -173,7 +208,6 @@ body {
         }
     }
 }
-
 
 div.jumbotron-home {
     border-radius: 0;
