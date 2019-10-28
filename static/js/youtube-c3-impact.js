@@ -3,7 +3,7 @@ $(document).ready(function() {
     var graphNodes = $('.c3graph');
 
     const clist = [{
-        bindto: '#newcomers-graph',
+        bindto: '#supporters-graph',
         data : {
             url: '/api/v2/statistics/supporters/day/15',
             mimeType: 'json',
@@ -26,8 +26,7 @@ $(document).ready(function() {
                 },
             }
         }
-    }, /* c3 */
-    {
+    }, {
         bindto: '#related-graph',
         data : {
             url: '/api/v2/statistics/related/day/15',
@@ -57,8 +56,7 @@ $(document).ready(function() {
 
             }
         }
-    }, /* c3 */
-    {
+    }, {
         bindto: '#processing-graph',
         data : {
             url: '/api/v2/statistics/processing/day/15',
@@ -95,7 +93,60 @@ $(document).ready(function() {
             },
             y2: { show: true }
         }
-    }, /* c3 */ ];
+    }, {
+        bindto: '#processing2-graph',
+        data : {
+            url: '/api/v2/statistics/processing2/day/15',
+            mimeType: 'json',
+            xFormat: '%Y-%m-%dT%H:%M:%S.000Z',
+            keys: { value : [ 'failure', 'successful', 'unprocessed', 'total' ], x: 'day' },
+            types: {
+                'failure': 'bar',
+                'unprocessed': 'bar',
+                'successful': 'line',
+                'total': 'line',
+            },
+            axes: {
+                'failure': 'y',
+                'unprocessed': 'y',
+                'successful': 'y2',
+                'total': 'y2',
+            },
+            colors: {
+                'failure': 'black',
+                'unprocessed': '#eee',
+                'successful': '#3b5898',
+                'total': 'green'
+            }
+        },
+        axis: {
+            x: {
+                type: 'timeseries',
+                tick: {
+                    format: '%d',
+                    culling: { max: 5 }
+                },
+            }
+        }
+    }, {
+        bindto: '#metadata-graph',
+        data : {
+            url: '/api/v2/statistics/metadata/day/15',
+            mimeType: 'json',
+            xFormat: '%Y-%m-%dT%H:%M:%S.000Z',
+            keys: { value : [ 'hasTitle', 'hasAuthor', 'hasRelated', 'hasAd', 'total' ], x: 'day' },
+            type: 'bar'
+        },
+        axis: {
+            x: {
+                type: 'timeseries',
+                tick: {
+                    format: '%d',
+                    culling: { max: 5 }
+                },
+            }
+        }
+    }];
 
     const graphs = _.map(graphNodes, function(graph) {
         var graphId = '#' + graph.id;
@@ -107,5 +158,4 @@ $(document).ready(function() {
             console.log("Invalid ID", graphId);
         }
     });
-
 });
