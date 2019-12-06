@@ -1,7 +1,9 @@
 {{ define "main" -}}
 <div class="jumbotron jumbotron-home">
     <div class="container">
-        <small>Our Vision</small>
+        {{ if ne site.Params.ourvision false }}
+            <small>Our Vision</small>
+        {{ end }}
         <h1 class="display-4 font-weight-bold">
             {{ site.Params.Tagline }}
         </h1>
