@@ -53,7 +53,9 @@
     {{ $style := resources.Get "main.scss" | resources.ExecuteAsTemplate "bootstrap.scss" . | toCSS $options | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
-    {{ hugo.Generator }}
+    {{ if .Params.extraCSS }}
+        <link rel="stylesheet" href="{{ .Params.extraCSS }}">
+    {{ end }}
 
     <script src='{{ "/js/jquery-3.3.1.min.js" | absURL }}'></script>
     <script src='{{ "/js/bootstrap.bundle.min.js" | absURL }}'></script>
