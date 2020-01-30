@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+<link href="/css/c3.min.css" rel="stylesheet">
+<script src="/js/moment-with-locales.min.js"></script>
+<script src="/js/d3.min.js"></script>
+<script src="/js/c3.min.js"></script>
+<script src="/js/global.js"></script>
+
+<!-- CSS WebSlides -->
+<link rel="stylesheet" type='text/css' media='all' href="/css/webslides.css">
+
+<!-- Optional - CSS SVG Icons (Font Awesome) -->
+<link rel="stylesheet" type='text/css' media='all' href="/css/svg-icons.css">
+
+<main role="main">
+    <article id="webslides" class="vertical">
+    <!-- Quick Guide
+        - Each parent <section> in the <article id="webslides"> element is an individual slide.
+        - Vertical sliding = <article id="webslides" class="vertical">
+        - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+    -->
+
+    {{ .Content }}
+
+    </article>
+</main>
+
+<!-- Required -->
+<script src="/js/webslides.min.js"></script>
+<script>
+    window.ws = new WebSlides();
+</script>
+
+<!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+<script defer src="/js/svg-icons.js"></script>
+
+{{ if .Params.include_partial }}
+    {{ partial .Params.include_partial . }}
+ {{ end }}
+{{ end }}
