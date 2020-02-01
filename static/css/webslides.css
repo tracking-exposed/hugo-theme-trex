@@ -794,7 +794,7 @@ body,
 input,
 select,
 textarea {
-  font-family: 'Roboto', 'San Francisco', helvetica, arial, sans-serif;
+  font-family: 'Trex-regular', helvetica, arial, sans-serif;
   font-size: 62.5%; }
 
 body,
@@ -1244,31 +1244,7 @@ figure[class*='text-pull-'] {
 =========================================== */
 .text-apple,
 .bg-apple {
-  font-family: 'San Francisco', helvetica, arial, sans-serif; }
-
-/* Ultra Light */
-@font-face {
-  font-family: 'San Francisco';
-  font-weight: 100;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff2"); }
-
-/* Thin */
-@font-face {
-  font-family: 'San Francisco';
-  font-weight: 200;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff2"); }
-
-/* Regular */
-@font-face {
-  font-family: 'San Francisco';
-  font-weight: 400;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff2"); }
-
-/* Bold */
-@font-face {
-  font-family: 'San Francisco';
-  font-weight: bold;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2"); }
+  font-family: 'Trex-Regular', helvetica, arial, sans-serif; }
 
 /*=========================================
 3. Header & Footer
@@ -1325,7 +1301,7 @@ header[role='banner'] {
 .logo {
   text-transform: lowercase; }
   .logo a {
-    background: url("../images/logos/logo.svg") no-repeat 0 0;
+    background: url("/images/trex-logo-32x32.jpg") no-repeat 0 0;
     background-size: 4.8rem;
     float: left;
     height: 4.8rem;
