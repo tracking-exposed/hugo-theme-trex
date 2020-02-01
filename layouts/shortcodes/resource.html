@@ -13,6 +13,8 @@
 {{ $resource1href := .Get "resource1href" }}
 {{ $resource2 := .Get "resource2" }}
 {{ $resource2href := .Get "resource2href" }}
+{{ $resource3 := .Get "resource3" }}
+{{ $resource3href := .Get "resource3href" }}
 
 <div class="row resource rounded">
     <header class="resource-header col-12 border-bottom">
@@ -59,6 +61,9 @@
                   <b>See also:</b> <a href="{{ $resource1href }}" target="_blank">{{ $resource1 }}</a>
                   {{ if $resource2 }} — 
                     <a href="{{ $resource2href }}" target="_blank">{{ $resource2 }}</a>
+                  {{ end }}
+                  {{ if $resource3 }} — 
+                    <a href="{{ $resource3href }}" target="_blank">{{ $resource3 }}</a>
                   {{ end }}
                 </small>
             </p>
