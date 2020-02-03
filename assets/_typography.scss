@@ -190,6 +190,9 @@ figcaption, .footnotes li {
 .no-break {
   word-break: keep-all !important;
 }
+.enlarged-report {
+  font-size: 2rem;
+}
 
 /* special styles call by Shortcodes */
 .highlight {
@@ -233,4 +236,3 @@ figcaption, .footnotes li {
   font-family: $medium;
   font-size: 20px;
 }
-
