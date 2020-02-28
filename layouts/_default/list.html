@@ -11,15 +11,20 @@
 <div class="container">
     <ul class="row list">
         {{ range $index, $element := .Data.Pages }}
-        <li class="col-sm">
+        <li class="col-sm-4">
             <article>
+                <small>{{ .Date.Format "Monday, Jan 2, 2006" }}</small>
                 <h3 class="center">
                     <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
                 </h3>
                 <time class="post-date d-none" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
                 <p>
-                    {{ if .Description }}{{ .Description }}{{ else }}
-                    {{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}
+
+                    {{ if (isset .Params "subtitle") }}
+                        {{ .Params.subtitle }}
+                    {{ end }}
+
+                    {{ if .Description }} {{ .Description }} {{ end }}
 
                     {{ if .Truncated }}
                     <span class="read-more-link">
