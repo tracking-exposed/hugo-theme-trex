@@ -1,7 +1,7 @@
-function countdown(targetId) {
+function countdown(datebin, targetId) {
 
   // Set the date we're counting down to
-   var countDownDate = new Date("Mar 15, 2020 00:00:01").getTime();
+   var countDownDate = datebin.getTime();
 
    //update the count down every 1 second
    var x = setInterval(function() {
