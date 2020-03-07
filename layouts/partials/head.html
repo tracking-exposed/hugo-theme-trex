@@ -7,17 +7,17 @@
     <meta name="description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ if eq $isHomePage false }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
     <meta name="robots" content="index, follow" />
 
+    <meta property="og:locale" content="utf-8" />
     <meta property="og:title" content="{{ .Params.og_title }}" />
-    <meta property="og:type" content="{{ .Params.og_type }}" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:description" content="{{ .Params.og_description }}">
     <meta property="og:image" content="{{ .Params.og_image }}" />
-
-    <meta property="og:locale" content="utf-8" />
-    <meta property="og:site_name" content="{{ .Params.openGraphSiteName }}" />
+    <meta property="og:image:secure_url" content="{{ .Params.og_image }}" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="200" />
     <meta property="og:image:height" content="200" />
+    <meta property="og:site_name" content="{{ .Params.openGraphSiteName }}" />
 
     <link rel="icon" href="/images/trex-logo-32x32.jpg" sizes="32x32" />
     <link rel="icon" href="/images/trex-logo-192x192.jpg" sizes="192x192" />
