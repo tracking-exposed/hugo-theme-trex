@@ -1,0 +1,29 @@
+{{ $picture := .Get "picture" }}
+{{ $title := .Get "title" }}
+{{ $text := .Get "text" }}
+{{ $when := .Get "when" }}
+{{ $reportLink := .Get "reportLink" }}
+{{ $slidesLink := .Get "slidesLink" }}
+{{ $href := .Get "href" }}
+
+<div class="card border-danger" style="margin-bottom: 10px;">
+  <img src="{{ $picture }}" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">
+        <a class="card-link" href="{{ $href }}">{{ $title }}</a>
+    </h5>
+    <p class="card-text">{{ $text }}</p>
+  </div>
+  <div class="card-footer">
+    <span class="card-text">
+        <small class="text-muted">
+            <b>
+                {{ $when }}
+            </b> ―
+            <a href="{{ $reportLink }}" target=_blank>Report</a>
+            ―
+            <a href="{{ $slidesLink }}" target=_blank>Slides</a>
+        </small>
+    </span>
+  </div>
+</div>
