@@ -1,5 +1,5 @@
 <div class="row entry">
-  <h3 class="mb-2">{{ .Get "title" }}</h3>
+  <h3 class='mb-2 {{ .Get "aligntitle" }}'>{{ .Get "title" }}</h3>
   {{ $kind := .Get "type" }}
   {{ if eq $kind "left" }}
     <div class="col-sm-4 position-relative">
