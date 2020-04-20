@@ -192,6 +192,12 @@ figcaption, .footnotes li {
 }
 .enlarged-report {
   font-size: 2rem;
+  p {
+    font-size: 1.7rem;
+  }
+  ul,ol {
+    font-size: 1.7rem;
+  }
 }
 
 /* special styles call by Shortcodes */
