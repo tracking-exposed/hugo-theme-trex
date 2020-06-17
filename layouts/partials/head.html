@@ -1,7 +1,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"
+/>
 
     <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ if eq $isHomePage false }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
@@ -57,6 +58,10 @@
         <link rel="stylesheet" href="{{ .Params.extraCSS }}">
     {{ end }}
 
+    <!-- 
+        <script src='{{ "/js/vendor/material-ui.production.min.js" | absURL }}'></script>
+    	<script src='{{ "/js/moment-with-locales.min.js" | absURL }}'></script>
+    -->
     <script src='{{ "/js/jquery-3.3.1.min.js" | absURL }}'></script>
     <script src='{{ "/js/bootstrap.bundle.min.js" | absURL }}'></script>
     <script src='{{ "/js/modernizr-custom.js" | absURL }}'></script>
