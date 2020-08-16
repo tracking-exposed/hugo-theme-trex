@@ -5,7 +5,9 @@
 
 <div class="card mb-3 text-center">
   <div style="background-color:{{ $bgcolor }}; padding: 0.5em;">
-    <img src="/images/header-logo-{{$suffix}}" class="card-img-top" alt="...">
+    <a href="{{ $href }}" target=_blank>
+      <img src="/images/header-logo-{{$suffix}}" class="card-img-top" alt="...">
+    </a>
   </div>
   <div class="card-body">
     <a target=_blank href="{{ $href }}" class="card-link">{{$href}} →<a>
