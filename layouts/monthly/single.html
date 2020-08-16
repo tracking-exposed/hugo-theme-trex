@@ -4,6 +4,9 @@
     <div class="container">
         <div class="text-center">
             <h1 class="pageTitle">{{ .Title }}</h1>
+	    <p>Note
+	        <i>internal report = seldom proofread.</i> 
+	    </p>
             {{ if (isset .Params "subtitle") }}<smaller class="top light-font">{{ .Params.subtitle }}</smaller>{{ end }}
             <time class="post-date d-none" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
         </div>
