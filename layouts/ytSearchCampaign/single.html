@@ -1,0 +1,69 @@
+{{define "main" -}}
+
+<link rel="stylesheet" href="/css/sunnyhack.css">
+<script src="/js/global.js"></script>
+<script src="/js/sunnyhack.js"></script>
+
+<script type="text/javascript">
+  $( document ).ready(async function() {
+
+    if(window.location.host != 'youtube.tracking.exposed')
+      console.log("kind reminder, ytSearchCampaign includes /(j|cs)s/sunnyhack.(j|cs)s which are ONLY part of yt.trex site; Do not use this from different sites");
+
+    const campaignName = window.location.pathname.split('/')[2];
+    if(_.size(campaignName) < 2)
+      $("#infoLoading").text("Error: didn't found a campagin name from the URL!");
+    else {
+      const recentSearches = await getRecentSearches(campaignName);
+      appendLinkList(recentSearches, "#sunnylink-skeleton-0", "#linklist");
+      $("#infoLoading").toggle();
+    }
+  });
+</script>
+
+<header class="jumbotron">
+  <div class="container">
+    <div class="text-center">
+      <h1>{{ .Title }}</h1>
+      {{ if (isset .Params "subtitle") }}<smaller class="top light-font">{{ .Params.subtitle }}</smaller>{{ end }}
+      <time class="post-date d-none" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <!-- this is the content from the .md here: https://github.com/tracking-exposed/youtube.tracking.exposed/tree/master/content/chiaro -->
+  {{ .Content }}
+  <span class="clearfix"></span>
+
+  <!-- the hidden template, it is used by jquery to copy this structure, do a clone, remote the 'hidden' attr and append on #linklist below -->
+  <div id="sunnylink-skeleton-0" hidden>
+    <p class="sunnylink">
+      <span class="linkwrapper">
+        <span class="query"></span>
+        <a target=_blank class="linktoyoutube"> repeat⏵ </a>
+      </span>
+      <span class="searchtimes"></span>
+      <span class="totalvideos"></span>
+      <a role="button" class="btn btn-default btn-outline-info downloadCSV">⇓ CSV</a>
+    </p>
+  </div>
+
+  <!-- the actual content -->
+  <h3 id="infoLoading">Loading list of recent queries...</h3>
+  <!-- this is the container of the list -->
+  <div id="linklist"></div>
+  <!-- this a few small basic stats, display in lightgrey -->
+  <div id="stats"></div>
+
+  <br />
+  <p>Please note: <i>This tool is in beta stage</i>;
+     One week ago it was a barely working prototype. A few major changes might still happens. If you've suggestions, checkout code: 
+    <a href="https://github.com/tracking-exposed/yttrex/blob/master/backend/routes/searches.js" target=_blank>backend API</a>,
+    <a href="https://github.com/tracking-exposed/youtube.tracking.exposed/blob/master/content/chiaro.html" target=_blank>frontend</a>, 
+    <a href="https://github.com/tracking-exposed/youtube.tracking.exposed/blob/master/static/js/sunnyhack.js" target=_blank>jquery</a>. 
+  </p>
+
+</div>
+
+{{- end }}
