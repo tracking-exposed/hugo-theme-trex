@@ -1,0 +1,18 @@
+{{ $desc := .Get "description" }}
+{{ $channel := .Get "channel" }}
+{{ $title := .Get "title" }}
+{{ $href := .Get "href" }}
+{{ $thumbnail := .Get "thumbnail" }}
+
+<div class="card mb-3 text-center">
+  <div style="padding: 0.5em;">
+    <a href="{{ $href }}" target=_blank>
+      <img src="/images/{{$thumbnail}}" class="card-img-top" alt="...">
+    </a>
+  </div>
+  <div class="card-body">
+    <a target=_blank href="{{ $href }}" class="card-link">{{$href}} →<a>
+    <h4 class="card-title">{{$title}}</h4>
+    <p class="card-text">{{$desc}}</p>
+  </div>
+</div>

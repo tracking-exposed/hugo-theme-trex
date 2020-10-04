@@ -14,7 +14,7 @@
     if(_.size(campaignName) < 2)
       $("#infoLoading").text("Error: didn't found a campagin name from the URL!");
     else {
-      const recentSearches = await getRecentSearches(campaignName);
+      const recentSearches = await getCampaignQueryStats(campaignName);
       appendLinkList(recentSearches, "#sunnylink-skeleton-0", "#linklist");
       $("#infoLoading").toggle();
     }
