@@ -42,6 +42,9 @@ b, .bold, strong, .strong {
 em, i, .italic {
   font-style: italic;
 }
+ul,ol {
+  font-size: 16px;
+}
 p, .paragraph {
   font-size: 16px;
   line-height: 160%;
