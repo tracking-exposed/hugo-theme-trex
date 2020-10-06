@@ -12,17 +12,22 @@
 
     const campaignName = window.location.pathname.split('/')[2];
     if(_.size(campaignName) < 2)
-      $("#infoLoading").text("Error: didn't found a campagin name from the URL!");
+      $("#infoLoading").text("Error: this system fail in finding a campagin from the URL!");
     else {
       const recentSearches = await getCampaignQueryStats(campaignName);
+
       appendLinkList(recentSearches, "#sunnylink-skeleton-0", "#linklist");
-      $("#infoLoading").toggle();
+
+      if(recentSearches.error)
+        $("#infoLoading").append(recentSearches.message);
     }
+    $("#infoLoading").toggle();
   });
 </script>
 
 <header class="jumbotron">
   <div class="container">
+    <h4><b><a href="/chiaro/start">CHIARO</a></b></h4>
     <div class="text-center">
       <h1>{{ .Title }}</h1>
       {{ if (isset .Params "subtitle") }}<smaller class="top light-font">{{ .Params.subtitle }}</smaller>{{ end }}
@@ -30,6 +35,7 @@
     </div>
   </div>
 </header>
+
 
 <div class="container">
   <!-- this is the content from the .md here: https://github.com/tracking-exposed/youtube.tracking.exposed/tree/master/content/chiaro -->
