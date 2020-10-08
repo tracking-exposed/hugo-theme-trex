@@ -1,18 +1,35 @@
-{{ $desc := .Get "description" }}
-{{ $channel := .Get "channel" }}
+{{ $description := .Get "description" }}
+{{ $producer := .Get "producer" }}
+{{ $duration := .Get "duration" }}
 {{ $title := .Get "title" }}
 {{ $href := .Get "href" }}
 {{ $thumbnail := .Get "thumbnail" }}
 
-<div class="ytbox card mb-3 text-center">
-  <div style="padding: 0.5em;">
-    <a href="{{ $href }}" target=_blank>
-      <img src="/images/{{$thumbnail}}" class="card-img-top" alt="...">
-    </a>
+<div class="ytbox card" style="background-color: rgb(241, 244, 255)">
+  <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
+    <div class="img-square-wrapper">
+      <img style="width: 300px" src="{{$thumbnail}}" alt="Image of {{$title}}">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">
+        {{$title}}
+        <a class="linktoyoutube" target=_blank href="{{$href}}">⏵</a>
+      </h5>
+      <p class="card-text">
+        <span class="duration" style="
+          color: white;
+          background-color: darkslategray;
+          padding: 3px 4px;
+          height: 12px;
+          border-radius: 2px;
+          letter-spacing: 0.5px;">{{$duration}}
+        </span>
+        <span class="producer" style="font-size: 0.8em;">{{$producer}}</span>
+      </p>
+    </div>
   </div>
-  <div class="card-body">
-    <a target=_blank href="{{ $href }}" class="card-link">{{$href}} →<a>
-    <h4 class="card-title">{{$title}}</h4>
-    <p class="card-text">{{$desc}}</p>
+  <div class="card-footer" style="background-color: rgb(241, 244, 255); font-size: 1.2em;">
+    <small class="text-muted">{{$description}}</small>
   </div>
 </div>
+<br />

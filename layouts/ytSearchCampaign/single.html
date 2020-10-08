@@ -15,9 +15,7 @@
       $("#infoLoading").text("Error: this system fail in finding a campagin from the URL!");
     else {
       const recentSearches = await getCampaignQueryStats(campaignName);
-
       appendLinkList(recentSearches, "#sunnylink-skeleton-0", "#linklist");
-
       if(recentSearches.error)
         $("#infoLoading").append(recentSearches.message);
     }
@@ -35,7 +33,6 @@
     </div>
   </div>
 </header>
-
 
 <div class="container">
   <!-- this is the content from the .md here: https://github.com/tracking-exposed/youtube.tracking.exposed/tree/master/content/chiaro -->

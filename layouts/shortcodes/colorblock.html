@@ -1,3 +1,8 @@
+{{ $cranky := .Get "cranky" }}
+
 <h3 class="highlight text-center pt-3 pb-3 {{ .Get "color"}}">
     {{ .Get "text"}}
+    {{ if $cranky }}
+        <div style="font-style: italic; text-align: right; margin: 6px; font-size: 0.8em"> — {{ $cranky }}</div>
+    {{ end }}
 </h3>
