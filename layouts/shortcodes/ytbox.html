@@ -4,15 +4,17 @@
 {{ $title := .Get "title" }}
 {{ $href := .Get "href" }}
 {{ $thumbnail := .Get "thumbnail" }}
+{{ $id := .Get "id" }}
 
-<div class="ytbox card" style="background-color: rgb(241, 244, 255)">
+<div class="ytbox card" style="background-color: rgb(241, 244, 255)" 
+  {{ if $id }} id={{$id}} hidden {{ end }} >
   <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
     <div class="img-square-wrapper">
       <img style="width: 300px" src="{{$thumbnail}}" alt="Image of {{$title}}">
     </div>
     <div class="card-body">
-      <h5 class="card-title">
-        {{$title}}
+      <h5>
+        <span class="card-title">{{$title}}</span>
         <a class="linktoyoutube" target=_blank href="{{$href}}">⏵</a>
       </h5>
       <p class="card-text">
