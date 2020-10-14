@@ -9,9 +9,7 @@
 <div class="ytbox card" style="background-color: rgb(241, 244, 255)" 
   {{ if $id }} id={{$id}} hidden {{ end }} >
   <div class="card-horizontal" style="display: flex; flex: 1 1 auto;">
-    <div class="img-square-wrapper">
-      <img style="width: 300px" src="{{$thumbnail}}" alt="Image of {{$title}}">
-    </div>
+    <img class="thumbnail" src="{{$thumbnail}}" alt="Video thumbnail for: {{$title}}">
     <div class="card-body">
       <h5>
         <span class="card-title">{{$title}}</span>
