@@ -12,18 +12,32 @@
 
 <div class="container">
     <div class="row">
-        {{ range .Site.Menus.featured }}
+        {{ range $index, $element := .Site.Menus.featured }}
+          {{ if (eq $index 2) and (eq site.Params.subsite "youtube") }}
+        <div class="featured-box col-sm" style="background-color:{{ site.Params.boxcolor}}">
+          {{ else }}
         <div class="featured-box col-sm">
+          {{ end }}
             <a class="image" href="{{ .URL }}" {{ if .Pre }}
-                style="background-image: url({{ .Pre }})" {{ end }}>
+              style="background-image: url({{ .Pre }})" {{ end }}>
             </a>
+          {{ if (eq $index 2) and (eq site.Params.subsite "youtube") }}
+            <a class="text" href="{{ .URL }}" style="color:{{ site.Params.titlecolor }}">
+          {{ else }}
             <a class="text" href="{{ .URL }}">
-                {{ .Name }}
+          {{ end }}
+              {{ .Name }}
             </a>
             {{ if .Post }}
-            <p class="mb-0">
+              <p class="mb-0">
+                {{ if (eq $index 2) and (eq site.Params.subsite "youtube") }}
+                  <span class="featured-alert"> {{ site.Params.before }} </span>
+                {{ end }}
                 {{ .Post }}
-            </p>
+                {{ if (eq $index 2) and (eq site.Params.subsite "youtube") }}
+                  <span class="featured-alert"> {{ site.Params.after }} </span>
+                {{ end }}
+              </p>
             {{ end }}
         </div>
         {{ end }}

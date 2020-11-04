@@ -467,6 +467,14 @@ ul.list li {
   background: transparent url($icon-author) no-repeat 0 3px;
 }
 
+.featured-alert {
+  border-radius: 2px;
+  border: 1px solid darkgray;
+  padding: 1px;
+  background-color: white;
+  font-weight: 600;
+}
+
 @import "components";
 @import "facebook";
 @import "query";
