@@ -1,0 +1,15 @@
+{{ $leftpict := .Get "leftpict" }}
+{{ $lefttitle := .Get "lefttitle" }}
+{{ $hover := .Get "hover" }}
+{{ $rightcontent := .Get "rightcontent" }}
+{{ $textstyle := .Get "textstyle" }}
+
+<div class="row">
+  <h3 class="m-0">{{$lefttitle}}</h3>
+  <div class="col-sm-8">
+    <img width="100%" src={{ $leftpict }}>
+  </div>
+  <div class="col-sm-4">
+    <p style={{$textstyle}}>{{ $rightcontent }}</p>
+  </div>
+</div>

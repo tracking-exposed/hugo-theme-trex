@@ -1,0 +1,44 @@
+{{define "main" -}}
+
+<style>
+body {
+    background-color: #1b1b1b !important;
+    color: white;
+}
+.jumbotron {
+    background-color: #1b1b1b !important;
+    color: #f98e05;    
+}
+.pageTitle {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.subtitle--db {
+    color: white;
+}
+h3 {
+    color: #f98e05;
+    padding: 10px;
+    font-weight: 100;
+}
+</style>
+
+<header class="jumbotron">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="pageTitle">{{ .Params.title }}<br>
+                <span class="subtitle--db">—{{ .Params.subtitle }}—</span>
+            </h1>
+            <time class="post-date d-none"
+                datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>{{ .Date.Format "Mon, Dec 2, 2006" }}
+            </time>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    {{ .Content }}
+    <span class="clearfix"></span>
+</div>
+
+{{- end }}
