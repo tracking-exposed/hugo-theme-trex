@@ -1,0 +1,21 @@
+{{define "main" -}}
+
+<div>
+    <div class="col-lg-6 col-md-12" style="position:fixed">
+    <iframe width="640"
+        height="390"
+        src="{{ .Params.video_url }}"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+    </div>
+    <div class="col-lg-6 col-md-12 tutorial-text" style="float:right">
+        {{ .Content }}
+	</div>
+    <span class="clearfix"></span>
+</div>
+
+<script src="/js/global.js"></script>
+
+{{- end }}
