@@ -26,17 +26,10 @@
 <script src="/js/c3.min.js"></script>
 <script src="/js/global.js"></script>
 
-<!-- include the site-script which hook at $(document).ready() to fire c3 -->
-{{ if eq site.Params.Subsite "youtube" }}
-    <script src="/js/youtube-c3-impact.js"></script>
-{{ else if eq site.Params.Subsite "facebook" }}
-    <script src="/js/facebook-c3-impact.js"></script>
-{{ else if eq site.Params.Subsite "pornhub" }}
-    <script src="/js/pornhub-c3-impact.js"></script>
-{{ else if eq site.Params.Subsite "amazon" }}
-    <script src="/js/amazon-c3-impact.js"></script>
-{{ else }}
-    <h1>UNSUPPORTED CONDITION IN c3app/single.html</h1>
-{{ end }}
+<!-- include the site-script which hook at $(document).ready() to fire c3,
+     this piece of code come from themes/trex/layouts/c3app/single.html and 
+     look for a JS that should be in the 'static' folder -->
+<script src="/js/{{site.Params.Subsite}}-c3-impact.js"></script>
+<!-- {{site.Params.Subsite}} -->
 
 {{- end }}
