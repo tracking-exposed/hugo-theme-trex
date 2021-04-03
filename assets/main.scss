@@ -182,6 +182,37 @@ body {
           background-color: $amazon-blue;
         }
     }
+
+    &.quintrex {
+        a {
+          color: $quintrex-light;
+        }
+        .highlight.secondary {
+          background-color: $amazon-blue !important;
+          color: $quintrex-light;
+        }
+        .highlight {
+          background-color: $quintrex-light;
+        }
+        footer {
+          border-color: $amazon-blue;
+        }
+        .jumbotron-home {
+          background-color: $quintrex-dark;
+          color: $quintrex-light;
+        }
+        .navbar-top {
+          @include trex-navbar($amazon-blue, $white, $quintrex-light, $amazon-blue);
+        }
+        .navbar-toggler-icon {
+          background: transparent url($icon-navbar-toggler-white) no-repeat;
+          background-size: contain;
+        }
+        .dropdown-menu {
+          background-color: $quintrex-dark;
+        }
+    }
+
 }
 
 /* Main Navbar */
