@@ -38,13 +38,13 @@ body {
             color: $primary;
         }
         .navbar-top {
-            @include trex-navbar(#1b1b1b, $white, $white, $white);
+            @include trex-navbar(#222e3d, $white, $white, $white);
         }
         .jumbotron-home {
-            @include trex-jumbotron(#1b1b1b, $white, true)
+            @include trex-jumbotron(#222e3d, $white, true)
         }
         .navbar-nav {
-          background-color: $black;
+          background-color: $amazon-blue;
         }
         .navbar-toggler-icon {
           background: transparent url($icon-navbar-toggler-white) no-repeat;
