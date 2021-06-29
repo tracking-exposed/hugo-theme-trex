@@ -1,0 +1,53 @@
+{{ $title:= .Get "title" }}
+{{ $when := .Get "when" }}
+{{ $description := .Get "description" }}
+{{ $embed := .Get "embed" }}
+{{ $author := .Get "author" }}
+{{ $language := .Get "language" }}
+{{ $iframe := .Get "iframe" }}
+{{ $allow := .Get "allow" }}
+{{ $href := .Get "href" }}
+{{ $year := .Get "year" }}
+
+<div class="row resource rounded">
+    <header class="resource-header col-12 border-bottom">
+        <div class="row">
+            <p class="mb-0">
+                <span class="badge badge-light">{{ $year }}</span>
+                {{ if $author }}
+                    <small>From: <span class="badge badge-light">{{ $author }}</span></small>
+                {{ end }}
+                {{ if $when }}
+                    <small>Published in: <span class="badge badge-light">{{ $when }}</span></small>
+                {{ end }}
+                {{ if $language}}
+                    <small>Language: <span class="badge badge-light">{{ $language }}</span></small>
+                {{ end }}
+            </p>
+        </div>
+    </header>
+    <div class="resource-body col-12">
+        <h3 class="mb-3 mt-3">
+            {{ $title }}
+        </h3>
+        {{ if $description }}
+            <p class="mb-1">
+                {{ if $href }}
+                    <a href="{{ $href }}">
+                        {{ $description }}
+                    </a>
+                {{ else }}
+                    {{ $description }}
+                {{ end }}
+            </p>
+        {{ end }}
+        {{ if $iframe }}
+            <iframe width="640" height="360"
+                src="{{ $iframe }}"
+                title="{{ $title }}"
+                allow="{{ $allow }}"
+                frameborder="0" allowfullscreen>
+            </iframe>
+        {{ end }}
+    </div>
+</div>
