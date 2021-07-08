@@ -9,6 +9,7 @@
 $navbar-top-height: 85px;
 $facebook-blue: #3b5898;
 $youtube-red: #D9230F;
+$youchoose-magenta: #e33180;
 
 
 body {
@@ -227,6 +228,46 @@ body {
         .dropdown-menu {
           background-color: $quintrex-dark;
         }
+    }
+
+    &.youchoose {
+      a {
+        color: $youchoose-magenta;
+      }
+      .highlight.secondary {
+        background-color: $white !important;
+        color: #FED766;
+      }
+      .highlight {
+        background-color: $youchoose-magenta;
+      }
+      footer {
+        border-color: $youchoose-magenta;
+      }
+      .jumbotron {
+        padding: 3.5rem 2rem 2rem 4rem;
+      }
+      .jumbotron-home {
+        background-color: #ffffff;
+        color: $youchoose-magenta;
+      }
+      .jumbotron-home small{
+        color: #1b1b1b;
+        font-weight: bold;
+      }
+      .navbar-top {
+        @include trex-navbar($white, $youchoose-magenta, $youchoose-magenta, $youchoose-magenta);
+      }
+      .navbar-toggler-icon {
+        background: transparent url($icon-navbar-toggler-white) no-repeat;
+        background-size: contain;
+      }
+      .dropdown-menu {
+        background-color: $white; 
+      }
+      .dropdown-item:hover{
+        background-color: $youchoose-magenta;
+      }
     }
 
 }
