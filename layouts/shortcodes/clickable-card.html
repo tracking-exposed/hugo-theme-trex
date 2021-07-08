@@ -1,0 +1,16 @@
+{{ $picture := .Get "picture" }}
+{{ $title := .Get "title" }}
+{{ $text := .Get "text" }}
+{{ $href := .Get "href" }}
+
+<div class="card">
+  <a href="{{ $href }}">
+    <img src="{{ .Get "picture" }}" class="card-img-top">
+  </a>
+  <div class="card-body">
+    <a href="{{ $href }}">
+      <h5 class="stretched-link card-title">{{ .Get "title" }}</h5>
+    </a>
+    <p class="stretched-link card-text">{{ .Get "text" }}</p>
+  </div>
+</div>
