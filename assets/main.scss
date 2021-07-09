@@ -243,17 +243,21 @@ body {
       }
       footer {
         border-color: $youchoose-magenta;
+        background-color: #000;
       }
       .jumbotron {
-        padding: 3.5rem 2rem 2rem 4rem;
+        padding: 4.5rem 2rem 0rem 3.5rem;
       }
       .jumbotron-home {
+        min-height: 500px;
         background-color: #ffffff;
         color: $youchoose-magenta;
       }
       .jumbotron-home small{
         color: #1b1b1b;
+        font-size: 18px;
         font-weight: bold;
+        padding-bottom: 10px;
       }
       .navbar-top {
         @include trex-navbar($white, $youchoose-magenta, $youchoose-magenta, $youchoose-magenta);
@@ -268,8 +272,27 @@ body {
       .dropdown-item:hover{
         background-color: $youchoose-magenta;
       }
-    }
-
+      #colophon small, #colophon a {
+        color: #fff !important;
+      }
+      #colophon a {
+        font-size: large;
+      }
+      #colophon .logo a {
+        background-image: url('/images/trex-logow.svg');
+        background-size: 60px;
+      }
+      /*.navbar {
+        position: fixed; 
+        top: 0; 
+        width: 100%; 
+        transition: top 0.3s; /* Transition effect when sliding down (and up) 
+      } */
+      div.featured-box{
+        margin: 0 13px 2rem 15px;
+        box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+      }
+  }
 }
 
 /* Main Navbar */
@@ -321,7 +344,7 @@ div.featured-box {
     background-color: $white;
     display: inline-block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    border-radius: 13px;
     a.image {
         display: block;
         text-indent: -99999px;
