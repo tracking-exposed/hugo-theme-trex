@@ -285,7 +285,13 @@ body {
       .navbar .navbar-brand img {
         height: 35px;
       }
+
+      div.featured-box{
+        margin: 0 35px 2.8rem 15px;
+        box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+      }
       h3 {
+        line-height: 140%;
         font-size: 25px;
         font-family: $regular !important;
         text-align: left;
@@ -294,17 +300,11 @@ body {
         h3 { 
           text-align: justify; 
         }
+      }
       
-   }
-      /*.navbar {
-        position: fixed; 
-        top: 0; 
-        width: 100%; 
-        transition: top 0.3s; /* Transition effect when sliding down (and up) 
-      } */
-      div.featured-box{
-        margin: 0 35px 2.8rem 15px;
-        box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+      h3 b, .bold, strong, .strong{
+        color: #e33180;
+        font-weight: 200 !important;
       }
   }
 }
