@@ -32,6 +32,10 @@ body {
           background: transparent url($icon-navbar-toggler-white) no-repeat;
           background-size: contain;
         }
+        pre b, .bold, strong, .strong{
+          font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+          font-weight: 900;
+        }
     }
 
     &.quintrex {
