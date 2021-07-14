@@ -421,10 +421,12 @@ div.featured-box {
   background: transparent url($icon-chrome) no-repeat;
 }
 
-#colophon p.logo {
+#colophon p {
+  text-align: right;
   margin-bottom: 20px;
 }
 
+/*
 #colophon .logo a {
   width: 60px;
   height: 60px;
@@ -436,10 +438,9 @@ div.featured-box {
   background: transparent url($icon-colophon-logo) no-repeat;
   background-size: 65px;
   background-position-y: center;
-}
+} */
 
 #colophon small {
-  margin-top: 45px;
   display: inline-block;
 }
 

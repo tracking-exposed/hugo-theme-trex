@@ -4,8 +4,7 @@
         {{ range .Site.Menus.footer }}
         <li>
             <a href="{{ .URL }}">
-                {{ .Pre }}
-                <span>{{ .Name }}</span>
+                {{ .Pre }}<span>{{ .Name }}</span>
             </a>
         </li>
         {{ end }}
