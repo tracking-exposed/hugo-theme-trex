@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+<style>
+    h2 {
+        font-size:3rem; 
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 2rem;
+        padding-top: 4rem;
+        word-break: break-word;
+        color: #e33180;
+        font-family: "Trex-Medium", sans-serif
+    }
+
+    h2:before {
+        content: '>_ ';
+        display: inline;
+    }
+
+    #philosophy-container > p {
+        box-sizing: border-box;
+        color: rgb(33, 37, 41);
+        font-family: "Trex-Regular", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 35px;
+        margin-bottom: 8px;
+        margin-top: 0px;
+        text-align: justify
+    }
+</style>
+
+<div class="container">
+    <div id="philosophy-container" class="col-md-8">
+        {{ .Content }}
+    </div>
+</div>
+
+{{ if .Params.include_partial }}
+    {{ partial .Params.include_partial . }}
+ {{ end }}
+{{ end }}
