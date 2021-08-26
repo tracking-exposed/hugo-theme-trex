@@ -1121,7 +1121,7 @@ h1 span {
   display: inline-block;
   font-weight: 600;
   text-transform: uppercase;
-  width: 15.8rem; }
+  width: 12.8rem; }
 
 /* -- Magazine Two Columns -- */
 @media (min-width: 768px) {
@@ -3157,12 +3157,6 @@ Slides - Backgrounds <section class="bg-primary">
 [class*='bg-'] .bg-white {
   color: #333;
   text-shadow: none; }
-
-.bg-potrex{
-  background-color: #1b1b1b; }
-
-.bg-pornhuborange{
-  background-color: #f98e05;}
 
 /* BG Apple Keynote*/
 .bg-apple {
