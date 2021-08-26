@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<script type="text/javascript" src='/js/vendor/particles.js' charset='utf-8'></script>
+<script type="text/javascript" src='/js/particles.js' charset='utf-8'></script>
+<link rel="stylesheet" href="/css/particles.css">
+<script src="/js/global.js"></script>
+
+<div id="particles-js" class="container">
+    {{ .Content }}
+</div>
+
+<script type="text/javascript">
+    particlesLoader();
+</script>
+
+{{ end }}
