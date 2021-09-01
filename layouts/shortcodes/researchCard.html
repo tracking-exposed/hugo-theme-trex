@@ -17,18 +17,13 @@
   </div>
   <div class="card-footer">
     <span class="card-text">
-        <small class="text-muted">
-            <b>
-                {{ $when }}
-            </b> ―
-            <a href="{{ $reportLink }}" target=_blank>Report</a>
-            ―
-            <a href="{{ $slidesLink }}" target=_blank>Slides</a>
-            {{ if $videoLink }}
-              ―
-              <a href="{{ $videoLink }}" target=_blank>Video</a>
-            {{ end }}
-        </small>
+      <small class="text-muted">
+        <b>
+          {{ $when }}
+        </b> ―
+        <a href="{{ $reportLink }}" target=_blank>Report</a>,
+        <a href="{{ $slidesLink }}" target=_blank>Slides</a>{{ if $videoLink }}, <a href="{{ $videoLink }}" target=_blank>Video</a>{{ end }}
+      </small>
     </span>
   </div>
 </div>
