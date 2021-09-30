@@ -252,10 +252,11 @@ body {
       @media (min-width: 768px) {
       .jumbotron {
         padding: 4.5rem 2rem 0rem 3.5rem;
+        margin-bottom: 0rem;
         }
       }
       .jumbotron-home {
-        min-height: 520px;
+        min-height: 480px;
         background-color: #ffffff;
         color: $youchoose-magenta;
       }
