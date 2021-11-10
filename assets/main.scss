@@ -74,11 +74,17 @@ body {
       }
 
       .navbar-top {
-        @include trex-navbar($tiktok-blue, $white, $white, $white);
+        @include trex-navbar($white, $white, $white, $white);
       }
 
       .jumbotron-home {
-        @include trex-jumbotron($tiktok-red, $tiktok-black, false);
+        background-color: $tiktok-red;
+        color: $white;
+      }
+
+      .jumbotron {
+        background-color: $tiktok-red;
+        color: $white;
       }
 
       .jumbotron-full {
