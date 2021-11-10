@@ -11,6 +11,9 @@ $facebook-blue: #3b5898;
 $youtube-red: #D9230F;
 $youchoose-magenta: #e33180;
 
+$tiktok-blue: #69c9d0;
+$tiktok-red: #ee1d52;
+$tiktok-black: #010101;
 
 body {
     padding-top: $navbar-top-height;
@@ -57,6 +60,52 @@ body {
         }
     }
 
+    &.tiktok {
+
+      .highlight {
+        background-color: $tiktok-blue
+      }
+      .highlight.secondary {
+        background-color: $tiktok-red !important;
+        color: $white;
+      }
+      a {
+        color: $tiktok-blue;
+      }
+
+      .navbar-top {
+        @include trex-navbar($tiktok-blue, $white, $white, $white);
+      }
+
+      .jumbotron-home {
+        @include trex-jumbotron($tiktok-red, $tiktok-black, false);
+      }
+
+      .jumbotron-full {
+        @include trex-jumbotron($tiktok-blue, $white, false);
+      }
+
+      .navbar-nav {
+        background-color: $tiktok-red;
+      }
+
+      .nav-pills {
+        .nav-link {
+          &.active {
+            background-color: $facebook-blue;
+          }
+        }
+      }
+
+      footer {
+        border-color: $facebook-blue;
+      }
+
+      .navbar-toggler-icon {
+        background: transparent url($icon-navbar-toggler-white) no-repeat;
+        background-size: contain;
+      }
+    }
 
     &.facebook {
 
@@ -107,7 +156,6 @@ body {
           background: transparent url($icon-navbar-toggler-white) no-repeat;
           background-size: contain;
         }
-
     }
 
     &.youtube {
