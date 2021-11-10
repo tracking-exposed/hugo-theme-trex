@@ -73,8 +73,13 @@ body {
         color: $tiktok-blue;
       }
 
+      .nav-link {
+        color: white;
+        font-size: 1.2rem;
+      }
+
       .navbar-top {
-        @include trex-navbar($white, $white, $white, $white);
+        background: linear-gradient(to right, $white, $tiktok-red);
       }
 
       .jumbotron-home {

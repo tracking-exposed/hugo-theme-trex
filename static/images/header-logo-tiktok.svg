@@ -6,7 +6,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="Layer_1"
@@ -42,8 +41,8 @@
      inkscape:window-height="1017"
      id="namedview4730"
      showgrid="false"
-     inkscape:zoom="0.36750954"
-     inkscape:cx="183.7985"
+     inkscape:zoom="0.91"
+     inkscape:cx="172.91443"
      inkscape:cy="227.11052"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
@@ -62,16 +61,6 @@
     </linearGradient>
     <style
        id="style4665">.cls-1{fill:#3b5998;}.cls-2{fill:#1b1b1b;}</style>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4890"
-       id="linearGradient4904"
-       gradientUnits="userSpaceOnUse"
-       x1="149.08632"
-       y1="158.49338"
-       x2="806.09761"
-       y2="158.49338"
-       gradientTransform="translate(-1.19498)" />
   </defs>
   <title
      id="title4669">TrackingExposed</title>
@@ -208,15 +197,39 @@
        style="fill:#1b1b1b" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:214.05648804px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:url(#linearGradient4904);fill-opacity:1;stroke:none;stroke-width:5.3514123"
-       x="148.51846"
-       y="238.29422"
-       id="text4868"
-       transform="scale(1.6736682,0.59749)"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;line-height:1.25;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#69c9d0;fill-opacity:1;stroke:none;stroke-width:3.84315443;"
+       x="320.73843"
+       y="151.63693"
+       id="text850"
+       transform="scale(1.0978355,0.91088327)"><tspan
          sodipodi:role="line"
-         id="tspan4866"
-         x="148.51846"
-         y="238.29422"
-         style="fill:url(#linearGradient4904);fill-opacity:1;stroke-width:5.3514123">TikTok</tspan></text>
+         id="tspan848"
+         x="320.73843"
+         y="151.63693"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:3.84315443;fill:#69c9d0;fill-opacity:1;">TikTok</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;line-height:1.25;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.84315443"
+       x="325.49292"
+       y="156.14619"
+       id="text850-5"
+       transform="scale(1.0978355,0.91088327)"><tspan
+         sodipodi:role="line"
+         id="tspan848-9"
+         x="325.49292"
+         y="156.14619"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:3.84315443">TikTok</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;line-height:1.25;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ee1d52;fill-opacity:1;stroke:none;stroke-width:3.84315443"
+       x="330.73038"
+       y="161.3934"
+       id="text850-5-6"
+       transform="scale(1.0978355,0.91088327)"><tspan
+         sodipodi:role="line"
+         id="tspan848-9-5"
+         x="330.73038"
+         y="161.3934"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ee1d52;fill-opacity:1;stroke-width:3.84315443">TikTok</tspan></text>
   </g>
 </svg>
