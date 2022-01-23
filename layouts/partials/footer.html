@@ -1,17 +1,16 @@
 <footer id="colophon">
     <div class="container">
-        <p class="float-right">
-        <a href="https://tracking.exposed" title="Tracking Exposed">
-            {{ if eq site.Params.subsite "youchoose" }}
-                <img src="/images/trex-logow.svg" width="60px" height="60px" />
-            {{ else }}
-                <img src="/images/trex-logo.svg" width="60px" height="60px" />
-            {{ end }}
-        </a>
+        <div class="row">
+            <div class="col-3">
+                <a href="https://tracking.exposed" title="Tracking Exposed">
+                    <img src="/images/header-logo-default-black.svg" width="100%"/>
+                </a>
+            </div>
+            <div class="col-9">
+                {{- partial "footer-menu.html" . -}}
+            </div>
+        </div>
         <br>
-        <small style="font-size: 0.8em">CC BY-NC 2.0 {{ now.Format "2006"}}</small>
-        </p>
-        {{- partial "footer-menu.html" . -}}
         <span class="clearfix"></span>
     </div>
 </footer>
