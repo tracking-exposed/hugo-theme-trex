@@ -1,0 +1,10 @@
+{{ $href := .Get "href" }}
+{{ $videoId := .Get "videoId" }}
+
+<blockquote
+    class="tiktok-embed"
+    cite="{{ $href }}"
+    data-video-id="{{ $videoId }}"
+    style="max-width: 605px;min-width: 325px;" > 
+    <section></section>
+</blockquote> 
