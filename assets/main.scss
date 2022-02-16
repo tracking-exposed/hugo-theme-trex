@@ -31,38 +31,24 @@ body {
         .navbar-nav {
           background-color: $black;
         }
+        .nav-link {
+          font-size: 1.6rem;
+          margin-left: 0.4em;
+          margin-right: 0.4em;
+        }
         .navbar-toggler-icon {
           background: transparent url($icon-navbar-toggler-white) no-repeat;
           background-size: contain;
         }
-        pre b, .bold, strong, .strong{
+
+        pre b, .bold, strong, .strong {
           font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
           font-weight: 900;
         }
     }
 
-    &.quintrex {
-        a {
-            color: $primary;
-        }
-        .navbar-top {
-            @include trex-navbar(#222e3d, $white, $white, $white);
-        }
-        .jumbotron-home {
-            @include trex-jumbotron(#222e3d, $white, true)
-        }
-        .navbar-nav {
-          background-color: $amazon-blue;
-        }
-        .navbar-toggler-icon {
-          background: transparent url($icon-navbar-toggler-white) no-repeat;
-          background-size: contain;
-        }
-    }
-
     &.tiktok {
 
-  
       .highlight {
         background-color: $tiktok-blue
       }
@@ -294,6 +280,26 @@ body {
           background-color: $quintrex-dark;
         }
     }
+    /* this was included above 
+
+    &.quintrex {
+        a {
+            color: $primary;
+        }
+        .navbar-top {
+            @include trex-navbar(#222e3d, $white, $white, $white);
+        }
+        .jumbotron-home {
+            @include trex-jumbotron(#222e3d, $white, true)
+        }
+        .navbar-nav {
+          background-color: $amazon-blue;
+        }
+        .navbar-toggler-icon {
+          background: transparent url($icon-navbar-toggler-white) no-repeat;
+          background-size: contain;
+        }
+    } */
 
     &.youchoose {
       a {

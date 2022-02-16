@@ -33,11 +33,10 @@
     </div>
 </div>
 
-{{ if eq site.Params.Subsite "other" }}
+{{ if eq site.Params.news "publish" }}
     <div class="container">
-        <h2>Recent News</h2>
         <ul class="list-group list-group-flush list-unstyled">
-            {{ range first 6 (.Data.Pages) }}
+            {{ range first 4 (.Data.Pages) }}
             <li>
                 <article>
                     <h3 class="center">

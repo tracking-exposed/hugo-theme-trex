@@ -1,0 +1,15 @@
+{{ $picture := .Get "picture" }}
+{{ $title := .Get "title" }}
+{{ $text := .Get "text" }}
+{{ $href := .Get "href" }}
+
+<div class="featured-box">
+  <a class="image" href="{{ $href }}" style="background-image: url({{ $picture }})">
+  </a>
+  <a class="text" href="{{ $href }}">
+    {{ $title }}
+  </a>
+  <p class="mb-0">
+    {{ $text  }}
+  </p>
+</div>
