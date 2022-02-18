@@ -1,0 +1,14 @@
+{{ $picture := .Get "picture" }}
+{{ $name := .Get "name" }}
+{{ $role:= .Get "role" }}
+{{ $blog := .Get "blog" }}
+
+<div class="col-3">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title text-center"><a href="{{ $blog }}">{{ $name }}</a></h5>
+      <img src="{{ $picture }}" class="card-img-top">
+      <p class="card-text text-center">{{ $role }}</p>
+    </div>
+  </div>
+</div>
