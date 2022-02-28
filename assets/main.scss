@@ -201,9 +201,41 @@ body {
         }
         footer {
           border-color: $orange;
+          border-width: 6px;
+          border-image: linear-gradient(45deg, rgb(249,142,5), rgb(250,224,66)) 1;
+          background-color: #1b1b1b;
+          margin-top: 1rem;
+          padding: 1.5rem 0;
+        }
+        #colophon .main-navigation a{
+          color: #f7fbfa !important;
+          font-weight: 600;
+          letter-spacing: 0.03rem;
+        }
+        #colophon .main-navigation a :hover{
+          text-decoration: underline !important;
+          color: $orange !important;
+          font-weight: 600;
+          letter-spacing: 0.03rem;
+        }
+        #colophon .logo a {
+          background-image: url('/images/trex-logow.svg');
+          background-size: 60px;
         }
         .navbar-nav {
           background-color: $black;
+        }
+        a.nav-link{
+          font-weight: 600;
+          letter-spacing: 0.03rem;
+        }
+        a.nav-link:hover{
+          text-decoration: underline !important;
+          color: $orange !important;
+        }
+        .navbar-expand-md .navbar-nav .nav-link {
+          padding-right: 1rem;
+          padding-left: 1rem; 
         }
         .jumbotron-home {
           background-color: $black;
@@ -216,7 +248,42 @@ body {
         .navbar-top {
           @include trex-navbar($black, $white, $black, $black);
         }
+        @media (min-width: 768px) {
+          .jumbotron {
+            padding: 2rem 2rem 0rem 2rem;
+            margin-bottom: 3rem;
+            }
+          }
+          .jumbotron-home {
+            min-height: 340px;
+            background-color: none;
+            color: $orange;
+          }
+          .jumbotron-home small{
+            color: #1b1b1b;
+            font-size: 18px;
+            font-weight: bold;
+            padding-bottom: 10px;
+          }
+          div.featured-box{
+            box-shadow: none;
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 0;
+            border-image: linear-gradient(45deg, rgb(249,142,5), rgb(250,224,66)) 1;
+            padding: 1.1rem 1rem 0.6rem 1.1rem;
+            margin: 0 10px 0.5rem 10px;
+            background-color: #f7fbfa;
+          }
+          div.featured-box a.image{
+            height: 10rem;
+            margin-bottom: 1rem;
+          }
+          .home-content{
+            padding-bottom: 2rem;
+          }
     }
+
 
     &.amazon {
         a {

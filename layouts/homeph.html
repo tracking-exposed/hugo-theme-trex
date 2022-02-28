@@ -1,0 +1,65 @@
+{{ define "main" -}}
+<div class="jumbotron jumbotron-home">
+    <div class="container">
+        {{ if eq site.Params.ourvision "display" }}
+            <small>Our Vision</small>
+        {{ end }}
+        <h1 class="display-4 font-weight-bold">
+            {{ site.Params.Tagline }}
+        </h1>
+    </div>
+</div>
+
+<div class="container core">
+    <div class="row">
+        {{ range $index, $element := .Site.Menus.featured }}
+        <div class="featured-box col-sm">
+            <a class="image" href="{{ .URL }}" {{ if .Pre }}
+              style="background-image: url({{ .Pre }})" {{ end }}>
+            </a>
+            <a class="text" href="{{ .URL }}">
+              {{ .Name }}
+            </a>
+            {{ if .Post }}
+              <p class="mb-0">
+                {{ .Post }}
+              </p>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+    <div class="content home-content" style="margin-top: -7rem;">
+        {{ .Content }}
+    </div>
+</div>
+
+{{ if eq site.Params.Subsite "other" }}
+    <div class="container">
+        <h2>Recent News</h2>
+        <ul class="list-group list-group-flush list-unstyled">
+            {{ range first 6 (.Data.Pages) }}
+            <li>
+                <article>
+                    <h3 class="center">
+                        <a href="{{ .Permalink }}" title="Read {{ .Title }}" rel="bookmark">{{ .Title }}</a>
+                    </h3>
+                    <time class="post-date" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'>
+                        {{ .Date.Format "Mon, Jan 2, 2006" }}
+                    </time>
+                    <p>
+                        {{ .Summary }}
+                        {{ if .Truncated }}
+                        <span class="read-more-link">
+                            <a href="{{ .RelPermalink }}">Read More…</a>
+                        </span>
+                        {{ end }}
+                    </p>
+                </article>
+            </li>
+            {{- end }}
+        </ul>
+        <span class="clear"></span>
+    </div>
+{{ end }}
+
+{{- end }}
