@@ -3,7 +3,12 @@
         <div class="row">
             <div class="col-3">
                 <a href="https://tracking.exposed" title="Tracking Exposed">
+                    {{ if eq site.Params.news "pornhub" }}
                     <img src="/images/header-logo-default-black.svg" width="100%"/>
+                    {{ else }}
+                    <!-- pornhub is the only site so far with dark background -->
+                    <img src="/images/header-logo-default.svg" width="100%"/>
+                    {{ end }}
                 </a>
             </div>
             <div class="col-9">
