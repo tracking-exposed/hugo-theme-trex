@@ -265,24 +265,51 @@ body {
             font-weight: bold;
             padding-bottom: 10px;
           }
-          div.featured-box{
+
+          /* this class is invoked in homeph which is a specially crafted homepage */
+          div.featured-ph-box {
+            position: relative;
+            display: inline-block;
+            top: -10rem;
+            padding: 1.1rem 1rem 0.6rem 1.1rem;
+            margin: 0 10px 0.5rem 10px;
             box-shadow: none;
             border-style: solid;
             border-width: 3px;
-            border-radius: 0;
+            /* border-radius: 13px; */
             border-image: linear-gradient(45deg, rgb(249,142,5), rgb(250,224,66)) 1;
-            padding: 1.1rem 1rem 0.6rem 1.1rem;
-            margin: 0 10px 0.5rem 10px;
             background-color: #f7fbfa;
           }
-          div.featured-box a.image{
+
+          div.featured-ph-box a.image {
             height: 10rem;
             margin-bottom: 1rem;
+            display: block;
+            text-indent: -99999px;
+            background-color: #d9d9d9;
+            width: 100%;
+            text-align: center;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
           }
+
+          div.featured-ph-box a.text {
+            text-decoration: none;
+            font-size: 21px;
+            font-family: "Trex-Bold";
+            margin-bottom: 0;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          } 
+
           .home-content{
             padding-bottom: 2rem;
           }
     }
+
 
 
     &.amazon {
@@ -500,6 +527,7 @@ div.featured-box {
     display: inline-block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 13px;
+
     a.image {
         display: block;
         text-indent: -99999px;
