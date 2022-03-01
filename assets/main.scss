@@ -237,6 +237,13 @@ body {
           padding-right: 1rem;
           padding-left: 1rem; 
         }
+        .dropdown-item:hover{
+          background-color: $orange;
+        }
+        .dropdown-menu {
+          background-color: #1b1b1b;
+          width: 40%;
+        }
         .jumbotron-home {
           background-color: $black;
           color: $orange;
@@ -271,7 +278,7 @@ body {
             position: relative;
             display: inline-block;
             top: -10rem;
-            padding: 1.1rem 1rem 0.6rem 1.1rem;
+            padding: 1.1rem 1rem 0.8rem 1.1rem;
             margin: 0 10px 0.5rem 10px;
             box-shadow: none;
             border-style: solid;
@@ -282,7 +289,7 @@ body {
           }
 
           div.featured-ph-box a.image {
-            height: 10rem;
+            height: 13rem;
             margin-bottom: 1rem;
             display: block;
             text-indent: -99999px;
@@ -298,12 +305,23 @@ body {
             text-decoration: none;
             font-size: 21px;
             font-family: "Trex-Bold";
-            margin-bottom: 0;
 
             &:hover {
               text-decoration: underline;
             }
           } 
+
+          div.featured-ph-box span{
+            font-family: monospace;
+            font-weight: 900;
+            line-height: 1.8em;
+          }
+
+          div.featured-ph-box p{
+            letter-spacing: 0.02em;
+            font-weight: 900;
+            line-height: 1.4em;
+          }
 
           .main-div {
             padding-bottom: 2rem;
