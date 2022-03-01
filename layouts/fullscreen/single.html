@@ -1,5 +1,7 @@
 {{ define "main" }}
-{{ .Content }}
+<div class="fullscreen-content">
+    {{ .Content }}
+</div>
 {{ if .Params.include_partial }}
     {{ partial .Params.include_partial . }}
  {{ end }}
