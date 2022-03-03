@@ -5,16 +5,11 @@
 {{ $textstyle := .Get "textstyle" }}
 {{ $leftId := .Get "leftId" }}
 
-<div class="row">
-  <h3>{{$lefttitle}}</h3>
-  <div class="col-lg-8">
+<div class="col-sm-8justify-content-md-center mt-3 mb-5">
     {{ if $leftId }}
       <div id="{{$leftId}}"></div>
     {{ else }}
       <img width="100%" src={{ $leftpict }}>
     {{ end }}
-  </div>
-  <div class="col-lg-4">
-    <p style={{$textstyle}}>{{ $rightcontent }}</p>
-  </div>
 </div>
+

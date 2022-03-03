@@ -201,7 +201,7 @@ body {
         }
         footer {
           border-color: $orange;
-          border-width: 6px;
+          border-width: 3px;
           border-image: linear-gradient(45deg, rgb(249,142,5), rgb(250,224,66)) 1;
           background-color: #1b1b1b;
           margin-top: 1rem;
@@ -283,7 +283,7 @@ body {
             box-shadow: none;
             border-style: solid;
             border-width: 3px;
-            /* border-radius: 13px; */
+            border-radius: 0;
             border-image: linear-gradient(45deg, rgb(249,142,5), rgb(250,224,66)) 1;
             background-color: #f7fbfa;
           }
