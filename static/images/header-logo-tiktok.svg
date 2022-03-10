@@ -42,7 +42,7 @@
      id="namedview4730"
      showgrid="false"
      inkscape:zoom="0.91"
-     inkscape:cx="172.91443"
+     inkscape:cx="594.2886"
      inkscape:cy="227.11052"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
@@ -195,41 +195,113 @@
        d="m 136.53086,181.62425 a 34.35,34.35 0 0 1 -16.39,-36.88 l -18.84,-10.82 a 55.4,55.4 0 0 0 94.2,54.38 l -18.85,-10.88 a 34.33,34.33 0 0 1 -40.12,4.2 z"
        id="path15049"
        style="fill:#1b1b1b" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;line-height:1.25;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#69c9d0;fill-opacity:1;stroke:none;stroke-width:3.84315443;"
-       x="320.73843"
-       y="151.63693"
-       id="text850"
-       transform="scale(1.0978355,0.91088327)"><tspan
-         sodipodi:role="line"
-         id="tspan848"
-         x="320.73843"
-         y="151.63693"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:3.84315443;fill:#69c9d0;fill-opacity:1;">TikTok</tspan></text>
-    <text
-       xml:space="preserve"
+    <g
+       aria-label="TikTok"
+       transform="scale(1.0978355,0.91088327)"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;line-height:1.25;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#69c9d0;fill-opacity:1;stroke:none;stroke-width:3.84315443"
+       id="text850">
+      <path
+         d="m 401.74887,64.477692 v -20.44476 h -81.16416 v 20.44476 h 29.9754 v 87.159238 h 21.21336 V 64.477692 Z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#69c9d0;fill-opacity:1;stroke-width:3.84315443"
+         id="path4617"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 431.01572,44.032932 h -20.29104 v 17.98524 h 20.29104 z m 0,28.28448 h -20.29104 v 79.319518 h 20.29104 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#69c9d0;fill-opacity:1;stroke-width:3.84315443"
+         id="path4619"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 469.74596,44.032932 H 449.45492 V 151.63693 h 20.29104 v -24.90264 l 7.53228,-8.30088 22.75056,33.20352 h 23.8266 l -32.89608,-48.11436 28.74564,-31.205158 h -24.5952 l -25.3638,27.6696 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#69c9d0;fill-opacity:1;stroke-width:3.84315443"
+         id="path4621"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 604.10685,64.477692 v -20.44476 h -81.16416 v 20.44476 h 29.9754 v 87.159238 h 21.21336 V 64.477692 Z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#69c9d0;fill-opacity:1;stroke-width:3.84315443"
+         id="path4623"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 603.11726,116.74249 c 0,21.98196 12.60504,36.43164 35.3556,36.43164 22.75056,0 35.3556,-14.44968 35.3556,-36.43164 v -10.14552 c 0,-21.981958 -12.60504,-36.431638 -35.3556,-36.431638 -22.75056,0 -35.3556,14.44968 -35.3556,36.431638 z m 50.42016,2.61324 c 0,9.37692 -5.22648,15.52572 -15.06456,15.52572 -9.83808,0 -15.06456,-6.1488 -15.06456,-15.52572 v -15.372 c 0,-9.376918 5.22648,-15.525718 15.06456,-15.525718 9.83808,0 15.06456,6.1488 15.06456,15.525718 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#69c9d0;fill-opacity:1;stroke-width:3.84315443"
+         id="path4625"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 710.23369,44.032932 H 689.94265 V 151.63693 h 20.29104 v -24.90264 l 7.53228,-8.30088 22.75056,33.20352 h 23.8266 l -32.89608,-48.11436 28.74564,-31.205158 h -24.5952 l -25.3638,27.6696 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#69c9d0;fill-opacity:1;stroke-width:3.84315443"
+         id="path4627"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       aria-label="TikTok"
+       transform="scale(1.0978355,0.91088327)"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;line-height:1.25;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.84315443"
-       x="325.49292"
-       y="156.14619"
-       id="text850-5"
-       transform="scale(1.0978355,0.91088327)"><tspan
-         sodipodi:role="line"
-         id="tspan848-9"
-         x="325.49292"
-         y="156.14619"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:3.84315443">TikTok</tspan></text>
-    <text
-       xml:space="preserve"
+       id="text850-5">
+      <path
+         d="M 406.50336,68.986954 V 48.542194 H 325.3392 v 20.44476 h 29.9754 v 87.159236 h 21.21336 V 68.986954 Z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:3.84315443"
+         id="path4604"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 435.77021,48.542194 h -20.29104 v 17.98524 h 20.29104 z m 0,28.28448 h -20.29104 v 79.319516 h 20.29104 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:3.84315443"
+         id="path4606"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 474.50045,48.542194 H 454.20941 V 156.14619 h 20.29104 v -24.90264 l 7.53228,-8.30088 22.75056,33.20352 h 23.8266 l -32.89608,-48.11436 28.74564,-31.205156 h -24.5952 l -25.3638,27.669596 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:3.84315443"
+         id="path4608"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 608.86133,68.986954 v -20.44476 h -81.16416 v 20.44476 h 29.9754 v 87.159236 h 21.21336 V 68.986954 Z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:3.84315443"
+         id="path4610"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 607.87174,121.25175 c 0,21.98196 12.60504,36.43164 35.3556,36.43164 22.75056,0 35.3556,-14.44968 35.3556,-36.43164 v -10.14552 c 0,-21.981956 -12.60504,-36.431636 -35.3556,-36.431636 -22.75056,0 -35.3556,14.44968 -35.3556,36.431636 z m 50.42016,2.61324 c 0,9.37692 -5.22648,15.52572 -15.06456,15.52572 -9.83808,0 -15.06456,-6.1488 -15.06456,-15.52572 v -15.372 c 0,-9.376916 5.22648,-15.525716 15.06456,-15.525716 9.83808,0 15.06456,6.1488 15.06456,15.525716 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:3.84315443"
+         id="path4612"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 714.98818,48.542194 H 694.69714 V 156.14619 h 20.29104 v -24.90264 l 7.53228,-8.30088 22.75056,33.20352 h 23.8266 l -32.89608,-48.11436 28.74564,-31.205156 h -24.5952 l -25.3638,27.669596 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:3.84315443"
+         id="path4614"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       aria-label="TikTok"
+       transform="scale(1.0978355,0.91088327)"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;line-height:1.25;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ee1d52;fill-opacity:1;stroke:none;stroke-width:3.84315443"
-       x="330.73038"
-       y="161.3934"
-       id="text850-5-6"
-       transform="scale(1.0978355,0.91088327)"><tspan
-         sodipodi:role="line"
-         id="tspan848-9-5"
-         x="330.73038"
-         y="161.3934"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ee1d52;fill-opacity:1;stroke-width:3.84315443">TikTok</tspan></text>
+       id="text850-5-6">
+      <path
+         d="m 411.74082,74.234161 v -20.44476 h -81.16416 v 20.44476 h 29.9754 V 161.3934 h 21.21336 V 74.234161 Z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ee1d52;fill-opacity:1;stroke-width:3.84315443"
+         id="path4591"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 441.00766,53.789401 h -20.29104 v 17.98524 h 20.29104 z m 0,28.28448 H 420.71662 V 161.3934 h 20.29104 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ee1d52;fill-opacity:1;stroke-width:3.84315443"
+         id="path4593"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 479.7379,53.789401 H 459.44686 V 161.3934 h 20.29104 v -24.90264 l 7.53228,-8.30088 22.75056,33.20352 h 23.8266 L 500.95126,113.27904 529.6969,82.073881 h -24.5952 l -25.3638,27.669599 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ee1d52;fill-opacity:1;stroke-width:3.84315443"
+         id="path4595"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 614.09879,74.234161 v -20.44476 h -81.16416 v 20.44476 h 29.9754 V 161.3934 h 21.21336 V 74.234161 Z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ee1d52;fill-opacity:1;stroke-width:3.84315443"
+         id="path4597"
+         inkscape:connector-curvature="0" />
+      <path
+         d="m 613.1092,126.49896 c 0,21.98196 12.60504,36.43164 35.3556,36.43164 22.75056,0 35.3556,-14.44968 35.3556,-36.43164 v -10.14552 c 0,-21.981958 -12.60504,-36.431639 -35.3556,-36.431639 -22.75056,0 -35.3556,14.449681 -35.3556,36.431639 z m 50.42016,2.61324 c 0,9.37692 -5.22648,15.52572 -15.06456,15.52572 -9.83808,0 -15.06456,-6.1488 -15.06456,-15.52572 v -15.372 c 0,-9.37692 5.22648,-15.525718 15.06456,-15.525718 9.83808,0 15.06456,6.148798 15.06456,15.525718 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ee1d52;fill-opacity:1;stroke-width:3.84315443"
+         id="path4599"
+         inkscape:connector-curvature="0" />
+      <path
+         d="M 720.22564,53.789401 H 699.9346 V 161.3934 h 20.29104 v -24.90264 l 7.53228,-8.30088 22.75056,33.20352 h 23.8266 L 741.439,113.27904 770.18464,82.073881 h -24.5952 l -25.3638,27.669599 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:153.72000122px;font-family:'Simplon Norm';-inkscape-font-specification:'Simplon Norm, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ee1d52;fill-opacity:1;stroke-width:3.84315443"
+         id="path4601"
+         inkscape:connector-curvature="0" />
+    </g>
   </g>
 </svg>
