@@ -45,6 +45,10 @@ body {
           font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
           font-weight: 900;
         }
+
+        .navbar-nav{
+          padding: 0 !important;  
+        }
     }
 
     &.tiktok {
