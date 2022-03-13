@@ -82,20 +82,26 @@
     </div>
 </header>
 
-
 <div id="press--container" class="container">
     <div class="row justify-content-start">
         <div class="col-md-9 pl-0 mt-2">
         {{ .Content }}
         <div class="row justify-content-start mt-5">
+            {{ if (isset .Params "documentation") }}
             <div class="col-md-6 pl-0">
-                <a class="btn" href="https://tracking.exposed"></a>>Download .pdf</a> <!--to be reviewed-->
+                <a class="btn" href="{{ .Params.documentation }}">
+                    Press Statement in .pdf
+                </a>
             </div>
+            {{ end }}
             <div class="col-md-6">
-                <a class="btn-filled" href="https://tracking.exposed">View all press releases</a>
+                <a class="btn-filled" href="/pr/">View all press releases</a>
             </div>
         </div>
-            <!--{{ if (isset .Params "image") }}<img id="press-image">{{ .Params.image }}</smaller>{{ end }}<br> to be fixed-->
+            {{ if (isset .Params "image") }}
+                <br>
+                <img id="press-image" src="{{ .Params.image }}" />
+            {{ end }}
         </div>
     </div>  
 </div>
