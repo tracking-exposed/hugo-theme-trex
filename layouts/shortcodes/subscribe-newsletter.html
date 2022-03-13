@@ -1,0 +1,99 @@
+{{ $reason := .Get "reason" }}
+
+<div class="mt-5">                                                                          
+
+  <p>
+      Subscribe to our press distribution list
+  </p>
+  <div class="row">                                                          
+    <div class="col-md-2 col-sm-12 mt-5">                                                                             
+      <input id="email--address" type="email" name="email" class="email-box__input" placeholder="email@domain" />     
+    </div>                                                                                                            
+    <div class="col-md-2 col-sm-12 mt-5"></div>
+    <div class="col-md-1 col-sm-6 mt-5">                                                                              
+        <button id="mail--button" class="btn btn-primary">Add me!</button>                                            
+    </div>                                                                                                            
+  </div>                                                                                                              
+</div>                                                                                                                
+
+
+<script src="/js/global.js"></script>                
+<script type="text/javascript">                      
+
+  $("#mail--button").click(function(evnt) {          
+    evnt.preventDefault();                           
+    $("#mail--button").text("...");                  
+
+    fetch(buildApiUrl("registerEmail"), {            
+      method: 'POST',                                
+      headers: {                                     
+        'Content-Type': 'application/json'           
+      },                                             
+      body: JSON.stringify({                         
+        'email': $('#email--address').val(),         
+        'reason': 'subscribe-to-ukraine',            
+      })                                             
+    })
+    .then(function(result) {                         
+      console.log(result.status);                    
+      if(result.status === 403)                      
+        $("#mail--button").text("⛔ ");               
+      else if(result.status === 200)                 
+        $("#mail--button").text("��");               
+      else if(result.status === 201)                 
+        $("#mail--button").text("��");               
+      else
+        $("#mail--button").text("<error>");          
+    });
+  });
+
+</script>
+
+
+<style>
+
+
+#email--address {
+    /* max-width: 800px; 
+    border-radius: 0px; */
+    border: solid;
+    border-width: 3px;
+    padding: 10px 10px 10px 10px;  
+}
+
+.fba {
+    color: #ee1d52;
+    font-size: 1.4em;
+    font-weight: 900;
+}
+
+#mail--button {
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 18px;
+    background-image: none;
+    background-color: #ee1d52;
+    color: white;
+    border-radius: 4px;
+    font-weight: 900;
+    border: none;
+}
+
+#mail--button:hover {
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 18px;
+    background-color: #69c9d0;
+    color: white;
+    border: none !important;
+    border-radius: 4px;
+    font-weight: 900;
+}
+
+.cta {
+    font-size: 6em;
+}
+
+.cta-container p {
+    font-size: 2.3em;
+}
+
+</style>
