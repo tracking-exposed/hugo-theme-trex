@@ -6,12 +6,21 @@
 
 <div class="card mb-3 text-center" {{ if $disabled }} style="background-color:{{ $bgcolor }}; -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); cursor:not-allowed" {{ end }}>
   <div style="background-color:{{ $bgcolor }}; padding: 0.5em;">
-    <a href="{{ $href }}" target=_blank {{ if $disabled }} style="background-color:{{ $bgcolor }}; -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); cursor:not-allowed" {{ end }}>
+    <a
+      href="{{ $href }}"
+      target=_blank
+      {{ if $disabled }} style="background-color:{{ $bgcolor }}; -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); cursor:not-allowed" {{ end }}
+    >
       <img src="/images/header-logo-{{$suffix}}" class="card-img-top" alt="...">
     </a>
   </div>
   <div class="card-body">
-    <a target=_blank href="{{ $href }}" class="card-link" {{ if $disabled }} style="background-color:{{ $bgcolor }}; -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); cursor:not-allowed" {{ end }}>{{$href}} →<a>
+    <a
+      target=_blank
+      href="{{ $href }}"
+      class="card-link"
+      {{ if $disabled }} style="background-color:{{ $bgcolor }}; -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); cursor:not-allowed" {{ end }}
+    >{{$href}} →</a>
     <!-- <h4 class="card-title">title</h4> -->
     <p class="card-text">{{$desc}}</p>
   </div>

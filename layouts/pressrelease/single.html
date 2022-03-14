@@ -1,0 +1,109 @@
+{{define "main" -}}
+
+<style>
+    .container {
+        max-width: 900px;
+    }
+    #pageTitle {
+        font-weight: 900;
+        font-size: 3em;
+        line-height: 120%;
+        padding-bottom: 0.5em;
+        max-width: 900px;
+    }
+
+    #pageSubtitle {
+        font-size: 2em !important;
+        padding-bottom: 0.5em;
+        display: inline-block;
+        max-width: 800px;
+    }
+
+    h3 {
+        padding-bottom: 0.8em;
+        padding-top: 1.5em;
+    }
+    
+    p {
+        font-size: 1.3em;
+        line-height: 1.7;
+        letter-spacing: 0.005em;
+
+    }
+
+    .location{
+        padding-top: 1em;
+    }
+
+    .green{
+        color: #53c1b6;
+    }
+
+    .btn {
+        background-color: none;
+        border: solid;
+        color: #53c1b6;
+        border-radius: 20px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .btn-filled {
+        background-color: #53c1b6;
+        color: #fff !important;
+        border-radius: 20px;
+        padding: 17px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    a:hover.btn-filled {
+        text-decoration: none;
+    }
+</style>
+
+<header class="jumbotron">
+    <div class="container">
+        <div class="text-left">
+            <h3 class="green">Press release</h3>
+            <h1 id="pageTitle">{{ .Title }}</h1>
+            {{ if (isset .Params "subtitle") }}<smaller id="pageSubtitle">{{ .Params.subtitle }}</smaller>{{ end }}<br>
+            {{ if (isset .Params "location") }}<h5 class="location green">({{ .Params.location }})<time class="post-date" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'> {{ .Date.Format "Mon, Jan 2, 2006" }}</time></h5>{{ end }}
+        </div>
+    </div>
+</header>
+
+<div id="press--container" class="container">
+    <div class="row justify-content-start">
+        <div class="col-md-9 pl-0 mt-2">
+        {{ .Content }}
+        <div class="row justify-content-start mt-5">
+            {{ if (isset .Params "documentation") }}
+            <div class="col-md-6 pl-0">
+                <a class="btn" href="{{ .Params.documentation }}">
+                    Press Statement in .pdf
+                </a>
+            </div>
+            {{ end }}
+            <div class="col-md-6">
+                <a class="btn-filled" href="/pr/">View all press releases</a>
+            </div>
+        </div>
+            {{ if (isset .Params "image") }}
+                <br>
+                <img id="press-image" src="{{ .Params.image }}" />
+            {{ end }}
+        </div>
+    </div>  
+</div>
+
+{{- end }}

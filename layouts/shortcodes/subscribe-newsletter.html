@@ -1,0 +1,87 @@
+{{ $reason := .Get "reason" }}
+
+<span>
+  <h3>
+      Subscribe to our press distribution list
+  </h3>
+  <div class="row vertical-center">
+    <div class="col-md-4 col-sm-3 ml-0 mr-2 mt-3 mb-5">
+      <input id="email--address" type="email" name="email" class="email-box__input" placeholder="email@domain" />     
+    </div>
+    <div class="col-md-3 col-sm-3 mt-2">
+        <button id="mail--button" class="btn btn-primary">Add me!</button>                                            
+    </div>                                                                                                            
+  </div>                                                                                                              
+</span>                                                                                        
+
+<!-- this mechanism to bridge between HUGO 'reason' variable andt the javascript variable below, as we can't use the { { into JS -->
+<script type="text/javascript">
+    window.reason = "{{ $reason }}"
+</script>
+
+<script src="/js/global.js"></script>                
+<script type="text/javascript">                      
+
+  $("#mail--button").click(function(evnt) {          
+
+    evnt.preventDefault();
+    $("#mail--button").text("...");
+
+    fetch(buildApiUrl("registerEmail"), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        'email': $('#email--address').val(),
+        'reason': window.reason,
+      })
+    })
+    .then(function(result) {
+      console.log(result.status);
+      if(result.status === 403)
+        $("#mail--button").text("⛔");
+      else if(result.status === 200)
+        $("#mail--button").text("👍");
+      else if(result.status === 201)
+        $("#mail--button").text("🙋");
+      else if(result.status === 500)
+        $("#mail--button").text("💥");
+      else
+        $("#mail--button").text("<error>");
+    });
+  });
+
+</script>
+
+
+<style>
+
+
+#email--address {
+    border: solid;
+    border-width: 2px;
+    padding: 0.7em;
+}
+
+#mail--button {
+    font-size: 16px;
+    background-image: none;
+    background-color: #000;
+    color: white;
+    border-radius: 20px;
+    font-weight: 900;
+    border: none;
+}
+
+#mail--button:hover {
+    background-color: #53c1b6;
+    color: white;
+    font-weight: 900;
+}
+
+.cta-container p {
+    font-size: 2.3em;
+}
+
+</style>

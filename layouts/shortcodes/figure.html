@@ -1,13 +1,10 @@
 {{ $picture := .Get "picture" }}
-{{ $title := .Get "name" }}
-{{ $role:= .Get "role" }}
+{{ $name := .Get "name" }}
+{{ $role := .Get "role" }}
 {{ $href := .Get "href" }}
 
-<div class="col mb-4">
-  <div class="card h-100">
-    <div class="card-body">
-	    <h5 class="card-title"><a href="{{ $href }}">{{ $title }}</a></h5>
-      <p class="card-text">{{ $role }}</p>
-    </div>
-  </div>
+<div class="col-2">
+  <h5 class="card-title">{{ $name }}</h5>
+  <p class="card-text">{{ $role }}</p>
 </div>
+

@@ -45,6 +45,10 @@ body {
           font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
           font-weight: 900;
         }
+
+        .navbar-nav{
+          padding: 0 !important;  
+        }
     }
 
     &.tiktok {
@@ -57,12 +61,22 @@ body {
         color: $white;
       }
       a {
+        color: $tiktok-red;
+      }
+      a:hover {
         color: $tiktok-blue;
+      }
+
+      .nav-item {
+        padding-right: 25px;
       }
 
       .nav-link {
         color: white;
         font-size: 1.2rem;
+      }
+      .nav-link:hover {
+        color: white;
       }
 
       .navbar-top {
@@ -77,6 +91,8 @@ body {
       .jumbotron {
         background-color: $tiktok-red;
         color: $white;
+        margin-bottom: 0;
+        border-radius: 0;
       }
 
       .jumbotron-full {
@@ -85,6 +101,7 @@ body {
 
       .navbar-nav {
         background-color: $tiktok-red;
+        padding: 14px 50px;
       }
 
       .nav-pills {
@@ -103,6 +120,11 @@ body {
         background: transparent url($icon-navbar-toggler-white) no-repeat;
         background-size: contain;
       }
+
+      ul, ol {
+        font-size: 1.4rem;
+      }
+
     }
 
 
