@@ -23,31 +23,32 @@
 <script type="text/javascript">                      
 
   $("#mail--button").click(function(evnt) {          
-    console.log(window.reason);
 
-    evnt.preventDefault();                           
-    $("#mail--button").text("...");                  
+    evnt.preventDefault();
+    $("#mail--button").text("...");
 
-    fetch(buildApiUrl("registerEmail"), {            
-      method: 'POST',                                
-      headers: {                                     
-        'Content-Type': 'application/json'           
-      },                                             
-      body: JSON.stringify({                         
-        'email': $('#email--address').val(),         
+    fetch(buildApiUrl("registerEmail"), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        'email': $('#email--address').val(),
         'reason': window.reason,
-      })                                             
+      })
     })
-    .then(function(result) {                         
-      console.log(result.status);                    
-      if(result.status === 403)                      
-        $("#mail--button").text("⛔ ");               
-      else if(result.status === 200)                 
-        $("#mail--button").text("��");               
-      else if(result.status === 201)                 
-        $("#mail--button").text("��");               
+    .then(function(result) {
+      console.log(result.status);
+      if(result.status === 403)
+        $("#mail--button").text("⛔");
+      else if(result.status === 200)
+        $("#mail--button").text("👍");
+      else if(result.status === 201)
+        $("#mail--button").text("🙋");
+      else if(result.status === 500)
+        $("#mail--button").text("💥");
       else
-        $("#mail--button").text("<error>");          
+        $("#mail--button").text("<error>");
     });
   });
 
