@@ -1,26 +1,32 @@
 {{ $reason := .Get "reason" }}
 
-<div class="mt-5">                                                                          
-
-  <p>
+<span>
+  <h3>
       Subscribe to our press distribution list
-  </p>
-  <div class="row">                                                          
-    <div class="col-md-2 col-sm-12 mt-5">                                                                             
+  </h3>
+  <div class="row">
+    <div class="col-md-2 col-sm-12">
       <input id="email--address" type="email" name="email" class="email-box__input" placeholder="email@domain" />     
-    </div>                                                                                                            
-    <div class="col-md-2 col-sm-12 mt-5"></div>
-    <div class="col-md-1 col-sm-6 mt-5">                                                                              
+    </div>
+    <div class="col-md-2 col-sm-12">
+    </div>
+    <div class="col-md-1 col-sm-6">
         <button id="mail--button" class="btn btn-primary">Add me!</button>                                            
     </div>                                                                                                            
   </div>                                                                                                              
-</div>                                                                                                                
+</span>                                                                                        
 
+<!-- this mechanism to bridge between HUGO 'reason' variable andt the javascript variable below, as we can't use the { { into JS -->
+<script type="text/javascript">
+    window.reason = "{{ $reason }}"
+</script>
 
 <script src="/js/global.js"></script>                
 <script type="text/javascript">                      
 
   $("#mail--button").click(function(evnt) {          
+    console.log(window.reason);
+
     evnt.preventDefault();                           
     $("#mail--button").text("...");                  
 
@@ -31,7 +37,7 @@
       },                                             
       body: JSON.stringify({                         
         'email': $('#email--address').val(),         
-        'reason': 'subscribe-to-ukraine',            
+        'reason': window.reason,
       })                                             
     })
     .then(function(result) {                         
@@ -54,11 +60,8 @@
 
 
 #email--address {
-    /* max-width: 800px; 
-    border-radius: 0px; */
     border: solid;
-    border-width: 3px;
-    padding: 10px 10px 10px 10px;  
+    margin: 1em;
 }
 
 .fba {
@@ -68,7 +71,6 @@
 }
 
 #mail--button {
-    padding: 0.5em 1em 0.5em 1em;
     font-size: 18px;
     background-image: none;
     background-color: #ee1d52;
@@ -79,17 +81,9 @@
 }
 
 #mail--button:hover {
-    padding: 0.5em 1em 0.5em 1em;
-    font-size: 18px;
     background-color: #69c9d0;
     color: white;
-    border: none !important;
-    border-radius: 4px;
     font-weight: 900;
-}
-
-.cta {
-    font-size: 6em;
 }
 
 .cta-container p {
