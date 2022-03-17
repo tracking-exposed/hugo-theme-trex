@@ -5,6 +5,8 @@
         <div class="text-center">
             {{ if eq .Title "Prs" }}
                 <h1>Press Releases</h1>
+            {{ else if eq .Title "Monthlies" }}
+                <h1>Progress Reports</h1>
             {{ else }}
                 <h1>{{ .Title }}</h1>
             {{ end }}
