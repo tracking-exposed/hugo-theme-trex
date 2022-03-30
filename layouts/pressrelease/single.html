@@ -1,6 +1,12 @@
 {{define "main" -}}
 
 <style>
+    @media only screen and (max-width: 800px) {
+        img {
+	    width: 100%;
+	}
+    }
+
     .container {
         max-width: 900px;
     }
@@ -100,9 +106,9 @@
         <div class="col-md-9 pl-0 mt-2">
         {{ .Content }}
         <div class="row justify-content-start mt-5">
-            {{ if (isset .Params "documentation") }}
+            {{ if (isset .Params "pdf") }}
             <div class="col-md-6 pl-0">
-                <a class="btn" href="{{ .Params.documentation }}">
+                <a class="btn" href="{{ .Params.pdf }}">
                     Press Statement in .pdf
                 </a>
             </div>

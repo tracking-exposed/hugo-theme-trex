@@ -3,8 +3,13 @@
 <header class="jumbotron">
     <div class="container">
         <div class="text-center">
-            <h1>{{ .Title }}</h1>
-	    <!-- <p><b>Opss!</b> you landed on a time-based-content-listing, our least developed web page ¯\_(ツ)_/¯</p> -->
+            {{ if eq .Title "Prs" }}
+                <h1>Press Releases</h1>
+            {{ else if eq .Title "Monthlies" }}
+                <h1>Progress Reports</h1>
+            {{ else }}
+                <h1>{{ .Title }}</h1>
+            {{ end }}
         </div>
     </div>
 </header>
