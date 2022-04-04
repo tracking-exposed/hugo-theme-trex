@@ -38,6 +38,10 @@
     #publishDate {
         line-height: 3em;
     }
+    #author {
+
+        line-height: 1em;
+    }
 
     h2 {
         padding-top: 1.2em;
@@ -55,7 +59,7 @@
         font-size: 1.2em;
     }
     
-    p, li{
+    p, li, {
         padding-top: 0.8em;
         font-size: 1.2em;
         line-height: 1.7;
@@ -107,6 +111,7 @@
             <h1 id="pageTitle">{{ .Title }}</h1>
             {{ if (isset .Params "subtitle") }}<smaller id="pageSubtitle">{{ .Params.subtitle }}</smaller>{{ end }}
             <h5><time id="publishDate" class="post-date white" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'> Publish date: {{ .Date.Format "2 Jan 2006" }}</time></h5>
+            {{ if (isset .Params "by") }}<h6 id="author">by {{ .Params.by }}</h6>{{ end }}
         </div>
     </div>
 </header>
