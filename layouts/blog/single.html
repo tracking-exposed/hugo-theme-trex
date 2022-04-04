@@ -6,10 +6,20 @@
 	    width: 100%;
 	}
     }
+    .jumbotron {
+        background: url("/images/bg_blog.svg") no-repeat center center; 
+    }
+
 
     .container {
         max-width: 900px;
     }
+
+    .monospace {
+        font-family: monospace;
+        font-weight: 600;
+    }
+
     #pageTitle {
         font-weight: 900;
         font-size: 2.5em;
@@ -19,10 +29,14 @@
     }
 
     #pageSubtitle {
-        font-size: 1.8em !important;
+        font-size: 1.6em !important;
         padding-bottom: 0.5em;
         display: inline-block;
         max-width: 800px;
+    }
+
+    #publishDate {
+        line-height: 3em;
     }
 
     h2 {
@@ -32,7 +46,8 @@
     }
 
     h3 {
-        padding-top: 1.5em;
+        padding-top: 1.7em;
+        padding-bottom: 1em;
         font-size: 1.3em;
     }
 
@@ -40,20 +55,14 @@
         font-size: 1.2em;
     }
     
-    p {
+    p, li{
         padding-top: 0.8em;
         font-size: 1.2em;
         line-height: 1.7;
         letter-spacing: 0.009em;
 
     }
-    li {
-        font-size: 0.8em;
-    }
 
-    .location{
-        padding-top: 1em;
-    }
 
     .green{
         color: #53c1b6;
@@ -93,11 +102,11 @@
 
 <header class="jumbotron">
     <div class="container">
-        <div class="text-left">
-            <h3 class="green">Press release</h3>
+        <div class="text-left"> 
+            <h3 class="monospace white">⟣ trex blog</h3>
             <h1 id="pageTitle">{{ .Title }}</h1>
-            {{ if (isset .Params "subtitle") }}<smaller id="pageSubtitle">{{ .Params.subtitle }}</smaller>{{ end }}<br>
-            {{ if (isset .Params "location") }}<h5 class="location green">({{ .Params.location }})<time class="post-date" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'> {{ .Date.Format "Mon, Jan 2, 2006" }}</time></h5>{{ end }}
+            {{ if (isset .Params "subtitle") }}<smaller id="pageSubtitle">{{ .Params.subtitle }}</smaller>{{ end }}
+            <h5><time id="publishDate" class="post-date white" datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'> Publish date: {{ .Date.Format "2 Jan 2006" }}</time></h5>
         </div>
     </div>
 </header>
@@ -106,18 +115,6 @@
     <div class="row justify-content-start">
         <div class="col-md-9 pl-0 mt-2">
         {{ .Content }}
-        <div class="row justify-content-start mt-5">
-            {{ if (isset .Params "pdf") }}
-            <div class="col-md-6 pl-0">
-                <a class="btn" href="{{ .Params.pdf }}">
-                    Press Statement in .pdf
-                </a>
-            </div>
-            {{ end }}
-            <div class="col-md-6">
-                <a class="btn-filled" href="/pr/">View all press releases</a>
-            </div>
-        </div>
             {{ if (isset .Params "image") }}
                 <br>
                 <img id="press-image" src="{{ .Params.image }}" />
