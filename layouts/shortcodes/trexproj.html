@@ -18,10 +18,12 @@
     <a
       target=_blank
       href="{{ $href }}"
-      class="card-link"
+      class="card-link">
       {{ if $disabled }} style="background-color:{{ $bgcolor }}; -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%); cursor:not-allowed" {{ end }}
-    >{{$href}} →</a>
-    <!-- <h4 class="card-title">title</h4> -->
-    <p class="card-text">{{$desc}}</p>
+      <!-- <h4 class="card-title">title</h4> -->
+      <p
+        style="color: black"
+        class="card-text text-left">{{$desc}}</p>
+    </a>
   </div>
 </div>
