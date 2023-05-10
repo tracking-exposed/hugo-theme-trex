@@ -1,9 +1,11 @@
 {{ define "main" -}}
 <div class="jumbotron jumbotron-home">
     <div class="container">
+	    <!--
         {{ if eq site.Params.ourvision "display" }}
             <small>Our Vision</small>
         {{ end }}
+	    -->
         <h1 class="display-4 font-weight-bold">
             {{ site.Params.Tagline }}
         </h1>
@@ -11,6 +13,7 @@
 </div>
 
 <div class="container core">
+<!--
     <div class="row">
         {{ range $index, $element := .Site.Menus.featured }}
         <div class="featured-box col-sm">
@@ -28,11 +31,13 @@
         </div>
         {{ end }}
     </div>
+-->
     <div class="content home-content" style="margin-top: -7rem;">
         {{ .Content }}
     </div>
 </div>
 
+<!--
 {{ if eq site.Params.news "publish" }}
     <div class="container">
         <ul class="list-group list-group-flush list-unstyled">
@@ -60,5 +65,7 @@
         <span class="clear"></span>
     </div>
 {{ end }}
+
+-->
 
 {{- end }}
