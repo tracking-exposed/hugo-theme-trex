@@ -2,33 +2,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}</title>
-    <meta name="description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ if eq $isHomePage false }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
     <meta name="robots" content="index, follow" />
 
+    {{ if eq site.Params.subsite "default" }}
+        <!-- HTML Meta Tags -->
+        <title>Tracking Exposed 2016 - 2023</title>
+        <meta name="description"
+            content="Goodbye Tracking Exposed, Hello AI Forensics: an Evolution in Algorithm Accountability">
 
-<!-- HTML Meta Tags -->
-<title>Tracking Exposed 2016 - 2023</title>
-<meta name="description" content="Goodbye Tracking Exposed, Hello AI Forensics: an Evolution in Algorithm Accountability">
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="https://tracking.exposed">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Tracking Exposed 2016 - 2023">
+        <meta property="og:description"
+            content="Goodbye Tracking Exposed, Hello AI Forensics: an Evolution in Algorithm Accountability">
+        <meta property="og:image" content="https://tracking.exposed/images/logo-with-payoff.png">
 
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://tracking.exposed">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tracking Exposed 2016 - 2023">
-<meta property="og:description" content="Goodbye Tracking Exposed, Hello AI Forensics: an Evolution in Algorithm Accountability">
-<meta property="og:image" content="https://tracking.exposed/images/logo-with-payoff.png">
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="tracking.exposed">
+        <meta property="twitter:url" content="https://tracking.exposed">
+        <meta name="twitter:title" content="Tracking Exposed 2016 - 2023">
+        <meta name="twitter:description"
+            content="Goodbye Tracking Exposed, Hello AI Forensics: an Evolution in Algorithm Accountability">
+        <meta name="twitter:image" content="https://tracking.exposed/images/logo-with-payoff.png">
+        <!-- Meta Tags Generated via https://opengraph.dev -->
+    {{ else }}
+        <title>{{ site.Params.tagline }}</title>
+        <meta name="description" content="{{ site.Params.tagline }}" />
 
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="tracking.exposed">
-<meta property="twitter:url" content="https://tracking.exposed">
-<meta name="twitter:title" content="Tracking Exposed 2016 - 2023">
-<meta name="twitter:description" content="Goodbye Tracking Exposed, Hello AI Forensics: an Evolution in Algorithm Accountability">
-<meta name="twitter:image" content="https://tracking.exposed/images/logo-with-payoff.png">
+        <meta property="og:title" content="Experience Summary & Farewells">
+        <meta property="og:description"
+            content="{{ site.Params.tagline }}">
 
-<!-- Meta Tags Generated via https://opengraph.dev -->
-
+        <meta name="twitter:title" content="Experience Summary & Farewells">
+        <meta name="twitter:description"
+            content="Goodbye Tracking Exposed, Hello AI Forensics: an Evolution in Algorithm Accountability">
+    {{ end }}
 
     <link rel="icon" href="/images/trex-logo-32x32.jpg" sizes="32x32" />
     <link rel="icon" href="/images/trex-logo-192x192.jpg" sizes="192x192" />
@@ -60,12 +70,14 @@
         "url" : "{{ .Permalink }}"
     }
     </script>
-    {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
-    {{ $style := resources.Get "main.scss" | resources.ExecuteAsTemplate "bootstrap.scss" . | toCSS $options | resources.Fingerprint }}
+    {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths"
+    (slice "node_modules/myscss")) }}
+    {{ $style := resources.Get "main.scss" | resources.ExecuteAsTemplate "bootstrap.scss" . | toCSS $options |
+    resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
     {{ if .Params.extraCSS }}
-        <link rel="stylesheet" href="{{ .Params.extraCSS }}">
+    <link rel="stylesheet" href="{{ .Params.extraCSS }}">
     {{ end }}
 
     <script src='{{ "/js/jquery-3.3.1.min.js" | absURL }}'></script>
